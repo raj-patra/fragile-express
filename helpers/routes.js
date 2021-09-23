@@ -3,8 +3,16 @@ const router = express.Router();
 const constants = require('./constants');
 
 router.get('/', (req, res)=>{
-    res.json({"message": "Here are the available resources",
+    res.json({"message": "List of available resources.",
         "resources": ["alias"]})
+});
+
+router.get('/alias', (req, res)=>{
+    function randomChoice(arr) {
+        return arr[Math.floor(arr.length * Math.random())];
+    }
+    res.json({"message": "Random alias generated.",
+        "data": randomChoice(constants.noun)+'-'+randomChoice(constants.adjective)})
 });
 
 
