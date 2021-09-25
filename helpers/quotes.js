@@ -28,5 +28,7 @@ router.get('/', (req, res)=>{
 });
 
 router.get('/random', (req, res)=> fetch_response(constants.api_urls.quote, res));
+router.get('/kanye', (req, res)=> fetch_response(constants.api_urls.kanye, res));
+router.get('/trump', (req, res)=> fetch_response(constants.api_urls.trump, res));
 
 module.exports = router;
