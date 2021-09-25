@@ -3,10 +3,6 @@ const axios = require("axios");
 const router = express.Router();
 
 const constants = require('./constants');
-const quote = require('./quotes');
-
-
-router.use("/quote", quote)
 
 function fetch_response(url, res){
     (async () => {
@@ -28,21 +24,7 @@ function fetch_response(url, res){
 
 router.get('/', (req, res)=>{
     res.status(200).send({"message": "List of available resources.",
-        "resources": ["alias"]})
+        "resources": ["random"]})
 });
-
-router.get('/alias', (req, res)=>{
-    function randomChoice(arr) {
-        return arr[Math.floor(arr.length * Math.random())];
-    }
-    res.status(200).send({"message": "Random alias generated.",
-        "data": randomChoice(constants.adjective)+'-'+randomChoice(constants.noun)})
-});
-
-router.get('/insult', (req, res)=> fetch_response(constants.api_urls.insult, res));
-
-router.get('/fact', (req, res)=> fetch_response(constants.api_urls.fact, res));
-
-
 
 module.exports = router;
