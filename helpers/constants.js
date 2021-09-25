@@ -1,3 +1,7 @@
+module.exports.api_urls = {
+    "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json"
+}
+
 module.exports.about = {
     "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
     "dev": {
