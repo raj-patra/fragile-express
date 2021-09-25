@@ -24,7 +24,7 @@ function fetch_response(url, res){
 
 router.get('/', (req, res)=>{
     res.status(200).send({"message": "List of available resources.",
-        "resources": ["random"]})
+        "resources": ["random", "kanye", "trump"]})
 });
 
 router.get('/random', (req, res)=> fetch_response(constants.api_urls.quote, res));
