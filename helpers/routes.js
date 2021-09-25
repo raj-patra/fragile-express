@@ -2,35 +2,56 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 const constants = require('./constants');
+const co = require('co');
+const { response } = require("express");
 
-router.get('/', (req, res)=>{
-    res.json({"message": "List of available resources.",
+
+router.get('/', (req, res, next)=>{
+    res.status(200).send({"message": "List of available resources.",
         "resources": ["alias"]})
 });
 
-router.get('/alias', (req, res)=>{
+router.get('/alias', (req, res, next)=>{
     function randomChoice(arr) {
         return arr[Math.floor(arr.length * Math.random())];
     }
-    res.json({"message": "Random alias generated.",
+    res.status(200).send({"message": "Random alias generated.",
         "data": randomChoice(constants.adjective)+'-'+randomChoice(constants.noun)})
 });
 
 router.get('/insult', (req, res)=>{
     (async () => {
         try{
-            const response = await axios.get(constants.api_urls.insult)
-            if (response.status === 200){
-                res.json({"message": "Data fetch successful.",
-                    "data": response.data,
-                    "original_api": response.config.url})
-            }
+            await axios.get(constants.api_urls.insult)
+                        .then(data => {
+                            res.status(200).send({"message": "Data fetch successful.", 
+                                                    "data": data.data, 
+                                                    "reference_api": data.config.url})
+                                                })
+                        .catch(error => res.send(error));
         }
         catch (error) {
-            console.log(error.response.body)
+            console.log(error)
         }
     }) ();
-})
+});
+
+router.get('/fact', (req, res)=>{
+    (async () => {
+        try{
+            await axios.get(constants.api_urls.fact)
+                        .then(data => {
+                            res.status(200).send({"message": "Data fetch successful.", 
+                                                    "data": data.data, 
+                                                    "reference_api": data.config.url})
+                                                })
+                        .catch(error => res.send(error));
+        }
+        catch (error) {
+            console.log(error)
+        }
+    }) ();
+});
 
 
 module.exports = router;

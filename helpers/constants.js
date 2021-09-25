@@ -1,5 +1,6 @@
 module.exports.api_urls = {
-    "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json"
+    "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
+    "fact": "https://uselessfacts.jsph.pl//random.json?language=en"
 }
 
 module.exports.about = {

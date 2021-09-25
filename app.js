@@ -9,11 +9,11 @@ app.use([express.json(), express.urlencoded({extended: true})]);
 app.use('/api', api);
 
 app.get('/', (req, res)=>{
-    res.json({"message": "Welcome to the Fragile Express."})
+    res.status(200).send({"message": "Welcome to the Fragile Express."})
 });
 
 app.get('/about', (req, res)=>{
-    res.json(constants.about)
+    res.status(200).send(constants.about)
 });
 
 app.listen(3000, () => {
