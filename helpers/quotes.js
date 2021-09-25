@@ -27,4 +27,6 @@ router.get('/', (req, res)=>{
         "resources": ["random"]})
 });
 
+router.get('/random', (req, res)=> fetch_response(constants.api_urls.quote, res));
+
 module.exports = router;
