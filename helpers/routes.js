@@ -6,8 +6,6 @@ const constants = require('./constants');
 const quote = require('./quotes');
 
 
-router.use("/quote", quote)
-
 function fetch_response(url, res){
     (async () => {
         try{
@@ -28,7 +26,7 @@ function fetch_response(url, res){
 
 router.get('/', (req, res)=>{
     res.status(200).send({"message": "List of available resources.",
-        "resources": ["alias"]})
+        "resources": ["alias", "insult", "fact", "quote"]})
 });
 
 router.get('/alias', (req, res)=>{
@@ -40,9 +38,9 @@ router.get('/alias', (req, res)=>{
 });
 
 router.get('/insult', (req, res)=> fetch_response(constants.api_urls.insult, res));
-
 router.get('/fact', (req, res)=> fetch_response(constants.api_urls.fact, res));
 
+router.use("/quote", quote);
 
 
 module.exports = router;
