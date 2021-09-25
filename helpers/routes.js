@@ -12,7 +12,7 @@ router.get('/alias', (req, res)=>{
         return arr[Math.floor(arr.length * Math.random())];
     }
     res.json({"message": "Random alias generated.",
-        "data": randomChoice(constants.noun)+'-'+randomChoice(constants.adjective)})
+        "data": randomChoice(constants.adjective)+'-'+randomChoice(constants.noun)})
 });
 
 
