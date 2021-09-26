@@ -5,7 +5,6 @@ const router = express.Router();
 const constants = require('./constants');
 const quote = require('./quotes');
 
-
 function fetch_response(url, res){
     (async () => {
         try{
