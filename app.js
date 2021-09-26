@@ -2,7 +2,7 @@ const express = require("express");
 const api = require('./helpers/routes');
 const constants = require('./helpers/constants');
 
-const port = 3000;
+const PORT = process.env.PORT || 80;
 const app = express();
 
 app.use([express.json(), express.urlencoded({extended: true})]);
@@ -16,6 +16,8 @@ app.get('/about', (req, res)=>{
     res.status(200).send(constants.about)
 });
 
-app.listen(3000, () => {
-    console.log(`Server Listening at http://localhost:${port}`);
+var server = app.listen(PORT, function() {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("Server is listening at http://%s:%s", host, port);
 });
