@@ -2,7 +2,7 @@ const express = require("express");
 const api = require('./helpers/routes');
 const constants = require('./helpers/constants');
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 46444;
 const app = express();
 
 app.use([express.json(), express.urlencoded({extended: true})]);
