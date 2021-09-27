@@ -12,7 +12,8 @@
   "dependencies": {
     "axios": "^0.21.4",
     "express": "^4.17.1",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "open": "^8.2.1"
   },
   "engines": {
     "node": "16.x"
