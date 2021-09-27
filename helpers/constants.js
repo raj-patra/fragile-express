@@ -1,9 +1,13 @@
 module.exports.api_urls = {
     "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
     "fact": "https://uselessfacts.jsph.pl//random.json?language=en",
+
     "quote": "https://api.quotable.io/random",
     "kanye": "https://api.kanye.rest/",
-    "trump": "https://api.whatdoestrumpthink.com/api/v1/quotes/random"
+    "trump": "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
+    "superhero": "https://superhero-quotes.herokuapp.com/random",
+
+    "random_website": "https://www.boredbutton.com/random"
 }
 
 module.exports.about = {
