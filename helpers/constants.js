@@ -1,3 +1,26 @@
+const HOST = process.env.HOST || "http://localhost"
+
+module.exports.root = {
+    "message": "Welcome to the Fragile Express.",
+    "resources": {
+        "about": HOST+"/about",
+        "api": {
+            "index": HOST+"/api",
+            "random_insult": HOST+"/api/insult",
+            "random_fact": HOST+"/api/fact",
+            "random_website": HOST+"/api/bored",
+
+            "quotes": {
+                "index": HOST+"/api/quote",
+                "random": HOST+"/api/quote/random",
+                "kanye_west": HOST+"/api/quote/kanye",
+                "donald_trump": HOST+"/api/quote/trump",
+                "superhero": HOST+"/api/quote/superhero",
+            }
+        }
+    }
+}
+
 module.exports.api_urls = {
     "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
     "fact": "https://uselessfacts.jsph.pl//random.json?language=en",
