@@ -25,11 +25,21 @@ module.exports.root = {
 module.exports.api = {
     "message": "List of available resources.",
     "resources": {
-        "index": HOST+"/api",
         "random_insult": HOST+"/api/insult",
         "random_fact": HOST+"/api/fact",
         "random_website": HOST+"/api/bored",
         "quotes": HOST+"/api/quote"
+    },
+    "root": HOST
+}
+
+module.exports.quote = {
+    "message": "List of available resources.",
+    "resources": {
+        "random": HOST+"/api/quote/random",
+        "kanye_west": HOST+"/api/quote/kanye",
+        "donald_trump": HOST+"/api/quote/trump",
+        "superhero": HOST+"/api/quote/superhero",
     },
     "root": HOST
 }
