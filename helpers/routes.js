@@ -13,7 +13,8 @@ function fetch_response(url, res){
                         .then(data => {
                             res.status(200).send({"message": "Data fetch successful.", 
                                                     "data": data.data, 
-                                                    "reference_api": data.config.url})
+                                                    "reference_api": data.config.url,
+                                                    "root": constants.host})
                         })
                         .catch(error => res.send(error))
                         .next;
@@ -25,8 +26,7 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send({"message": "List of available resources.",
-        "resources": ["alias", "insult", "fact", "quote"]})
+    res.status(200).send(constants.api)
 });
 
 router.get('/alias', (req, res)=>{
@@ -43,7 +43,8 @@ router.get('/fact', (req, res)=> fetch_response(constants.api_urls.fact, res));
 router.get('/bored', (req, res)=> {
     open(constants.api_urls.random_website)
     res.status(200).send({"message": "Random website fetched.", 
-                            "reference_api": constants.api_urls.random_website})
+                            "reference_api": constants.api_urls.random_website,
+                            "root": constants.host})
 });
 
 router.use("/quote", quote);

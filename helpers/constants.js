@@ -1,4 +1,5 @@
 const HOST = process.env.HOST || "http://localhost"
+module.exports.host = HOST;
 
 module.exports.root = {
     "message": "Welcome to the Fragile Express.",
@@ -21,6 +22,18 @@ module.exports.root = {
     }
 }
 
+module.exports.api = {
+    "message": "List of available resources.",
+    "resources": {
+        "index": HOST+"/api",
+        "random_insult": HOST+"/api/insult",
+        "random_fact": HOST+"/api/fact",
+        "random_website": HOST+"/api/bored",
+        "quotes": HOST+"/api/quote"
+    },
+    "root": HOST
+}
+
 module.exports.api_urls = {
     "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
     "fact": "https://uselessfacts.jsph.pl//random.json?language=en",
@@ -40,7 +53,8 @@ module.exports.about = {
         "repo": "https://github.com/raj-patra/fragile-express",
         "portfolio": "https://raj-patra.github.io/",
         "linktree": "https://linktr.ee/ign_mortal"
-    }
+    },
+    "root": HOST
 }
 
 module.exports.noun = [
