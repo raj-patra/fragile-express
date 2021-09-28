@@ -13,7 +13,8 @@ function fetch_response(url, res){
                         .then(data => {
                             res.status(200).send({"message": "Data fetch successful.", 
                                                     "data": data.data, 
-                                                    "reference_api": data.config.url})
+                                                    "reference_api": data.config.url,
+                                                    "root": constants.host})
                         })
                         .catch(error => res.send(error))
                         .next;
@@ -25,8 +26,7 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send({"message": "List of available resources.",
-        "resources": ["alias", "insult", "fact", "quote"]})
+    res.status(200).send(constants.api)
 });
 
 router.get('/alias', (req, res)=>{
@@ -41,9 +41,20 @@ router.get('/insult', (req, res)=> fetch_response(constants.api_urls.insult, res
 router.get('/fact', (req, res)=> fetch_response(constants.api_urls.fact, res));
 
 router.get('/bored', (req, res)=> {
-    open(constants.api_urls.random_website)
-    res.status(200).send({"message": "Random website fetched.", 
-                            "reference_api": constants.api_urls.random_website})
+    
+    axios.get(constants.api_urls.random_website)
+        .then(response => {
+            var data = response.data.split(`iframe src="`)[1].split(`">`)[0].split(`" title="`)
+            res.status(200).send({"message": "Random website fetched.",
+                                    "data": {
+                                        "title": data[1],
+                                        "url": data[0]
+                                    },
+                                    "reference_api": constants.api_urls.random_website,
+                                    "root": constants.host})
+            open(data[0]);
+        })
+        .catch(error => res.send(error));
 });
 
 router.use("/quote", quote);

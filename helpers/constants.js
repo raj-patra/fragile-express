@@ -1,3 +1,49 @@
+const HOST = process.env.HOST || "http://localhost"
+module.exports.host = HOST;
+
+module.exports.root = {
+    "message": "Welcome to the Fragile Express.",
+    "resources": {
+        "about": HOST+"/about",
+        "api": {
+            "index": HOST+"/api",
+            "random_insult": HOST+"/api/insult",
+            "random_fact": HOST+"/api/fact",
+            "random_website": HOST+"/api/bored",
+
+            "quotes": {
+                "index": HOST+"/api/quote",
+                "random": HOST+"/api/quote/random",
+                "kanye_west": HOST+"/api/quote/kanye",
+                "donald_trump": HOST+"/api/quote/trump",
+                "superhero": HOST+"/api/quote/superhero",
+            }
+        }
+    }
+}
+
+module.exports.api = {
+    "message": "List of available resources.",
+    "resources": {
+        "random_insult": HOST+"/api/insult",
+        "random_fact": HOST+"/api/fact",
+        "random_website": HOST+"/api/bored",
+        "quotes": HOST+"/api/quote"
+    },
+    "root": HOST
+}
+
+module.exports.quote = {
+    "message": "List of available resources.",
+    "resources": {
+        "random": HOST+"/api/quote/random",
+        "kanye_west": HOST+"/api/quote/kanye",
+        "donald_trump": HOST+"/api/quote/trump",
+        "superhero": HOST+"/api/quote/superhero",
+    },
+    "root": HOST
+}
+
 module.exports.api_urls = {
     "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
     "fact": "https://uselessfacts.jsph.pl//random.json?language=en",
@@ -17,7 +63,8 @@ module.exports.about = {
         "repo": "https://github.com/raj-patra/fragile-express",
         "portfolio": "https://raj-patra.github.io/",
         "linktree": "https://linktr.ee/ign_mortal"
-    }
+    },
+    "root": HOST
 }
 
 module.exports.noun = [
