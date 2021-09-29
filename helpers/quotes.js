@@ -27,9 +27,10 @@ router.get('/', (req, res)=>{
     res.status(200).send(constants.quote)
 });
 
-router.get('/random', (req, res)=> fetch_response(constants.api_urls.quote, res));
-router.get('/kanye', (req, res)=> fetch_response(constants.api_urls.kanye, res));
-router.get('/trump', (req, res)=> fetch_response(constants.api_urls.trump, res));
-router.get('/superhero', (req, res)=> fetch_response(constants.api_urls.superhero, res));
+router.get('/random', (req, res)=> fetch_response(constants.api_urls.quote.random, res));
+router.get('/kanye', (req, res)=> fetch_response(constants.api_urls.quote.kanye, res));
+router.get('/trump', (req, res)=> fetch_response(constants.api_urls.quote.trump, res));
+router.get('/superhero', (req, res)=> fetch_response(constants.api_urls.quote.superhero, res));
+router.get('/poem', (req, res)=> fetch_response(constants.api_urls.quote.poem, res));
 
 module.exports = router;
