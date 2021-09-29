@@ -17,6 +17,7 @@ module.exports.root = {
                 "kanye_west": HOST+"/api/quote/kanye",
                 "donald_trump": HOST+"/api/quote/trump",
                 "superhero": HOST+"/api/quote/superhero",
+                "poems": HOST+"/api/quote/poems",
             }
         }
     }
@@ -40,6 +41,7 @@ module.exports.quote = {
         "kanye_west": HOST+"/api/quote/kanye",
         "donald_trump": HOST+"/api/quote/trump",
         "superhero": HOST+"/api/quote/superhero",
+        "poems": HOST+"/api/quote/poems",
     },
     "root": HOST
 }
@@ -53,7 +55,7 @@ module.exports.api_urls = {
         "kanye": "https://api.kanye.rest/",
         "trump": "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
         "superhero": "https://superhero-quotes.herokuapp.com/random",
-        "poem": "https://www.poemist.com/api/v1/randompoems"
+        "poems": "https://www.poemist.com/api/v1/randompoems"
     },
 
     "random_website": "https://www.boredbutton.com/random"
