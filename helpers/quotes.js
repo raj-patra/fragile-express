@@ -32,5 +32,6 @@ router.get('/kanye', (req, res)=> fetch_response(constants.api_urls.quote.kanye,
 router.get('/trump', (req, res)=> fetch_response(constants.api_urls.quote.trump, res));
 router.get('/superhero', (req, res)=> fetch_response(constants.api_urls.quote.superhero, res));
 router.get('/poems', (req, res)=> fetch_response(constants.api_urls.quote.poems, res));
+router.get('/anime', (req, res)=> fetch_response(constants.api_urls.quote.anime, res));
 
 module.exports = router;

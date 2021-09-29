@@ -1,6 +1,22 @@
 const HOST = process.env.HOST || "http://localhost"
 module.exports.host = HOST;
 
+module.exports.api_urls = {
+    "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
+    "fact": "https://uselessfacts.jsph.pl//random.json?language=en",
+
+    "quote": {
+        "random": "https://api.quotable.io/random",
+        "kanye": "https://api.kanye.rest/",
+        "trump": "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
+        "superhero": "https://superhero-quotes.herokuapp.com/random",
+        "poems": "https://www.poemist.com/api/v1/randompoems",
+        "anime": "https://animechan.vercel.app/api/random",
+    },
+
+    "random_website": "https://www.boredbutton.com/random"
+}
+
 module.exports.root = {
     "message": "Welcome to the Fragile Express.",
     "resources": {
@@ -18,6 +34,7 @@ module.exports.root = {
                 "donald_trump": HOST+"/api/quote/trump",
                 "superhero": HOST+"/api/quote/superhero",
                 "poems": HOST+"/api/quote/poems",
+                "anime": HOST+"/api/quote/anime",
             }
         }
     }
@@ -42,23 +59,9 @@ module.exports.quote = {
         "donald_trump": HOST+"/api/quote/trump",
         "superhero": HOST+"/api/quote/superhero",
         "poems": HOST+"/api/quote/poems",
+        "anime": HOST+"/api/quote/anime",
     },
     "root": HOST
-}
-
-module.exports.api_urls = {
-    "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
-    "fact": "https://uselessfacts.jsph.pl//random.json?language=en",
-
-    "quote": {
-        "random": "https://api.quotable.io/random",
-        "kanye": "https://api.kanye.rest/",
-        "trump": "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
-        "superhero": "https://superhero-quotes.herokuapp.com/random",
-        "poems": "https://www.poemist.com/api/v1/randompoems"
-    },
-
-    "random_website": "https://www.boredbutton.com/random"
 }
 
 module.exports.about = {
