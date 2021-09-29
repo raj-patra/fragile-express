@@ -11,7 +11,8 @@ function fetch_response(url, res){
                         .then(data => {
                             res.status(200).send({"message": "Data fetch successful.", 
                                                     "data": data.data, 
-                                                    "reference_api": data.config.url})
+                                                    "reference_api": data.config.url,
+                                                    "root": constants.host})
                         })
                         .catch(error => res.send(error))
                         .next;
