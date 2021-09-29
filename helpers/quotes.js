@@ -11,7 +11,8 @@ function fetch_response(url, res){
                         .then(data => {
                             res.status(200).send({"message": "Data fetch successful.", 
                                                     "data": data.data, 
-                                                    "reference_api": data.config.url})
+                                                    "reference_api": data.config.url,
+                                                    "root": constants.host})
                         })
                         .catch(error => res.send(error))
                         .next;
@@ -26,9 +27,11 @@ router.get('/', (req, res)=>{
     res.status(200).send(constants.quote)
 });
 
-router.get('/random', (req, res)=> fetch_response(constants.api_urls.quote, res));
-router.get('/kanye', (req, res)=> fetch_response(constants.api_urls.kanye, res));
-router.get('/trump', (req, res)=> fetch_response(constants.api_urls.trump, res));
-router.get('/superhero', (req, res)=> fetch_response(constants.api_urls.superhero, res));
+router.get('/random', (req, res)=> fetch_response(constants.api_urls.quote.random, res));
+router.get('/kanye', (req, res)=> fetch_response(constants.api_urls.quote.kanye, res));
+router.get('/trump', (req, res)=> fetch_response(constants.api_urls.quote.trump, res));
+router.get('/superhero', (req, res)=> fetch_response(constants.api_urls.quote.superhero, res));
+router.get('/poems', (req, res)=> fetch_response(constants.api_urls.quote.poems, res));
+router.get('/anime', (req, res)=> fetch_response(constants.api_urls.quote.anime, res));
 
 module.exports = router;
