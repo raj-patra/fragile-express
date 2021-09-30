@@ -32,8 +32,7 @@ module.exports.root = {
         "about": HOST+"/about",
         "api": {
             "index": HOST+"/api",
-            "random_insult": HOST+"/api/insult",
-            "random_fact": HOST+"/api/fact",
+            "insult": HOST+"/api/insult",
             "random_website": HOST+"/api/bored",
 
             "quotes": {
@@ -44,7 +43,18 @@ module.exports.root = {
                 "superhero": HOST+"/api/quote/superhero",
                 "poems": HOST+"/api/quote/poems",
                 "anime": HOST+"/api/quote/anime",
-            }
+            },
+
+            "facts": {
+                "index": HOST+"/api/fact",
+                "random": HOST+"/api/fact/random",
+                "useless": HOST+"/api/fact/useless",
+                "chuck_norris": HOST+"/api/fact/chuck_norris",
+                "trivia": HOST+"/api/fact/trivia",
+                "math": HOST+"/api/fact/math",
+                "date": HOST+"/api/fact/date",
+                "year": HOST+"/api/fact/year",
+            },
         }
     }
 }
