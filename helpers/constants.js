@@ -3,7 +3,6 @@ module.exports.host = HOST;
 
 module.exports.api_urls = {
     "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
-    "fact": "https://uselessfacts.jsph.pl//random.json?language=en",
 
     "quote": {
         "random": "https://api.quotable.io/random",
@@ -12,6 +11,16 @@ module.exports.api_urls = {
         "superhero": "https://superhero-quotes.herokuapp.com/random",
         "poems": "https://www.poemist.com/api/v1/randompoems",
         "anime": "https://animechan.vercel.app/api/random",
+    },
+
+    "fact": {
+        "random": "https://asli-fun-fact-api.herokuapp.com/",
+        "useless": "https://uselessfacts.jsph.pl//random.json?language=en",
+        "chuck_norris": "http://api.icndb.com/jokes/random",
+        "trivia": "http://numbersapi.com/random/trivia",
+        "math": "http://numbersapi.com/random/math",
+        "date": "http://numbersapi.com/random/date",
+        "year": "http://numbersapi.com/random/year",
     },
 
     "random_website": "https://www.boredbutton.com/random"
