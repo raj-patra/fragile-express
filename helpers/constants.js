@@ -83,6 +83,20 @@ module.exports.quote = {
     "root": HOST
 }
 
+module.exports.fact = {
+    "message": "List of available resources.",
+    "resources": {
+        "random": HOST+"/api/fact/random",
+        "useless": HOST+"/api/fact/useless",
+        "chuck_norris": HOST+"/api/fact/chuck_norris",
+        "trivia": HOST+"/api/fact/trivia",
+        "math": HOST+"/api/fact/math",
+        "date": HOST+"/api/fact/date",
+        "year": HOST+"/api/fact/year",
+    },
+    "root": HOST
+}
+
 module.exports.about = {
     "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
     "dev": {
