@@ -3,7 +3,6 @@ module.exports.host = HOST;
 
 module.exports.api_urls = {
     "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
-    "fact": "https://uselessfacts.jsph.pl//random.json?language=en",
 
     "quote": {
         "random": "https://api.quotable.io/random",
@@ -12,6 +11,16 @@ module.exports.api_urls = {
         "superhero": "https://superhero-quotes.herokuapp.com/random",
         "poems": "https://www.poemist.com/api/v1/randompoems",
         "anime": "https://animechan.vercel.app/api/random",
+    },
+
+    "fact": {
+        "random": "https://asli-fun-fact-api.herokuapp.com/",
+        "useless": "https://uselessfacts.jsph.pl//random.json?language=en",
+        "chuck_norris": "http://api.icndb.com/jokes/random",
+        "trivia": "http://numbersapi.com/random/trivia",
+        "math": "http://numbersapi.com/random/math",
+        "date": "http://numbersapi.com/random/date",
+        "year": "http://numbersapi.com/random/year",
     },
 
     "random_website": "https://www.boredbutton.com/random"
@@ -23,8 +32,7 @@ module.exports.root = {
         "about": HOST+"/about",
         "api": {
             "index": HOST+"/api",
-            "random_insult": HOST+"/api/insult",
-            "random_fact": HOST+"/api/fact",
+            "insult": HOST+"/api/insult",
             "random_website": HOST+"/api/bored",
 
             "quotes": {
@@ -35,7 +43,18 @@ module.exports.root = {
                 "superhero": HOST+"/api/quote/superhero",
                 "poems": HOST+"/api/quote/poems",
                 "anime": HOST+"/api/quote/anime",
-            }
+            },
+
+            "facts": {
+                "index": HOST+"/api/fact",
+                "random": HOST+"/api/fact/random",
+                "useless": HOST+"/api/fact/useless",
+                "chuck_norris": HOST+"/api/fact/chuck_norris",
+                "trivia": HOST+"/api/fact/trivia",
+                "math": HOST+"/api/fact/math",
+                "date": HOST+"/api/fact/date",
+                "year": HOST+"/api/fact/year",
+            },
         }
     }
 }
@@ -60,6 +79,20 @@ module.exports.quote = {
         "superhero": HOST+"/api/quote/superhero",
         "poems": HOST+"/api/quote/poems",
         "anime": HOST+"/api/quote/anime",
+    },
+    "root": HOST
+}
+
+module.exports.fact = {
+    "message": "List of available resources.",
+    "resources": {
+        "random": HOST+"/api/fact/random",
+        "useless": HOST+"/api/fact/useless",
+        "chuck_norris": HOST+"/api/fact/chuck_norris",
+        "trivia": HOST+"/api/fact/trivia",
+        "math": HOST+"/api/fact/math",
+        "date": HOST+"/api/fact/date",
+        "year": HOST+"/api/fact/year",
     },
     "root": HOST
 }

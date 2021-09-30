@@ -5,6 +5,7 @@ const router = express.Router();
 
 const constants = require('./constants');
 const quote = require('./quotes');
+const fact = require('./facts');
 
 function fetch_response(url, res){
     (async () => {
@@ -38,7 +39,6 @@ router.get('/alias', (req, res)=>{
 });
 
 router.get('/insult', (req, res)=> fetch_response(constants.api_urls.insult, res));
-router.get('/fact', (req, res)=> fetch_response(constants.api_urls.fact, res));
 
 router.get('/bored', (req, res)=> {
     
@@ -58,6 +58,7 @@ router.get('/bored', (req, res)=> {
 });
 
 router.use("/quote", quote);
+router.use("/fact", fact);
 
 
 module.exports = router;
