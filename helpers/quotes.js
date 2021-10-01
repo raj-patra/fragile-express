@@ -33,5 +33,7 @@ router.get('/trump', (req, res)=> fetch_response(constants.api_urls.quote.trump,
 router.get('/superhero', (req, res)=> fetch_response(constants.api_urls.quote.superhero, res));
 router.get('/poems', (req, res)=> fetch_response(constants.api_urls.quote.poems, res));
 router.get('/anime', (req, res)=> fetch_response(constants.api_urls.quote.anime, res));
+router.get('/powerful', (req, res)=> fetch_response(constants.api_urls.quote.powerful, res));
+router.get('/stoicism', (req, res)=> fetch_response(constants.api_urls.quote.stoicism, res));
 
 module.exports = router;

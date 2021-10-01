@@ -11,6 +11,8 @@ module.exports.api_urls = {
         "superhero": "https://superhero-quotes.herokuapp.com/random",
         "poems": "https://www.poemist.com/api/v1/randompoems",
         "anime": "https://animechan.vercel.app/api/random",
+        "powerful": "https://api.fisenko.net/v1/quotes/en/random",
+        "stoicism": "https://api.themotivate365.com/stoic-quote"
     },
 
     "fact": {
@@ -43,6 +45,8 @@ module.exports.root = {
                 "superhero": HOST+"/api/quote/superhero",
                 "poems": HOST+"/api/quote/poems",
                 "anime": HOST+"/api/quote/anime",
+                "powerful": HOST+"/api/quote/powerful",
+                "stoicism": HOST+"/api/quote/stoicism"
             },
 
             "facts": {
@@ -79,6 +83,8 @@ module.exports.quote = {
         "superhero": HOST+"/api/quote/superhero",
         "poems": HOST+"/api/quote/poems",
         "anime": HOST+"/api/quote/anime",
+        "powerful": HOST+"/api/quote/powerful",
+        "stoicism": HOST+"/api/quote/stoicism"
     },
     "root": HOST
 }
