@@ -45,7 +45,8 @@ module.exports.root = {
                 "superhero": HOST+"/api/quote/superhero",
                 "poems": HOST+"/api/quote/poems",
                 "anime": HOST+"/api/quote/anime",
-                "powerful": HOST+"/api/quote/powerful"
+                "powerful": HOST+"/api/quote/powerful",
+                "stoicism": HOST+"/api/quote/stoicism"
             },
 
             "facts": {
@@ -82,7 +83,8 @@ module.exports.quote = {
         "superhero": HOST+"/api/quote/superhero",
         "poems": HOST+"/api/quote/poems",
         "anime": HOST+"/api/quote/anime",
-        "powerful": HOST+"/api/quote/powerful"
+        "powerful": HOST+"/api/quote/powerful",
+        "stoicism": HOST+"/api/quote/stoicism"
     },
     "root": HOST
 }
