@@ -11,6 +11,7 @@ module.exports.api_urls = {
         "superhero": "https://superhero-quotes.herokuapp.com/random",
         "poems": "https://www.poemist.com/api/v1/randompoems",
         "anime": "https://animechan.vercel.app/api/random",
+        "powerful": "https://api.fisenko.net/v1/quotes/en/random"
     },
 
     "fact": {
