@@ -25,6 +25,12 @@ module.exports.api_urls = {
         "year": "http://numbersapi.com/random/year",
     },
 
+    "personality": {
+        "advice": "https://api.adviceslip.com/advice",
+        "affirmation": "https://www.affirmations.dev",
+        "inspiration": "https://inspiration.goprogram.ai/"
+    },
+
     "random_website": "https://www.boredbutton.com/random"
 }
 
