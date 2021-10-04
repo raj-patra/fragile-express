@@ -6,6 +6,7 @@ const router = express.Router();
 const constants = require('./constants');
 const quote = require('./quotes');
 const fact = require('./facts');
+const personality = require('./personalities');
 
 function fetch_response(url, res){
     (async () => {
@@ -59,6 +60,7 @@ router.get('/bored', (req, res)=> {
 
 router.use("/quote", quote);
 router.use("/fact", fact);
+router.use("/personality", personality);
 
 
 module.exports = router;
