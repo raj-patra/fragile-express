@@ -69,7 +69,8 @@ module.exports.api = {
         "random_insult": HOST+"/api/insult",
         "random_fact": HOST+"/api/fact",
         "random_website": HOST+"/api/bored",
-        "quotes": HOST+"/api/quote"
+        "quotes": HOST+"/api/quote",
+        "facts": HOST+"/api/fact"
     },
     "root": HOST
 }
