@@ -25,15 +25,21 @@ module.exports.api_urls = {
         "year": "http://numbersapi.com/random/year",
     },
 
+    "personality": {
+        "advice": "https://api.adviceslip.com/advice",
+        "affirmation": "https://www.affirmations.dev",
+        "inspiration": "https://inspiration.goprogram.ai/"
+    },
+
     "random_website": "https://www.boredbutton.com/random"
 }
 
-module.exports.root = {
-    "message": "Welcome to the Fragile Express.",
+module.exports.api = {
+    "message": "List of available resources.",
     "resources": {
+        "root": HOST, 
         "about": HOST+"/about",
         "api": {
-            "index": HOST+"/api",
             "insult": HOST+"/api/insult",
             "random_website": HOST+"/api/bored",
 
@@ -59,17 +65,36 @@ module.exports.root = {
                 "date": HOST+"/api/fact/date",
                 "year": HOST+"/api/fact/year",
             },
+
+            "personalities": {
+                "index": HOST+"/api/personality",
+                "advice": HOST+"/api/personality/advice",
+                "affirmation": HOST+"/api/personality/affirmation",
+                "inspiration": HOST+"/api/personality/inspiration"
+            }
         }
     }
 }
 
-module.exports.api = {
+module.exports.root = {
+    "message": "Welcome to the Fragile Express.",
+    "resources": {
+        "api": HOST+"/api",
+        "random_insult": HOST+"/api/insult",
+        "random_website": HOST+"/api/bored",
+        "quotes": HOST+"/api/quote",
+        "facts": HOST+"/api/fact",
+        "personalities": HOST+"/api/personality"
+    },
+    "root": HOST
+}
+
+module.exports.personalities = {
     "message": "List of available resources.",
     "resources": {
-        "random_insult": HOST+"/api/insult",
-        "random_fact": HOST+"/api/fact",
-        "random_website": HOST+"/api/bored",
-        "quotes": HOST+"/api/quote"
+        "advice": HOST+"/api/personality/advice",
+        "affirmation": HOST+"/api/personality/affirmation",
+        "inspiration": HOST+"/api/personality/inspiration"
     },
     "root": HOST
 }
