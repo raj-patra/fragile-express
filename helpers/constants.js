@@ -28,12 +28,11 @@ module.exports.api_urls = {
     "random_website": "https://www.boredbutton.com/random"
 }
 
-module.exports.root = {
-    "message": "Welcome to the Fragile Express.",
+module.exports.api = {
+    "message": "List of available resources.",
     "resources": {
         "about": HOST+"/about",
         "api": {
-            "index": HOST+"/api",
             "insult": HOST+"/api/insult",
             "random_website": HOST+"/api/bored",
 
@@ -70,9 +69,10 @@ module.exports.root = {
     }
 }
 
-module.exports.api = {
-    "message": "List of available resources.",
+module.exports.root = {
+    "message": "Welcome to the Fragile Express.",
     "resources": {
+        "api": HOST+"/api",
         "random_insult": HOST+"/api/insult",
         "random_website": HOST+"/api/bored",
         "quotes": HOST+"/api/quote",
