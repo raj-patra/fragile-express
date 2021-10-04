@@ -37,6 +37,7 @@ module.exports.api_urls = {
 module.exports.api = {
     "message": "List of available resources.",
     "resources": {
+        "root": HOST, 
         "about": HOST+"/about",
         "api": {
             "insult": HOST+"/api/insult",
