@@ -59,6 +59,13 @@ module.exports.root = {
                 "date": HOST+"/api/fact/date",
                 "year": HOST+"/api/fact/year",
             },
+
+            "personalities": {
+                "index": HOST+"/api/personality",
+                "advice": HOST+"/api/personality/advice",
+                "affirmation": HOST+"/api/personality/affirmation",
+                "inspiration": HOST+"/api/personality/inspiration"
+            }
         }
     }
 }
@@ -67,10 +74,20 @@ module.exports.api = {
     "message": "List of available resources.",
     "resources": {
         "random_insult": HOST+"/api/insult",
-        "random_fact": HOST+"/api/fact",
         "random_website": HOST+"/api/bored",
         "quotes": HOST+"/api/quote",
-        "facts": HOST+"/api/fact"
+        "facts": HOST+"/api/fact",
+        "personalities": HOST+"/api/personality"
+    },
+    "root": HOST
+}
+
+module.exports.personalities = {
+    "message": "List of available resources.",
+    "resources": {
+        "advice": HOST+"/api/personality/advice",
+        "affirmation": HOST+"/api/personality/affirmation",
+        "inspiration": HOST+"/api/personality/inspiration"
     },
     "root": HOST
 }
