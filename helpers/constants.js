@@ -2,7 +2,7 @@ const HOST = process.env.HOST || "http://localhost"
 module.exports.host = HOST;
 
 module.exports.api_urls = {
-    "quote": {
+    "quotes": {
         "random": "https://api.quotable.io/random",
         "kanye": "https://api.kanye.rest/",
         "trump": "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
@@ -13,7 +13,7 @@ module.exports.api_urls = {
         "stoicism": "https://api.themotivate365.com/stoic-quote"
     },
 
-    "fact": {
+    "facts": {
         "random": "https://asli-fun-fact-api.herokuapp.com/",
         "useless": "https://uselessfacts.jsph.pl//random.json?language=en",
         "chuck_norris": "http://api.icndb.com/jokes/random",
@@ -23,7 +23,7 @@ module.exports.api_urls = {
         "year": "http://numbersapi.com/random/year",
     },
 
-    "personality": {
+    "personalities": {
         "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
         "advice": "https://api.adviceslip.com/advice",
         "affirmation": "https://www.affirmations.dev",
@@ -42,15 +42,15 @@ module.exports.api = {
             "random_website": HOST+"/api/bored",
 
             "quotes": {
-                "index": HOST+"/api/quote",
-                "random": HOST+"/api/quote/random",
-                "kanye_west": HOST+"/api/quote/kanye",
-                "donald_trump": HOST+"/api/quote/trump",
-                "superhero": HOST+"/api/quote/superhero",
-                "poems": HOST+"/api/quote/poems",
-                "anime": HOST+"/api/quote/anime",
-                "powerful": HOST+"/api/quote/powerful",
-                "stoicism": HOST+"/api/quote/stoicism"
+                "index": HOST+"/api/quotes",
+                "random": HOST+"/api/quotes/random",
+                "kanye_west": HOST+"/api/quotes/kanye",
+                "donald_trump": HOST+"/api/quotes/trump",
+                "superhero": HOST+"/api/quotes/superhero",
+                "poems": HOST+"/api/quotes/poems",
+                "anime": HOST+"/api/quotes/anime",
+                "powerful": HOST+"/api/quotes/powerful",
+                "stoicism": HOST+"/api/quotes/stoicism"
             },
 
             "facts": {
@@ -81,7 +81,7 @@ module.exports.root = {
     "resources": {
         "api": HOST+"/api",
         "random_website": HOST+"/api/bored",
-        "quotes": HOST+"/api/quote",
+        "quotes": HOST+"/api/quotes",
         "facts": HOST+"/api/fact",
         "personalities": HOST+"/api/personality"
     },
@@ -99,17 +99,17 @@ module.exports.personalities = {
     "root": HOST
 }
 
-module.exports.quote = {
+module.exports.quotes = {
     "message": "List of available resources.",
     "resources": {
-        "random": HOST+"/api/quote/random",
-        "kanye_west": HOST+"/api/quote/kanye",
-        "donald_trump": HOST+"/api/quote/trump",
-        "superhero": HOST+"/api/quote/superhero",
-        "poems": HOST+"/api/quote/poems",
-        "anime": HOST+"/api/quote/anime",
-        "powerful": HOST+"/api/quote/powerful",
-        "stoicism": HOST+"/api/quote/stoicism"
+        "random": HOST+"/api/quotes/random",
+        "kanye_west": HOST+"/api/quotes/kanye",
+        "donald_trump": HOST+"/api/quotes/trump",
+        "superhero": HOST+"/api/quotes/superhero",
+        "poems": HOST+"/api/quotes/poems",
+        "anime": HOST+"/api/quotes/anime",
+        "powerful": HOST+"/api/quotes/powerful",
+        "stoicism": HOST+"/api/quotes/stoicism"
     },
     "root": HOST
 }

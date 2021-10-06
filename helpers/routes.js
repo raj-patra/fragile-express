@@ -39,8 +39,6 @@ router.get('/alias', (req, res)=>{
         "data": randomChoice(constants.adjective)+'-'+randomChoice(constants.noun)})
 });
 
-router.get('/insult', (req, res)=> fetch_response(constants.api_urls.insult, res));
-
 router.get('/bored', (req, res)=> {
     
     axios.get(constants.api_urls.random_website)
@@ -58,7 +56,7 @@ router.get('/bored', (req, res)=> {
         .catch(error => res.send(error));
 });
 
-router.use("/quote", quote);
+router.use("/quotes", quote);
 router.use("/fact", fact);
 router.use("/personality", personality);
 
