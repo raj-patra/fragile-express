@@ -38,7 +38,6 @@ module.exports.api = {
     "resources": {
         "root": HOST, 
         "api": {
-            "insult": HOST+"/api/insult",
             "random_website": HOST+"/api/bored",
 
             "quotes": {
@@ -65,11 +64,11 @@ module.exports.api = {
             },
 
             "personalities": {
-                "index": HOST+"/api/personality",
-                "insult": HOST+"/api/personality/insult",
-                "advice": HOST+"/api/personality/advice",
-                "affirmation": HOST+"/api/personality/affirmation",
-                "inspiration": HOST+"/api/personality/inspiration"
+                "index": HOST+"/api/personalities",
+                "insult": HOST+"/api/personalities/insult",
+                "advice": HOST+"/api/personalities/advice",
+                "affirmation": HOST+"/api/personalities/affirmation",
+                "inspiration": HOST+"/api/personalities/inspiration"
             }
         }
     }
@@ -83,7 +82,7 @@ module.exports.root = {
         "random_website": HOST+"/api/bored",
         "quotes": HOST+"/api/quotes",
         "facts": HOST+"/api/facts",
-        "personalities": HOST+"/api/personality"
+        "personalities": HOST+"/api/personalities"
     },
     "root": HOST
 }
@@ -91,10 +90,10 @@ module.exports.root = {
 module.exports.personalities = {
     "message": "List of available resources.",
     "resources": {
-        "insult": HOST+"/api/personality/insult",
-        "advice": HOST+"/api/personality/advice",
-        "affirmation": HOST+"/api/personality/affirmation",
-        "inspiration": HOST+"/api/personality/inspiration"
+        "insult": HOST+"/api/personalities/insult",
+        "advice": HOST+"/api/personalities/advice",
+        "affirmation": HOST+"/api/personalities/affirmation",
+        "inspiration": HOST+"/api/personalities/inspiration"
     },
     "root": HOST
 }

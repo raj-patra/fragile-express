@@ -58,7 +58,7 @@ router.get('/bored', (req, res)=> {
 
 router.use("/quotes", quotes);
 router.use("/facts", facts);
-router.use("/personality", personalities);
+router.use("/personalities", personalities);
 
 
 module.exports = router;
