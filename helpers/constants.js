@@ -37,7 +37,6 @@ module.exports.api = {
     "message": "List of available resources.",
     "resources": {
         "root": HOST, 
-        "about": HOST+"/about",
         "api": {
             "insult": HOST+"/api/insult",
             "random_website": HOST+"/api/bored",
@@ -78,9 +77,9 @@ module.exports.api = {
 
 module.exports.root = {
     "message": "Welcome to the Fragile Express.",
+    "about": HOST+"/about",
     "resources": {
         "api": HOST+"/api",
-        "random_insult": HOST+"/api/insult",
         "random_website": HOST+"/api/bored",
         "quotes": HOST+"/api/quote",
         "facts": HOST+"/api/fact",
