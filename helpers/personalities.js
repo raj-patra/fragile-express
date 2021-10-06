@@ -27,6 +27,7 @@ router.get('/', (req, res)=>{
     res.status(200).send(constants.personalities)
 });
 
+router.get('/insult', (req, res)=> fetch_response(constants.api_urls.personality.insult, res));
 router.get('/advice', (req, res)=> fetch_response(constants.api_urls.personality.advice, res));
 router.get('/affirmation', (req, res)=> fetch_response(constants.api_urls.personality.affirmation, res));
 router.get('/inspiration', (req, res)=> fetch_response(constants.api_urls.personality.inspiration, res));

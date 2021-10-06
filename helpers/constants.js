@@ -26,6 +26,7 @@ module.exports.api_urls = {
     },
 
     "personality": {
+        "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
         "advice": "https://api.adviceslip.com/advice",
         "affirmation": "https://www.affirmations.dev",
         "inspiration": "https://inspiration.goprogram.ai/"
