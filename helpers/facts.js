@@ -24,15 +24,15 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.fact)
+    res.status(200).send(constants.facts)
 });
 
-router.get('/random', (req, res)=> fetch_response(constants.api_urls.fact.random, res));
-router.get('/useless', (req, res)=> fetch_response(constants.api_urls.fact.useless, res));
-router.get('/chuck_norris', (req, res)=> fetch_response(constants.api_urls.fact.chuck_norris, res));
-router.get('/trivia', (req, res)=> fetch_response(constants.api_urls.fact.trivia, res));
-router.get('/math', (req, res)=> fetch_response(constants.api_urls.fact.math, res));
-router.get('/date', (req, res)=> fetch_response(constants.api_urls.fact.date, res));
-router.get('/year', (req, res)=> fetch_response(constants.api_urls.fact.year, res));
+router.get('/random', (req, res)=> fetch_response(constants.api_urls.facts.random, res));
+router.get('/useless', (req, res)=> fetch_response(constants.api_urls.facts.useless, res));
+router.get('/chuck_norris', (req, res)=> fetch_response(constants.api_urls.facts.chuck_norris, res));
+router.get('/trivia', (req, res)=> fetch_response(constants.api_urls.facts.trivia, res));
+router.get('/math', (req, res)=> fetch_response(constants.api_urls.facts.math, res));
+router.get('/date', (req, res)=> fetch_response(constants.api_urls.facts.date, res));
+router.get('/year', (req, res)=> fetch_response(constants.api_urls.facts.year, res));
 
 module.exports = router;

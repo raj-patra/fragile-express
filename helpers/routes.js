@@ -4,9 +4,9 @@ const open = require("open");
 const router = express.Router();
 
 const constants = require('./constants');
-const quote = require('./quotes');
-const fact = require('./facts');
-const personality = require('./personalities');
+const quotes = require('./quotes');
+const facts = require('./facts');
+const personalities = require('./personalities');
 
 function fetch_response(url, res){
     (async () => {
@@ -56,9 +56,9 @@ router.get('/bored', (req, res)=> {
         .catch(error => res.send(error));
 });
 
-router.use("/quotes", quote);
-router.use("/fact", fact);
-router.use("/personality", personality);
+router.use("/quotes", quotes);
+router.use("/facts", facts);
+router.use("/personality", personalities);
 
 
 module.exports = router;

@@ -54,14 +54,14 @@ module.exports.api = {
             },
 
             "facts": {
-                "index": HOST+"/api/fact",
-                "random": HOST+"/api/fact/random",
-                "useless": HOST+"/api/fact/useless",
-                "chuck_norris": HOST+"/api/fact/chuck_norris",
-                "trivia": HOST+"/api/fact/trivia",
-                "math": HOST+"/api/fact/math",
-                "date": HOST+"/api/fact/date",
-                "year": HOST+"/api/fact/year",
+                "index": HOST+"/api/facts",
+                "random": HOST+"/api/facts/random",
+                "useless": HOST+"/api/facts/useless",
+                "chuck_norris": HOST+"/api/facts/chuck_norris",
+                "trivia": HOST+"/api/facts/trivia",
+                "math": HOST+"/api/facts/math",
+                "date": HOST+"/api/facts/date",
+                "year": HOST+"/api/facts/year",
             },
 
             "personalities": {
@@ -82,7 +82,7 @@ module.exports.root = {
         "api": HOST+"/api",
         "random_website": HOST+"/api/bored",
         "quotes": HOST+"/api/quotes",
-        "facts": HOST+"/api/fact",
+        "facts": HOST+"/api/facts",
         "personalities": HOST+"/api/personality"
     },
     "root": HOST
@@ -114,16 +114,16 @@ module.exports.quotes = {
     "root": HOST
 }
 
-module.exports.fact = {
+module.exports.facts = {
     "message": "List of available resources.",
     "resources": {
-        "random": HOST+"/api/fact/random",
-        "useless": HOST+"/api/fact/useless",
-        "chuck_norris": HOST+"/api/fact/chuck_norris",
-        "trivia": HOST+"/api/fact/trivia",
-        "math": HOST+"/api/fact/math",
-        "date": HOST+"/api/fact/date",
-        "year": HOST+"/api/fact/year",
+        "random": HOST+"/api/facts/random",
+        "useless": HOST+"/api/facts/useless",
+        "chuck_norris": HOST+"/api/facts/chuck_norris",
+        "trivia": HOST+"/api/facts/trivia",
+        "math": HOST+"/api/facts/math",
+        "date": HOST+"/api/facts/date",
+        "year": HOST+"/api/facts/year",
     },
     "root": HOST
 }
