@@ -2,8 +2,6 @@ const HOST = process.env.HOST || "http://localhost"
 module.exports.host = HOST;
 
 module.exports.api_urls = {
-    "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
-
     "quote": {
         "random": "https://api.quotable.io/random",
         "kanye": "https://api.kanye.rest/",
@@ -69,6 +67,7 @@ module.exports.api = {
 
             "personalities": {
                 "index": HOST+"/api/personality",
+                "insult": HOST+"/api/personality/insult",
                 "advice": HOST+"/api/personality/advice",
                 "affirmation": HOST+"/api/personality/affirmation",
                 "inspiration": HOST+"/api/personality/inspiration"
@@ -93,6 +92,7 @@ module.exports.root = {
 module.exports.personalities = {
     "message": "List of available resources.",
     "resources": {
+        "insult": HOST+"/api/personality/insult",
         "advice": HOST+"/api/personality/advice",
         "affirmation": HOST+"/api/personality/affirmation",
         "inspiration": HOST+"/api/personality/inspiration"
