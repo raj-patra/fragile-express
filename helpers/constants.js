@@ -93,7 +93,17 @@ module.exports.root = {
         "random_website": HOST+"/api/bored",
         "quotes": HOST+"/api/quotes",
         "facts": HOST+"/api/facts",
-        "personalities": HOST+"/api/personalities"
+        "personalities": HOST+"/api/personalities",
+        "games": HOST+"/api/games"
+    },
+    "root": HOST
+}
+
+module.exports.games = {
+    "message": "List of available resources.",
+    "resources": {
+        "pc": HOST+"/api/games/pc",
+        "browser": HOST+"/api/games/browser"
     },
     "root": HOST
 }
