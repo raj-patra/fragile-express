@@ -30,6 +30,11 @@ module.exports.api_urls = {
         "inspiration": "https://inspiration.goprogram.ai/"
     },
 
+    "games": {
+        "pc": "https://www.freetogame.com/api/games?platform=pc",
+        "browser": " https://www.freetogame.com/api/games?platform=browser"
+    },
+
     "random_website": "https://www.boredbutton.com/random"
 }
 
@@ -69,6 +74,12 @@ module.exports.api = {
                 "advice": HOST+"/api/personalities/advice",
                 "affirmation": HOST+"/api/personalities/affirmation",
                 "inspiration": HOST+"/api/personalities/inspiration"
+            },
+
+            "games": {
+                "index": HOST+"/api/games",
+                "pc": HOST+"/api/games/pc",
+                "browser": HOST+"/api/games/browser",
             }
         }
     }
