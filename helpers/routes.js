@@ -45,14 +45,7 @@ router.get('/bored', (req, res)=> {
     axios.get(constants.api_urls.random_website)
         .then(response => {
             var data = response.data.split(`iframe src="`)[1].split(`">`)[0].split(`" title="`)
-            res.status(200).send({"message": "Random website fetched.",
-                                    "data": {
-                                        "title": data[1],
-                                        "url": data[0]
-                                    },
-                                    "reference_api": constants.api_urls.random_website,
-                                    "root": constants.host})
-            open(data[0]);
+            res.redirect(data[0]);
         })
         .catch(error => res.send(error));
 });
