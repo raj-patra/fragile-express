@@ -152,7 +152,7 @@ module.exports.about = {
     "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
     "dev": {
         "message": "Made with ❤ by a_ignorant_mortal",
-        "repo": "https://github.com/raj-patra/fragile-express",
+        "repository": "https://github.com/raj-patra/fragile-express",
         "portfolio": "https://raj-patra.github.io/",
         "linktree": "https://linktr.ee/ign_mortal"
     },
