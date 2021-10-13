@@ -1,14 +1,8 @@
 const express = require("express");
 const axios = require("axios");
-const open = require("open");
 const router = express.Router();
 
 const constants = require('./constants');
-const quotes = require('./quotes');
-const facts = require('./facts');
-const personalities = require('./personalities');
-const games = require('./games');
-const random = require('./random');
 
 function fetch_response(url, res){
     (async () => {
@@ -30,15 +24,27 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.api)
+    res.status(200).send(constants.random)
 });
 
 
-router.use("/quotes", quotes);
-router.use("/facts", facts);
-router.use("/personalities", personalities);
-router.use("/games", games);
-router.use("/random", random);
+router.get('/alias', (req, res)=>{
+    function randomChoice(arr) {
+        return arr[Math.floor(arr.length * Math.random())];
+    }
+    res.status(200).send({"message": "Random alias generated.",
+        "data": randomChoice(constants.adjective)+'-'+randomChoice(constants.noun),
+        "root": constants.host})
+});
 
+router.get('/website', (req, res)=> {
+    
+    axios.get(constants.api_urls.random.website)
+        .then(response => {
+            var data = response.data.split(`iframe src="`)[1].split(`">`)[0].split(`" title="`)
+            res.redirect(data[0]);
+        })
+        .catch(error => res.send(error));
+});
 
 module.exports = router;
