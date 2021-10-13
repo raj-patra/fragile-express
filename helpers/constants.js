@@ -2,6 +2,10 @@ const HOST = process.env.HOST || "http://localhost"
 module.exports.host = HOST;
 
 module.exports.api_urls = {
+    "random": {
+        "website": "https://www.boredbutton.com/random"
+    },
+
     "quotes": {
         "random": "https://api.quotable.io/random",
         "kanye": "https://api.kanye.rest/",
@@ -35,7 +39,6 @@ module.exports.api_urls = {
         "browser": " https://www.freetogame.com/api/games?platform=browser"
     },
 
-    "random_website": "https://www.boredbutton.com/random"
 }
 
 module.exports.api = {
@@ -97,6 +100,15 @@ module.exports.root = {
         "facts": HOST+"/api/facts",
         "personalities": HOST+"/api/personalities",
         "games": HOST+"/api/games"
+    },
+    "root": HOST
+}
+
+module.exports.random = {
+    "message": "List of available resources.",
+    "resources": {
+        "alias": HOST+"/api/random/alias",
+        "website": HOST+"/api/random/website"
     },
     "root": HOST
 }
