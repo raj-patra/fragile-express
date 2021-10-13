@@ -46,8 +46,11 @@ module.exports.api = {
     "resources": {
         "root": HOST, 
         "api": {
-            "random_alias": HOST+"/api/alias",
-            "random_website": HOST+"/api/bored",
+            "random": {
+                "index": HOST+"/api/random/",
+                "alias": HOST+"/api/random/alias",
+                "website": HOST+"/api/random/website"
+            },
 
             "quotes": {
                 "index": HOST+"/api/quotes",
@@ -94,8 +97,7 @@ module.exports.root = {
     "about": HOST+"/about",
     "resources": {
         "api": HOST+"/api",
-        "random_alias": HOST+"/api/alias",
-        "random_website": HOST+"/api/bored",
+        "random": HOST+"/api/random",
         "quotes": HOST+"/api/quotes",
         "facts": HOST+"/api/facts",
         "personalities": HOST+"/api/personalities",
