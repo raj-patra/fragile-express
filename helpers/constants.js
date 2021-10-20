@@ -39,6 +39,12 @@ module.exports.api_urls = {
         "browser": " https://www.freetogame.com/api/games?platform=browser"
     },
 
+    "jokes": {
+        "chuck_norris": "https://api.chucknorris.io/jokes/random",
+        "dad": "https://icanhazdadjoke.com/",
+        "yo_mama": "https://yomomma-api.herokuapp.com/jokes"
+    }
+
 }
 
 module.exports.api = {
