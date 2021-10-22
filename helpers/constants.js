@@ -47,62 +47,14 @@ module.exports.api_urls = {
 
 }
 
-module.exports.api = {
-    "message": "List of available resources.",
-    "resources": {
-        "root": HOST, 
-        "api": {
-            "random": {
-                "index": HOST+"/api/random/",
-                "alias": HOST+"/api/random/alias",
-                "website": HOST+"/api/random/website"
-            },
-
-            "quotes": {
-                "index": HOST+"/api/quotes",
-                "random": HOST+"/api/quotes/random",
-                "kanye_west": HOST+"/api/quotes/kanye",
-                "donald_trump": HOST+"/api/quotes/trump",
-                "superhero": HOST+"/api/quotes/superhero",
-                "poems": HOST+"/api/quotes/poems",
-                "anime": HOST+"/api/quotes/anime",
-                "powerful": HOST+"/api/quotes/powerful",
-                "stoicism": HOST+"/api/quotes/stoicism"
-            },
-
-            "facts": {
-                "index": HOST+"/api/facts",
-                "random": HOST+"/api/facts/random",
-                "useless": HOST+"/api/facts/useless",
-                "chuck_norris": HOST+"/api/facts/chuck_norris",
-                "trivia": HOST+"/api/facts/trivia",
-                "math": HOST+"/api/facts/math",
-                "date": HOST+"/api/facts/date",
-                "year": HOST+"/api/facts/year",
-            },
-
-            "personalities": {
-                "index": HOST+"/api/personalities",
-                "insult": HOST+"/api/personalities/insult",
-                "advice": HOST+"/api/personalities/advice",
-                "affirmation": HOST+"/api/personalities/affirmation",
-                "inspiration": HOST+"/api/personalities/inspiration"
-            },
-
-            "games": {
-                "index": HOST+"/api/games",
-                "pc": HOST+"/api/games/pc",
-                "browser": HOST+"/api/games/browser",
-            }
-        }
-    }
-}
-
 module.exports.root = {
     "message": "Welcome to the Fragile Express.",
     "about": HOST+"/about",
+    "api": HOST+"/api"
+}
+
+module.exports.api = {
     "resources": {
-        "api": HOST+"/api",
         "random": HOST+"/api/random",
         "quotes": HOST+"/api/quotes",
         "facts": HOST+"/api/facts",
