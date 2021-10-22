@@ -30,7 +30,7 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.root)
+    res.status(200).send(constants.api)
 });
 
 
