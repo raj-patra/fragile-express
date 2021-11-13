@@ -30,6 +30,18 @@ router.get('/', (req, res)=>{
 router.get('/insult', (req, res)=> fetch_response(constants.api_urls.personalities.insult, res));
 router.get('/advice', (req, res)=> fetch_response(constants.api_urls.personalities.advice, res));
 router.get('/affirmation', (req, res)=> fetch_response(constants.api_urls.personalities.affirmation, res));
-router.get('/inspiration', (req, res)=> fetch_response(constants.api_urls.personalities.inspiration, res));
+router.get('/inspiration', (req, res)=> {
+    function randomChoice(arr) {
+        return arr[Math.floor(arr.length * Math.random())];
+    }
+    axios.get(constants.api_urls.personalities.inspiration)
+        .then(response => {
+            res.status(200).send({"message": "Data fetch successful.", 
+                                    "data": randomChoice(response.data), 
+                                    "reference_api": response.config.url,
+                                    "root": constants.host});
+        })
+        .catch(error => res.send(error));
+});
 
 module.exports = router;
