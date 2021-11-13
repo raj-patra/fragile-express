@@ -31,7 +31,7 @@ module.exports.api_urls = {
         "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
         "advice": "https://api.adviceslip.com/advice",
         "affirmation": "https://www.affirmations.dev",
-        "inspiration": "https://inspiration.goprogram.ai/"
+        "inspiration": "https://type.fit/api/quotes"
     },
 
     "games": {
