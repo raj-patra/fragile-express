@@ -9,6 +9,7 @@ const facts = require('./facts');
 const personalities = require('./personalities');
 const games = require('./games');
 const random = require('./random');
+const jokes = require('./jokes');
 
 function fetch_response(url, res){
     (async () => {
@@ -39,6 +40,7 @@ router.use("/facts", facts);
 router.use("/personalities", personalities);
 router.use("/games", games);
 router.use("/random", random);
+router.use("/jokes", jokes);
 
 
 module.exports = router;
