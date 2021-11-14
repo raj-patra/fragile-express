@@ -24,7 +24,7 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.facts)
+    res.status(200).send(constants.jokes)
 });
 
 router.get('/chuck_norris', (req, res)=> fetch_response(constants.api_urls.jokes.chuck_norris, res));
