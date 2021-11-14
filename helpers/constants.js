@@ -65,6 +65,16 @@ module.exports.api = {
     "root": HOST
 }
 
+module.exports.jokes = {
+    "message": "List of available resources.",
+    "resources": {
+        "chuck_norris": HOST+"/api/jokes/chuck_norris",
+        "dad": HOST+"/api/jokes/dad",
+        "yo_mama": HOST+"/api/jokes/yo_mama",
+    },
+    "root": HOST
+}
+
 module.exports.random = {
     "message": "List of available resources.",
     "resources": {
