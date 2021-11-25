@@ -80,7 +80,8 @@ module.exports.random = {
     "message": "List of available resources.",
     "resources": {
         "alias": HOST+"/api/random/alias",
-        "website": HOST+"/api/random/website"
+        "website": HOST+"/api/random/website",
+        "human": HOST+"/api/random/human"
     },
     "root": HOST
 }
