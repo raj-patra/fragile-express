@@ -19,13 +19,16 @@ router.get('/alias', (req, res)=>{
 });
 
 router.get('/website', (req, res)=> {
-    
     axios.get(constants.api_urls.random.website)
         .then(response => {
             var data = response.data.split(`iframe src="`)[1].split(`">`)[0].split(`" title="`)
             res.redirect(data[0]);
         })
         .catch(error => res.send(error));
+});
+
+router.get('/human', (req, res)=> {
+    res.redirect(constants.api_urls.random.human);
 });
 
 module.exports = router;
