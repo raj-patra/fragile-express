@@ -3,7 +3,8 @@ module.exports.host = HOST;
 
 module.exports.api_urls = {
     "random": {
-        "website": "https://www.boredbutton.com/random"
+        "website": "https://www.boredbutton.com/random",
+        "human": "https://thispersondoesnotexist.com/image"
     },
 
     "quotes": {
