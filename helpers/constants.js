@@ -47,7 +47,8 @@ module.exports.api_urls = {
     },
 
     "meme":{
-        "reddit": "https://meme-api.herokuapp.com/gimme"
+        "reddit": "https://meme-api.herokuapp.com/gimme",
+        "random": "https://inspirobot.me/api?generate=true"
     }
 
 }
