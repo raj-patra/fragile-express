@@ -47,8 +47,8 @@ module.exports.api_urls = {
     },
 
     "meme":{
-        "reddit": "https://meme-api.herokuapp.com/gimme",
         "random": "https://inspirobot.me/api?generate=true",
+        "reddit": "https://meme-api.herokuapp.com/gimme",
         "namo": "https://namo-memes.herokuapp.com/memes/1"
     }
 
@@ -68,6 +68,16 @@ module.exports.api = {
         "personalities": HOST+"/api/personalities",
         "games": HOST+"/api/games",
         "jokes": HOST+"/api/jokes"
+    },
+    "root": HOST
+}
+
+module.exports.memes = {
+    "message": "List of available resources.",
+    "resources": {
+        "random": HOST+"/api/meme/random",
+        "reddit": HOST+"/api/meme/reddit",
+        "namo": HOST+"/api/meme/namo",
     },
     "root": HOST
 }
