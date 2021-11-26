@@ -44,6 +44,10 @@ module.exports.api_urls = {
         "chuck_norris": "https://api.chucknorris.io/jokes/random",
         "dad": "https://icanhazdadjoke.com/",
         "yo_mama": "https://yomomma-api.herokuapp.com/jokes"
+    },
+
+    "meme":{
+        "reddit": "https://meme-api.herokuapp.com/gimme"
     }
 
 }
