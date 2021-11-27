@@ -27,6 +27,8 @@ router.get('/', (req, res)=>{
     res.status(200).send(constants.memes)
 });
 
-
+router.get('/random', (req, res)=> fetch_response(constants.api_urls.memes.random, res));
+router.get('/reddit', (req, res)=> fetch_response(constants.api_urls.memes.reddit, res));
+router.get('/namo', (req, res)=> fetch_response(constants.api_urls.memes.namo, res));
 
 module.exports = router;

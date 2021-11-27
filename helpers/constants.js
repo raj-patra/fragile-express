@@ -67,7 +67,8 @@ module.exports.api = {
         "facts": HOST+"/api/facts",
         "personalities": HOST+"/api/personalities",
         "games": HOST+"/api/games",
-        "jokes": HOST+"/api/jokes"
+        "jokes": HOST+"/api/jokes",
+        "memes": HOST+"/api/memes"
     },
     "root": HOST
 }
