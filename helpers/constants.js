@@ -46,7 +46,7 @@ module.exports.api_urls = {
         "yo_mama": "https://yomomma-api.herokuapp.com/jokes"
     },
 
-    "meme":{
+    "memes":{
         "random": "https://inspirobot.me/api?generate=true",
         "reddit": "https://meme-api.herokuapp.com/gimme",
         "namo": "https://namo-memes.herokuapp.com/memes/1"
@@ -75,9 +75,9 @@ module.exports.api = {
 module.exports.memes = {
     "message": "List of available resources.",
     "resources": {
-        "random": HOST+"/api/meme/random",
-        "reddit": HOST+"/api/meme/reddit",
-        "namo": HOST+"/api/meme/namo",
+        "random": HOST+"/api/memes/random",
+        "reddit": HOST+"/api/memes/reddit",
+        "namo": HOST+"/api/memes/namo",
     },
     "root": HOST
 }
