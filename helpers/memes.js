@@ -1,16 +1,8 @@
 const express = require("express");
 const axios = require("axios");
-const open = require("open");
 const router = express.Router();
 
 const constants = require('./constants');
-const quotes = require('./quotes');
-const facts = require('./facts');
-const personalities = require('./personalities');
-const games = require('./games');
-const random = require('./random');
-const jokes = require('./jokes');
-const memes = require('./memes');
 
 function fetch_response(url, res){
     (async () => {
@@ -32,17 +24,11 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.api)
+    res.status(200).send(constants.memes)
 });
 
-
-router.use("/quotes", quotes);
-router.use("/facts", facts);
-router.use("/personalities", personalities);
-router.use("/games", games);
-router.use("/random", random);
-router.use("/jokes", jokes);
-router.use("/memes", memes);
-
+router.get('/random', (req, res)=> fetch_response(constants.api_urls.memes.random, res));
+router.get('/reddit', (req, res)=> fetch_response(constants.api_urls.memes.reddit, res));
+router.get('/namo', (req, res)=> fetch_response(constants.api_urls.memes.namo, res));
 
 module.exports = router;
