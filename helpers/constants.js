@@ -80,6 +80,7 @@ module.exports.memes = {
         "random": HOST+"/api/memes/random",
         "reddit": HOST+"/api/memes/reddit",
         "namo": HOST+"/api/memes/namo",
+        "templates": HOST+"/api/memes/templates"
     },
     "root": HOST
 }
