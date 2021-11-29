@@ -42,8 +42,8 @@ module.exports.api_urls = {
 
     "jokes": {
         "chuck_norris": "https://api.chucknorris.io/jokes/random",
-        "dad": "https://icanhazdadjoke.com/",
-        "yo_mama": "https://yomomma-api.herokuapp.com/jokes"
+        "yo_mama": "https://yomomma-api.herokuapp.com/jokes",
+        "dad": "https://icanhazdadjoke.com/"
     },
 
     "memes":{
