@@ -4,7 +4,8 @@ module.exports.host = HOST;
 module.exports.api_urls = {
     "random": {
         "website": "https://www.boredbutton.com/random",
-        "human": "https://thispersondoesnotexist.com/image"
+        "human": "https://thispersondoesnotexist.com/image",
+        "activity": "http://www.boredapi.com/api/activity"
     },
 
     "quotes": {
