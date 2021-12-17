@@ -101,7 +101,8 @@ module.exports.random = {
     "resources": {
         "alias": HOST+"/api/random/alias",
         "website": HOST+"/api/random/website",
-        "human": HOST+"/api/random/human"
+        "human": HOST+"/api/random/human",
+        "activity": HOST+"/api/random/activity",
     },
     "root": HOST
 }
