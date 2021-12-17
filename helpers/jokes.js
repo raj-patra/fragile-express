@@ -12,10 +12,18 @@ function fetch_response(url, res){
                 headers: headers
                 })
                     .then(data => {
-                        res.status(200).send({"message": "Data fetch successful.", 
-                                                "data": data.data, 
-                                                "reference_api": data.config.url,
-                                                "root": constants.host})
+                        if (data.status == 200){
+                            res.status(200).send({"message": "Data fetch successful.", 
+                                                    "data": data.data, 
+                                                    "reference_api": data.config.url,
+                                                    "root": constants.host})
+                        }
+                        else{
+                            res.status(data.status).send({"message": "Data fetch unsuccessful.", 
+                                                    "data": null, 
+                                                    "reference_api": data.config.url,
+                                                    "root": constants.host})
+                        }
                     })
                     .catch(error => res.send(error))
                     .next;

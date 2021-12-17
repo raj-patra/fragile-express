@@ -4,7 +4,8 @@ module.exports.host = HOST;
 module.exports.api_urls = {
     "random": {
         "website": "https://www.boredbutton.com/random",
-        "human": "https://thispersondoesnotexist.com/image"
+        "human": "https://thispersondoesnotexist.com/image",
+        "activity": "http://www.boredapi.com/api/activity"
     },
 
     "quotes": {
@@ -100,7 +101,8 @@ module.exports.random = {
     "resources": {
         "alias": HOST+"/api/random/alias",
         "website": HOST+"/api/random/website",
-        "human": HOST+"/api/random/human"
+        "human": HOST+"/api/random/human",
+        "activity": HOST+"/api/random/activity",
     },
     "root": HOST
 }
