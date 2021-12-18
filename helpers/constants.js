@@ -153,6 +153,7 @@ module.exports.facts = {
         "math": HOST+"/api/facts/math",
         "date": HOST+"/api/facts/date",
         "year": HOST+"/api/facts/year",
+        "cat": HOST+"/api/facts/cat"
     },
     "root": HOST
 }
