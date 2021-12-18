@@ -34,5 +34,6 @@ router.get('/trivia', (req, res)=> fetch_response(constants.api_urls.facts.trivi
 router.get('/math', (req, res)=> fetch_response(constants.api_urls.facts.math, res));
 router.get('/date', (req, res)=> fetch_response(constants.api_urls.facts.date, res));
 router.get('/year', (req, res)=> fetch_response(constants.api_urls.facts.year, res));
+router.get('/cat', (req, res)=> fetch_response(constants.api_urls.facts.cat, res));
 
 module.exports = router;
