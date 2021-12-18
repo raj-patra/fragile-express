@@ -27,6 +27,7 @@ module.exports.api_urls = {
         "math": "http://numbersapi.com/random/math",
         "date": "http://numbersapi.com/random/date",
         "year": "http://numbersapi.com/random/year",
+        "cat": "https://meowfacts.herokuapp.com/"
     },
 
     "personalities": {
