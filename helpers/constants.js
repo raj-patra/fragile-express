@@ -7,6 +7,7 @@ module.exports.api_urls = {
         "human": "https://thispersondoesnotexist.com/image",
         "activity": "http://www.boredapi.com/api/activity",
         "yes_gif": "https://yesno.wtf/api?force=yes",
+        "no_gif": "https://yesno.wtf/api?force=no",
     },
 
     "quotes": {
@@ -108,6 +109,7 @@ module.exports.random = {
         "human": HOST+"/api/random/human",
         "activity": HOST+"/api/random/activity",
         "yes_gif": HOST+"/api/random/yes_gif",
+        "no_gif": HOST+"/api/random/no_gif",
     },
     "root": HOST
 }
