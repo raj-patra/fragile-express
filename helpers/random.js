@@ -61,5 +61,6 @@ router.get('/human', (req, res)=> {
 });
 
 router.get('/activity', (req, res)=> fetch_response(constants.api_urls.random.activity, res));
+router.get('/yes_gif', (req, res)=> fetch_response(constants.api_urls.random.yes_gif, res));
 
 module.exports = router;
