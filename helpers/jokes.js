@@ -38,6 +38,7 @@ router.get('/', (req, res)=>{
     res.status(200).send(constants.jokes)
 });
 
+router.get('/random', (req, res)=> fetch_response(constants.api_urls.jokes.random, res));
 router.get('/chuck_norris', (req, res)=> fetch_response(constants.api_urls.jokes.chuck_norris, res));
 router.get('/dad', (req, res)=> fetch_response(constants.api_urls.jokes.dad, res));
 router.get('/yo_mama', (req, res)=> fetch_response(constants.api_urls.jokes.yo_mama, res));

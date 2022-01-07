@@ -43,6 +43,7 @@ module.exports.api_urls = {
     },
 
     "jokes": {
+        "random": "https://sv443.net/jokeapi/v2/joke/Any",
         "chuck_norris": "https://api.chucknorris.io/jokes/random",
         "yo_mama": "https://yomomma-api.herokuapp.com/jokes",
         "dad": "https://icanhazdadjoke.com/"
@@ -90,6 +91,7 @@ module.exports.memes = {
 module.exports.jokes = {
     "message": "List of available resources.",
     "resources": {
+        "random": HOST+"/api/jokes/random",
         "chuck_norris": HOST+"/api/jokes/chuck_norris",
         "dad": HOST+"/api/jokes/dad",
         "yo_mama": HOST+"/api/jokes/yo_mama",
