@@ -6,8 +6,8 @@ module.exports.api_urls = {
         "website": "https://www.boredbutton.com/random",
         "human": "https://thispersondoesnotexist.com/image",
         "activity": "http://www.boredapi.com/api/activity",
-        "yes_gif": "https://yesno.wtf/api?force=yes",
-        "no_gif": "https://yesno.wtf/api?force=no",
+        "yes": "https://yesno.wtf/api?force=yes",
+        "no": "https://yesno.wtf/api?force=no",
     },
 
     "quotes": {
@@ -108,8 +108,8 @@ module.exports.random = {
         "website": HOST+"/api/random/website",
         "human": HOST+"/api/random/human",
         "activity": HOST+"/api/random/activity",
-        "yes_gif": HOST+"/api/random/yes_gif",
-        "no_gif": HOST+"/api/random/no_gif",
+        "yes": HOST+"/api/random/yes",
+        "no": HOST+"/api/random/no",
     },
     "root": HOST
 }

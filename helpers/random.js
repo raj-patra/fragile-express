@@ -61,7 +61,7 @@ router.get('/human', (req, res)=> {
 });
 
 router.get('/activity', (req, res)=> fetch_response(constants.api_urls.random.activity, res));
-router.get('/yes_gif', (req, res)=> fetch_response(constants.api_urls.random.yes_gif, res));
-router.get('/no_gif', (req, res)=> fetch_response(constants.api_urls.random.no_gif, res));
+router.get('/yes', (req, res)=> fetch_response(constants.api_urls.random.yes, res));
+router.get('/no', (req, res)=> fetch_response(constants.api_urls.random.no, res));
 
 module.exports = router;
