@@ -5,7 +5,9 @@ module.exports.api_urls = {
     "random": {
         "website": "https://www.boredbutton.com/random",
         "human": "https://thispersondoesnotexist.com/image",
-        "activity": "http://www.boredapi.com/api/activity"
+        "activity": "http://www.boredapi.com/api/activity",
+        "yes": "https://yesno.wtf/api?force=yes",
+        "no": "https://yesno.wtf/api?force=no",
     },
 
     "quotes": {
@@ -43,6 +45,7 @@ module.exports.api_urls = {
     },
 
     "jokes": {
+        "random": "https://sv443.net/jokeapi/v2/joke/Any",
         "chuck_norris": "https://api.chucknorris.io/jokes/random",
         "yo_mama": "https://yomomma-api.herokuapp.com/jokes",
         "dad": "https://icanhazdadjoke.com/"
@@ -90,6 +93,7 @@ module.exports.memes = {
 module.exports.jokes = {
     "message": "List of available resources.",
     "resources": {
+        "random": HOST+"/api/jokes/random",
         "chuck_norris": HOST+"/api/jokes/chuck_norris",
         "dad": HOST+"/api/jokes/dad",
         "yo_mama": HOST+"/api/jokes/yo_mama",
@@ -104,6 +108,8 @@ module.exports.random = {
         "website": HOST+"/api/random/website",
         "human": HOST+"/api/random/human",
         "activity": HOST+"/api/random/activity",
+        "yes": HOST+"/api/random/yes",
+        "no": HOST+"/api/random/no",
     },
     "root": HOST
 }
