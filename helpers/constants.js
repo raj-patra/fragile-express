@@ -145,7 +145,8 @@ module.exports.quotes = {
         "poems": HOST+"/api/quotes/poems",
         "anime": HOST+"/api/quotes/anime",
         "powerful": HOST+"/api/quotes/powerful",
-        "stoicism": HOST+"/api/quotes/stoicism"
+        "stoicism": HOST+"/api/quotes/stoicism",
+        "game_of_thrones": HOST+"/api/quotes/got",
     },
     "root": HOST
 }
