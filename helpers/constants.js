@@ -18,7 +18,8 @@ module.exports.api_urls = {
         "poems": "https://www.poemist.com/api/v1/randompoems",
         "anime": "https://animechan.vercel.app/api/random",
         "powerful": "https://api.fisenko.net/v1/quotes/en/random",
-        "stoicism": "https://api.themotivate365.com/stoic-quote"
+        "stoicism": "https://api.themotivate365.com/stoic-quote",
+        "game_of_thrones": "https://game-of-thrones-quotes.herokuapp.com/v1/random",
     },
 
     "facts": {
@@ -144,7 +145,8 @@ module.exports.quotes = {
         "poems": HOST+"/api/quotes/poems",
         "anime": HOST+"/api/quotes/anime",
         "powerful": HOST+"/api/quotes/powerful",
-        "stoicism": HOST+"/api/quotes/stoicism"
+        "stoicism": HOST+"/api/quotes/stoicism",
+        "game_of_thrones": HOST+"/api/quotes/got",
     },
     "root": HOST
 }
