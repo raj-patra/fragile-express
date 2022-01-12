@@ -61,10 +61,12 @@ module.exports.api_urls = {
 
 }
 
-module.exports.root = {
-    "message": "Welcome to the Fragile Express.",
-    "about": HOST+"/about",
-    "api": HOST+"/api"
+module.exports = {
+    root: {
+        "message": "Welcome to the Fragile Express.",
+        "about": HOST+"/about",
+        "api": HOST+"/api"
+    }
 }
 
 module.exports.api = {
