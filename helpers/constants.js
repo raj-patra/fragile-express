@@ -72,23 +72,23 @@ module.exports = {
         api: HOST+"/api"
     },
     about: {
-        "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
-        "dev": {
-            "message": "Made with ❤ by a_ignorant_mortal",
-            "repository": "https://github.com/raj-patra/fragile-express",
-            "portfolio": "https://raj-patra.github.io/",
-            "linktree": "https://linktr.ee/ign_mortal"
+        message: "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
+        dev: {
+            message: "Made with ❤ by a_ignorant_mortal",
+            repository: "https://github.com/raj-patra/fragile-express",
+            portfolio: "https://raj-patra.github.io/",
+            linktree: "https://linktr.ee/ign_mortal"
         }
     },
     api: {
         resources: {
-            "random": HOST+"/api/random",
-            "quotes": HOST+"/api/quotes",
-            "facts": HOST+"/api/facts",
-            "personalities": HOST+"/api/personalities",
-            "games": HOST+"/api/games",
-            "jokes": HOST+"/api/jokes",
-            "memes": HOST+"/api/memes"
+            random: HOST+"/api/random",
+            quotes: HOST+"/api/quotes",
+            facts: HOST+"/api/facts",
+            personalities: HOST+"/api/personalities",
+            games: HOST+"/api/games",
+            jokes: HOST+"/api/jokes",
+            memes: HOST+"/api/memes"
         }
     }
 }
