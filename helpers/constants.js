@@ -62,24 +62,35 @@ module.exports.api_urls = {
 }
 
 module.exports = {
-    root: {
-        "message": "Welcome to the Fragile Express.",
-        "about": HOST+"/about",
-        "api": HOST+"/api"
-    }
-}
-
-module.exports.api = {
-    "resources": {
-        "random": HOST+"/api/random",
-        "quotes": HOST+"/api/quotes",
-        "facts": HOST+"/api/facts",
-        "personalities": HOST+"/api/personalities",
-        "games": HOST+"/api/games",
-        "jokes": HOST+"/api/jokes",
-        "memes": HOST+"/api/memes"
+    index: {
+        message: "List of available resources.",
+        root: HOST
     },
-    "index": HOST
+    root: {
+        message: "Welcome to the Fragile Express.",
+        about: HOST+"/about",
+        api: HOST+"/api"
+    },
+    about: {
+        "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
+        "dev": {
+            "message": "Made with ❤ by a_ignorant_mortal",
+            "repository": "https://github.com/raj-patra/fragile-express",
+            "portfolio": "https://raj-patra.github.io/",
+            "linktree": "https://linktr.ee/ign_mortal"
+        }
+    },
+    api: {
+        resources: {
+            "random": HOST+"/api/random",
+            "quotes": HOST+"/api/quotes",
+            "facts": HOST+"/api/facts",
+            "personalities": HOST+"/api/personalities",
+            "games": HOST+"/api/games",
+            "jokes": HOST+"/api/jokes",
+            "memes": HOST+"/api/memes"
+        }
+    }
 }
 
 module.exports.memes = {
@@ -168,16 +179,16 @@ module.exports.facts = {
     "index": HOST
 }
 
-module.exports.about = {
-    "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
-    "dev": {
-        "message": "Made with ❤ by a_ignorant_mortal",
-        "repository": "https://github.com/raj-patra/fragile-express",
-        "portfolio": "https://raj-patra.github.io/",
-        "linktree": "https://linktr.ee/ign_mortal"
-    },
-    "index": HOST
-}
+// module.exports.about = {
+//     "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
+//     "dev": {
+//         "message": "Made with ❤ by a_ignorant_mortal",
+//         "repository": "https://github.com/raj-patra/fragile-express",
+//         "portfolio": "https://raj-patra.github.io/",
+//         "linktree": "https://linktr.ee/ign_mortal"
+//     },
+//     "index": HOST
+// }
 
 module.exports.noun = [
     'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
