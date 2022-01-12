@@ -61,23 +61,36 @@ module.exports.api_urls = {
 
 }
 
-module.exports.root = {
-    "message": "Welcome to the Fragile Express.",
-    "about": HOST+"/about",
-    "api": HOST+"/api"
-}
-
-module.exports.api = {
-    "resources": {
-        "random": HOST+"/api/random",
-        "quotes": HOST+"/api/quotes",
-        "facts": HOST+"/api/facts",
-        "personalities": HOST+"/api/personalities",
-        "games": HOST+"/api/games",
-        "jokes": HOST+"/api/jokes",
-        "memes": HOST+"/api/memes"
+module.exports = {
+    index: {
+        message: "List of available resources.",
+        root: HOST
     },
-    "root": HOST
+    root: {
+        message: "Welcome to the Fragile Express.",
+        about: HOST+"/about",
+        api: HOST+"/api"
+    },
+    about: {
+        message: "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
+        dev: {
+            message: "Made with ❤ by a_ignorant_mortal",
+            repository: "https://github.com/raj-patra/fragile-express",
+            portfolio: "https://raj-patra.github.io/",
+            linktree: "https://linktr.ee/ign_mortal"
+        }
+    },
+    api: {
+        resources: {
+            random: HOST+"/api/random",
+            quotes: HOST+"/api/quotes",
+            facts: HOST+"/api/facts",
+            personalities: HOST+"/api/personalities",
+            games: HOST+"/api/games",
+            jokes: HOST+"/api/jokes",
+            memes: HOST+"/api/memes"
+        }
+    }
 }
 
 module.exports.memes = {
@@ -88,7 +101,7 @@ module.exports.memes = {
         "namo": HOST+"/api/memes/namo",
         "templates": HOST+"/api/memes/templates"
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.jokes = {
@@ -99,7 +112,7 @@ module.exports.jokes = {
         "dad": HOST+"/api/jokes/dad",
         "yo_mama": HOST+"/api/jokes/yo_mama",
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.random = {
@@ -112,7 +125,7 @@ module.exports.random = {
         "yes": HOST+"/api/random/yes",
         "no": HOST+"/api/random/no",
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.games = {
@@ -121,7 +134,7 @@ module.exports.games = {
         "pc": HOST+"/api/games/pc",
         "browser": HOST+"/api/games/browser"
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.personalities = {
@@ -132,7 +145,7 @@ module.exports.personalities = {
         "affirmation": HOST+"/api/personalities/affirmation",
         "inspiration": HOST+"/api/personalities/inspiration"
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.quotes = {
@@ -148,7 +161,7 @@ module.exports.quotes = {
         "stoicism": HOST+"/api/quotes/stoicism",
         "game_of_thrones": HOST+"/api/quotes/got",
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.facts = {
@@ -163,19 +176,19 @@ module.exports.facts = {
         "year": HOST+"/api/facts/year",
         "cat": HOST+"/api/facts/cat"
     },
-    "root": HOST
+    "index": HOST
 }
 
-module.exports.about = {
-    "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
-    "dev": {
-        "message": "Made with ❤ by a_ignorant_mortal",
-        "repository": "https://github.com/raj-patra/fragile-express",
-        "portfolio": "https://raj-patra.github.io/",
-        "linktree": "https://linktr.ee/ign_mortal"
-    },
-    "root": HOST
-}
+// module.exports.about = {
+//     "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
+//     "dev": {
+//         "message": "Made with ❤ by a_ignorant_mortal",
+//         "repository": "https://github.com/raj-patra/fragile-express",
+//         "portfolio": "https://raj-patra.github.io/",
+//         "linktree": "https://linktr.ee/ign_mortal"
+//     },
+//     "index": HOST
+// }
 
 module.exports.noun = [
     'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
