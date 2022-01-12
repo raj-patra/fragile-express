@@ -77,7 +77,7 @@ module.exports.api = {
         "jokes": HOST+"/api/jokes",
         "memes": HOST+"/api/memes"
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.memes = {
@@ -88,7 +88,7 @@ module.exports.memes = {
         "namo": HOST+"/api/memes/namo",
         "templates": HOST+"/api/memes/templates"
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.jokes = {
@@ -99,7 +99,7 @@ module.exports.jokes = {
         "dad": HOST+"/api/jokes/dad",
         "yo_mama": HOST+"/api/jokes/yo_mama",
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.random = {
@@ -112,7 +112,7 @@ module.exports.random = {
         "yes": HOST+"/api/random/yes",
         "no": HOST+"/api/random/no",
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.games = {
@@ -121,7 +121,7 @@ module.exports.games = {
         "pc": HOST+"/api/games/pc",
         "browser": HOST+"/api/games/browser"
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.personalities = {
@@ -132,7 +132,7 @@ module.exports.personalities = {
         "affirmation": HOST+"/api/personalities/affirmation",
         "inspiration": HOST+"/api/personalities/inspiration"
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.quotes = {
@@ -148,7 +148,7 @@ module.exports.quotes = {
         "stoicism": HOST+"/api/quotes/stoicism",
         "game_of_thrones": HOST+"/api/quotes/got",
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.facts = {
@@ -163,7 +163,7 @@ module.exports.facts = {
         "year": HOST+"/api/facts/year",
         "cat": HOST+"/api/facts/cat"
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.about = {
@@ -174,7 +174,7 @@ module.exports.about = {
         "portfolio": "https://raj-patra.github.io/",
         "linktree": "https://linktr.ee/ign_mortal"
     },
-    "root": HOST
+    "index": HOST
 }
 
 module.exports.noun = [
