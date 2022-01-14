@@ -1,67 +1,79 @@
 const HOST = process.env.HOST || "http://localhost"
-module.exports.host = HOST;
+const _ = require('lodash');
 
-module.exports.api_urls = {
-    "random": {
-        "website": "https://www.boredbutton.com/random",
-        "human": "https://thispersondoesnotexist.com/image",
-        "activity": "http://www.boredapi.com/api/activity",
-        "yes": "https://yesno.wtf/api?force=yes",
-        "no": "https://yesno.wtf/api?force=no",
+const api_urls = {
+    random: {
+        website: "https://www.boredbutton.com/random",
+        human: "https://thispersondoesnotexist.com/image",
+        activity: "http://www.boredapi.com/api/activity",
+        yes: "https://yesno.wtf/api?force=yes",
+        no: "https://yesno.wtf/api?force=no",
     },
 
-    "quotes": {
-        "random": "https://api.quotable.io/random",
-        "kanye": "https://api.kanye.rest/",
-        "trump": "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
-        "superhero": "https://superhero-quotes.herokuapp.com/random",
-        "poems": "https://www.poemist.com/api/v1/randompoems",
-        "anime": "https://animechan.vercel.app/api/random",
-        "powerful": "https://api.fisenko.net/v1/quotes/en/random",
-        "stoicism": "https://api.themotivate365.com/stoic-quote",
-        "game_of_thrones": "https://game-of-thrones-quotes.herokuapp.com/v1/random",
+    quotes: {
+        random: "https://api.quotable.io/random",
+        kanye: "https://api.kanye.rest/",
+        trump: "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
+        superhero: "https://superhero-quotes.herokuapp.com/random",
+        poems: "https://www.poemist.com/api/v1/randompoems",
+        anime: "https://animechan.vercel.app/api/random",
+        powerful: "https://api.fisenko.net/v1/quotes/en/random",
+        stoicism: "https://api.themotivate365.com/stoic-quote",
+        game_of_thrones: "https://game-of-thrones-quotes.herokuapp.com/v1/random",
     },
 
-    "facts": {
-        "random": "https://asli-fun-fact-api.herokuapp.com/",
-        "useless": "https://uselessfacts.jsph.pl//random.json?language=en",
-        "chuck_norris": "http://api.icndb.com/jokes/random",
-        "trivia": "http://numbersapi.com/random/trivia",
-        "math": "http://numbersapi.com/random/math",
-        "date": "http://numbersapi.com/random/date",
-        "year": "http://numbersapi.com/random/year",
-        "cat": "https://meowfacts.herokuapp.com/"
+    facts: {
+        random: "https://asli-fun-fact-api.herokuapp.com/",
+        useless: "https://uselessfacts.jsph.pl//random.json?language=en",
+        chuck_norris: "http://api.icndb.com/jokes/random",
+        trivia: "http://numbersapi.com/random/trivia",
+        math: "http://numbersapi.com/random/math",
+        date: "http://numbersapi.com/random/date",
+        year: "http://numbersapi.com/random/year",
+        cat: "https://meowfacts.herokuapp.com/"
     },
 
-    "personalities": {
-        "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
-        "advice": "https://api.adviceslip.com/advice",
-        "affirmation": "https://www.affirmations.dev",
-        "inspiration": "https://type.fit/api/quotes"
+    personalities: {
+        insult: "https://evilinsult.com/generate_insult.php?lang=en&type=json",
+        advice: "https://api.adviceslip.com/advice",
+        affirmation: "https://www.affirmations.dev",
+        inspiration: "https://type.fit/api/quotes"
     },
 
-    "games": {
-        "pc": "https://www.freetogame.com/api/games?platform=pc",
-        "browser": " https://www.freetogame.com/api/games?platform=browser"
+    games: {
+        pc: "https://www.freetogame.com/api/games?platform=pc",
+        browser: " https://www.freetogame.com/api/games?platform=browser"
     },
 
-    "jokes": {
-        "random": "https://sv443.net/jokeapi/v2/joke/Any",
-        "chuck_norris": "https://api.chucknorris.io/jokes/random",
+    jokes: {
+        random: "https://sv443.net/jokeapi/v2/joke/Any",
+        chuck_norris: "https://api.chucknorris.io/jokes/random",
         "yo_mama": "https://yomomma-api.herokuapp.com/jokes",
         "dad": "https://icanhazdadjoke.com/"
     },
 
-    "memes":{
-        "random": "https://inspirobot.me/api?generate=true",
-        "reddit": "https://meme-api.herokuapp.com/gimme",
-        "templates": "https://api.imgflip.com/get_memes",
-        "namo": "https://namo-memes.herokuapp.com/memes/1"
+    memes:{
+        random: "https://inspirobot.me/api?generate=true",
+        reddit: "https://meme-api.herokuapp.com/gimme",
+        templates: "https://api.imgflip.com/get_memes",
+        namo: "https://namo-memes.herokuapp.com/memes/1"
     }
 
 }
 
+const indexing = (obj, route) => {
+    let keys = _.keys(obj);
+    return {
+        message: "List of available resources.",
+        resources: _.zipObject(keys, _.map(keys, (key) => HOST+"/api/"+route+key)),
+        root: HOST
+    }  
+}
+
 module.exports = {
+    api_urls: api_urls,
+    host: HOST,
+
     index: {
         message: "List of available resources.",
         root: HOST
@@ -80,17 +92,8 @@ module.exports = {
             linktree: "https://linktr.ee/ign_mortal"
         }
     },
-    api: {
-        resources: {
-            random: HOST+"/api/random",
-            quotes: HOST+"/api/quotes",
-            facts: HOST+"/api/facts",
-            personalities: HOST+"/api/personalities",
-            games: HOST+"/api/games",
-            jokes: HOST+"/api/jokes",
-            memes: HOST+"/api/memes"
-        }
-    }
+    api: indexing(api_urls, ""),
+    random: indexing(api_urls.random, "random/"),
 }
 
 module.exports.memes = {
@@ -111,19 +114,6 @@ module.exports.jokes = {
         "chuck_norris": HOST+"/api/jokes/chuck_norris",
         "dad": HOST+"/api/jokes/dad",
         "yo_mama": HOST+"/api/jokes/yo_mama",
-    },
-    "index": HOST
-}
-
-module.exports.random = {
-    "message": "List of available resources.",
-    "resources": {
-        "alias": HOST+"/api/random/alias",
-        "website": HOST+"/api/random/website",
-        "human": HOST+"/api/random/human",
-        "activity": HOST+"/api/random/activity",
-        "yes": HOST+"/api/random/yes",
-        "no": HOST+"/api/random/no",
     },
     "index": HOST
 }
@@ -178,17 +168,6 @@ module.exports.facts = {
     },
     "index": HOST
 }
-
-// module.exports.about = {
-//     "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
-//     "dev": {
-//         "message": "Made with ❤ by a_ignorant_mortal",
-//         "repository": "https://github.com/raj-patra/fragile-express",
-//         "portfolio": "https://raj-patra.github.io/",
-//         "linktree": "https://linktr.ee/ign_mortal"
-//     },
-//     "index": HOST
-// }
 
 module.exports.noun = [
     'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
