@@ -94,6 +94,7 @@ module.exports = {
     },
     api: indexing(api_urls, ""),
     random: indexing(api_urls.random, "random/"),
+    quotes: indexing(api_urls.quotes, "quotes/"),
 }
 
 module.exports.memes = {
@@ -138,21 +139,21 @@ module.exports.personalities = {
     "index": HOST
 }
 
-module.exports.quotes = {
-    "message": "List of available resources.",
-    "resources": {
-        "random": HOST+"/api/quotes/random",
-        "kanye_west": HOST+"/api/quotes/kanye",
-        "donald_trump": HOST+"/api/quotes/trump",
-        "superhero": HOST+"/api/quotes/superhero",
-        "poems": HOST+"/api/quotes/poems",
-        "anime": HOST+"/api/quotes/anime",
-        "powerful": HOST+"/api/quotes/powerful",
-        "stoicism": HOST+"/api/quotes/stoicism",
-        "game_of_thrones": HOST+"/api/quotes/got",
-    },
-    "index": HOST
-}
+// module.exports.quotes = {
+//     "message": "List of available resources.",
+//     "resources": {
+//         "random": HOST+"/api/quotes/random",
+//         "kanye_west": HOST+"/api/quotes/kanye",
+//         "donald_trump": HOST+"/api/quotes/trump",
+//         "superhero": HOST+"/api/quotes/superhero",
+//         "poems": HOST+"/api/quotes/poems",
+//         "anime": HOST+"/api/quotes/anime",
+//         "powerful": HOST+"/api/quotes/powerful",
+//         "stoicism": HOST+"/api/quotes/stoicism",
+//         "game_of_thrones": HOST+"/api/quotes/got",
+//     },
+//     "index": HOST
+// }
 
 module.exports.facts = {
     "message": "List of available resources.",
