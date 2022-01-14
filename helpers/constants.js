@@ -1,4 +1,5 @@
 const HOST = process.env.HOST || "http://localhost"
+const _ = require('lodash');
 
 const api_urls = {
     "random": {
@@ -60,9 +61,19 @@ const api_urls = {
 
 }
 
+const indexing = (obj) => {
+    let keys = _.keys(obj);
+    return { 
+        resources:_.zipObject(keys, _.map(keys, (key) => HOST+"/api/"+key)),
+        index: HOST
+    }  
+}
+
 module.exports = {
     api_urls: api_urls,
+
     host: HOST,
+
     index: {
         message: "List of available resources.",
         root: HOST
@@ -81,7 +92,7 @@ module.exports = {
             linktree: "https://linktr.ee/ign_mortal"
         }
     },
-    api: {
+    apis: {
         resources: {
             random: HOST+"/api/random",
             quotes: HOST+"/api/quotes",
@@ -91,7 +102,8 @@ module.exports = {
             jokes: HOST+"/api/jokes",
             memes: HOST+"/api/memes"
         }
-    }
+    },
+    api: indexing(api_urls),
 }
 
 module.exports.memes = {
