@@ -1,7 +1,6 @@
 const HOST = process.env.HOST || "http://localhost"
-module.exports.host = HOST;
 
-module.exports.api_urls = {
+const api_urls = {
     "random": {
         "website": "https://www.boredbutton.com/random",
         "human": "https://thispersondoesnotexist.com/image",
@@ -62,6 +61,8 @@ module.exports.api_urls = {
 }
 
 module.exports = {
+    api_urls: api_urls,
+    host: HOST,
     index: {
         message: "List of available resources.",
         root: HOST
