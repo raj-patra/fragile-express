@@ -3,60 +3,60 @@ const _ = require('lodash');
 
 const api_urls = {
     random: {
-        "website": "https://www.boredbutton.com/random",
-        "human": "https://thispersondoesnotexist.com/image",
-        "activity": "http://www.boredapi.com/api/activity",
-        "yes": "https://yesno.wtf/api?force=yes",
-        "no": "https://yesno.wtf/api?force=no",
+        website: "https://www.boredbutton.com/random",
+        human: "https://thispersondoesnotexist.com/image",
+        activity: "http://www.boredapi.com/api/activity",
+        yes: "https://yesno.wtf/api?force=yes",
+        no: "https://yesno.wtf/api?force=no",
     },
 
     quotes: {
-        "random": "https://api.quotable.io/random",
-        "kanye": "https://api.kanye.rest/",
-        "trump": "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
-        "superhero": "https://superhero-quotes.herokuapp.com/random",
-        "poems": "https://www.poemist.com/api/v1/randompoems",
-        "anime": "https://animechan.vercel.app/api/random",
-        "powerful": "https://api.fisenko.net/v1/quotes/en/random",
-        "stoicism": "https://api.themotivate365.com/stoic-quote",
-        "game_of_thrones": "https://game-of-thrones-quotes.herokuapp.com/v1/random",
+        random: "https://api.quotable.io/random",
+        kanye: "https://api.kanye.rest/",
+        trump: "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
+        superhero: "https://superhero-quotes.herokuapp.com/random",
+        poems: "https://www.poemist.com/api/v1/randompoems",
+        anime: "https://animechan.vercel.app/api/random",
+        powerful: "https://api.fisenko.net/v1/quotes/en/random",
+        stoicism: "https://api.themotivate365.com/stoic-quote",
+        game_of_thrones: "https://game-of-thrones-quotes.herokuapp.com/v1/random",
     },
 
     facts: {
-        "random": "https://asli-fun-fact-api.herokuapp.com/",
-        "useless": "https://uselessfacts.jsph.pl//random.json?language=en",
-        "chuck_norris": "http://api.icndb.com/jokes/random",
-        "trivia": "http://numbersapi.com/random/trivia",
-        "math": "http://numbersapi.com/random/math",
-        "date": "http://numbersapi.com/random/date",
-        "year": "http://numbersapi.com/random/year",
-        "cat": "https://meowfacts.herokuapp.com/"
+        random: "https://asli-fun-fact-api.herokuapp.com/",
+        useless: "https://uselessfacts.jsph.pl//random.json?language=en",
+        chuck_norris: "http://api.icndb.com/jokes/random",
+        trivia: "http://numbersapi.com/random/trivia",
+        math: "http://numbersapi.com/random/math",
+        date: "http://numbersapi.com/random/date",
+        year: "http://numbersapi.com/random/year",
+        cat: "https://meowfacts.herokuapp.com/"
     },
 
     personalities: {
-        "insult": "https://evilinsult.com/generate_insult.php?lang=en&type=json",
-        "advice": "https://api.adviceslip.com/advice",
-        "affirmation": "https://www.affirmations.dev",
-        "inspiration": "https://type.fit/api/quotes"
+        insult: "https://evilinsult.com/generate_insult.php?lang=en&type=json",
+        advice: "https://api.adviceslip.com/advice",
+        affirmation: "https://www.affirmations.dev",
+        inspiration: "https://type.fit/api/quotes"
     },
 
     games: {
-        "pc": "https://www.freetogame.com/api/games?platform=pc",
-        "browser": " https://www.freetogame.com/api/games?platform=browser"
+        pc: "https://www.freetogame.com/api/games?platform=pc",
+        browser: " https://www.freetogame.com/api/games?platform=browser"
     },
 
     jokes: {
-        "random": "https://sv443.net/jokeapi/v2/joke/Any",
-        "chuck_norris": "https://api.chucknorris.io/jokes/random",
+        random: "https://sv443.net/jokeapi/v2/joke/Any",
+        chuck_norris: "https://api.chucknorris.io/jokes/random",
         "yo_mama": "https://yomomma-api.herokuapp.com/jokes",
         "dad": "https://icanhazdadjoke.com/"
     },
 
     memes:{
-        "random": "https://inspirobot.me/api?generate=true",
-        "reddit": "https://meme-api.herokuapp.com/gimme",
-        "templates": "https://api.imgflip.com/get_memes",
-        "namo": "https://namo-memes.herokuapp.com/memes/1"
+        random: "https://inspirobot.me/api?generate=true",
+        reddit: "https://meme-api.herokuapp.com/gimme",
+        templates: "https://api.imgflip.com/get_memes",
+        namo: "https://namo-memes.herokuapp.com/memes/1"
     }
 
 }
