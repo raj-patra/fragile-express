@@ -65,8 +65,8 @@ const indexing = (obj, route) => {
     let keys = _.keys(obj);
     return {
         message: "List of available resources.",
-        resources:_.zipObject(keys, _.map(keys, (key) => HOST+"/api/"+route+key)),
-        index: HOST
+        resources: _.zipObject(keys, _.map(keys, (key) => HOST+"/api/"+route+key)),
+        root: HOST
     }  
 }
 
@@ -93,6 +93,7 @@ module.exports = {
         }
     },
     api: indexing(api_urls, ""),
+    random: indexing(api_urls.random, "random/"),
 }
 
 module.exports.memes = {
@@ -113,19 +114,6 @@ module.exports.jokes = {
         "chuck_norris": HOST+"/api/jokes/chuck_norris",
         "dad": HOST+"/api/jokes/dad",
         "yo_mama": HOST+"/api/jokes/yo_mama",
-    },
-    "index": HOST
-}
-
-module.exports.random = {
-    "message": "List of available resources.",
-    "resources": {
-        "alias": HOST+"/api/random/alias",
-        "website": HOST+"/api/random/website",
-        "human": HOST+"/api/random/human",
-        "activity": HOST+"/api/random/activity",
-        "yes": HOST+"/api/random/yes",
-        "no": HOST+"/api/random/no",
     },
     "index": HOST
 }
