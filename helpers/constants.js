@@ -63,7 +63,8 @@ const api_urls = {
 
 const indexing = (obj, route) => {
     let keys = _.keys(obj);
-    return { 
+    return {
+        message: "List of available resources.",
         resources:_.zipObject(keys, _.map(keys, (key) => HOST+"/api/"+route+key)),
         index: HOST
     }  
@@ -71,7 +72,6 @@ const indexing = (obj, route) => {
 
 module.exports = {
     api_urls: api_urls,
-
     host: HOST,
 
     index: {
@@ -180,17 +180,6 @@ module.exports.facts = {
     },
     "index": HOST
 }
-
-// module.exports.about = {
-//     "message": "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
-//     "dev": {
-//         "message": "Made with ❤ by a_ignorant_mortal",
-//         "repository": "https://github.com/raj-patra/fragile-express",
-//         "portfolio": "https://raj-patra.github.io/",
-//         "linktree": "https://linktr.ee/ign_mortal"
-//     },
-//     "index": HOST
-// }
 
 module.exports.noun = [
     'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
