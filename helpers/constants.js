@@ -92,10 +92,13 @@ module.exports = {
             linktree: "https://linktr.ee/ign_mortal"
         }
     },
+
     api: indexing(api_urls, ""),
     random: indexing(api_urls.random, "random/"),
     quotes: indexing(api_urls.quotes, "quotes/"),
     facts: indexing(api_urls.facts, "facts/"),
+    personalities: indexing(api_urls.personalities, "personalities/"),
+    games: indexing(api_urls.games, "games/"),
 }
 
 module.exports.memes = {
@@ -116,26 +119,6 @@ module.exports.jokes = {
         "chuck_norris": HOST+"/api/jokes/chuck_norris",
         "dad": HOST+"/api/jokes/dad",
         "yo_mama": HOST+"/api/jokes/yo_mama",
-    },
-    "index": HOST
-}
-
-module.exports.games = {
-    "message": "List of available resources.",
-    "resources": {
-        "pc": HOST+"/api/games/pc",
-        "browser": HOST+"/api/games/browser"
-    },
-    "index": HOST
-}
-
-module.exports.personalities = {
-    "message": "List of available resources.",
-    "resources": {
-        "insult": HOST+"/api/personalities/insult",
-        "advice": HOST+"/api/personalities/advice",
-        "affirmation": HOST+"/api/personalities/affirmation",
-        "inspiration": HOST+"/api/personalities/inspiration"
     },
     "index": HOST
 }
