@@ -130,17 +130,6 @@ module.exports.games = {
     "index": HOST
 }
 
-// module.exports.personalities = {
-//     "message": "List of available resources.",
-//     "resources": {
-//         "insult": HOST+"/api/personalities/insult",
-//         "advice": HOST+"/api/personalities/advice",
-//         "affirmation": HOST+"/api/personalities/affirmation",
-//         "inspiration": HOST+"/api/personalities/inspiration"
-//     },
-//     "index": HOST
-// }
-
 module.exports.noun = [
     'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
     'tapeworm', 'crackpot', 'rattlesnake', 'courtroom', 'rearward', 'teaspoon', 'became', 'countermeasure', 'passbook', 'earthworm', 'countdown', 'copycat', 'lifetime', 'cartwheel', 'stonewall', 'checkmate', 'carport', 'bedbug', 'airfield', 'passkey', 'taleteller', 'candid', 'ladybug', 'stepson', 'bedclothes',
