@@ -99,6 +99,7 @@ module.exports = {
     facts: indexing(api_urls.facts, "facts/"),
     personalities: indexing(api_urls.personalities, "personalities/"),
     games: indexing(api_urls.games, "games/"),
+    jokes: indexing(api_urls.jokes, "jokes/"),
 }
 
 module.exports.memes = {
@@ -112,16 +113,16 @@ module.exports.memes = {
     "index": HOST
 }
 
-module.exports.jokes = {
-    "message": "List of available resources.",
-    "resources": {
-        "random": HOST+"/api/jokes/random",
-        "chuck_norris": HOST+"/api/jokes/chuck_norris",
-        "dad": HOST+"/api/jokes/dad",
-        "yo_mama": HOST+"/api/jokes/yo_mama",
-    },
-    "index": HOST
-}
+// module.exports.jokes = {
+//     "message": "List of available resources.",
+//     "resources": {
+//         "random": HOST+"/api/jokes/random",
+//         "chuck_norris": HOST+"/api/jokes/chuck_norris",
+//         "dad": HOST+"/api/jokes/dad",
+//         "yo_mama": HOST+"/api/jokes/yo_mama",
+//     },
+//     "index": HOST
+// }
 
 module.exports.noun = [
     'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
