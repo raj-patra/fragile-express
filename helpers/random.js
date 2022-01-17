@@ -2,6 +2,9 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 
+const WordPOS = require('wordpos'),
+wordpos = new WordPOS();
+
 const constants = require('./constants');
 
 function fetch_response(url, res){
@@ -42,9 +45,11 @@ router.get('/alias', (req, res)=>{
     function randomChoice(arr) {
         return arr[Math.floor(arr.length * Math.random())];
     }
-    res.status(200).send({"message": "Random alias generated.",
+    res.status(200).send({
+        "message": "Random alias generated.",
         "data": randomChoice(constants.adjective)+'-'+randomChoice(constants.noun),
-        "root": constants.host})
+        "root": constants.host
+    });
 });
 
 router.get('/website', (req, res)=> {

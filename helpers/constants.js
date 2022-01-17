@@ -3,6 +3,7 @@ const _ = require('lodash');
 
 const api_urls = {
     random: {
+        alias: "",
         website: "https://www.boredbutton.com/random",
         human: "https://thispersondoesnotexist.com/image",
         activity: "http://www.boredapi.com/api/activity",
