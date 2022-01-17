@@ -3,6 +3,7 @@ const _ = require('lodash');
 
 const api_urls = {
     random: {
+        alias: "",
         website: "https://www.boredbutton.com/random",
         human: "https://thispersondoesnotexist.com/image",
         activity: "http://www.boredapi.com/api/activity",
@@ -99,28 +100,8 @@ module.exports = {
     facts: indexing(api_urls.facts, "facts/"),
     personalities: indexing(api_urls.personalities, "personalities/"),
     games: indexing(api_urls.games, "games/"),
-}
-
-module.exports.memes = {
-    "message": "List of available resources.",
-    "resources": {
-        "random": HOST+"/api/memes/random",
-        "reddit": HOST+"/api/memes/reddit",
-        "namo": HOST+"/api/memes/namo",
-        "templates": HOST+"/api/memes/templates"
-    },
-    "index": HOST
-}
-
-module.exports.jokes = {
-    "message": "List of available resources.",
-    "resources": {
-        "random": HOST+"/api/jokes/random",
-        "chuck_norris": HOST+"/api/jokes/chuck_norris",
-        "dad": HOST+"/api/jokes/dad",
-        "yo_mama": HOST+"/api/jokes/yo_mama",
-    },
-    "index": HOST
+    jokes: indexing(api_urls.jokes, "jokes/"),
+    memes: indexing(api_urls.memes, "memes/")
 }
 
 module.exports.noun = [
