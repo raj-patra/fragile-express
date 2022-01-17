@@ -100,18 +100,19 @@ module.exports = {
     personalities: indexing(api_urls.personalities, "personalities/"),
     games: indexing(api_urls.games, "games/"),
     jokes: indexing(api_urls.jokes, "jokes/"),
+    memes: indexing(api_urls.memes, "memes/")
 }
 
-module.exports.memes = {
-    "message": "List of available resources.",
-    "resources": {
-        "random": HOST+"/api/memes/random",
-        "reddit": HOST+"/api/memes/reddit",
-        "namo": HOST+"/api/memes/namo",
-        "templates": HOST+"/api/memes/templates"
-    },
-    "index": HOST
-}
+// module.exports.memes = {
+//     "message": "List of available resources.",
+//     "resources": {
+//         "random": HOST+"/api/memes/random",
+//         "reddit": HOST+"/api/memes/reddit",
+//         "namo": HOST+"/api/memes/namo",
+//         "templates": HOST+"/api/memes/templates"
+//     },
+//     "index": HOST
+// }
 
 // module.exports.jokes = {
 //     "message": "List of available resources.",
