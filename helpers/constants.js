@@ -103,28 +103,6 @@ module.exports = {
     memes: indexing(api_urls.memes, "memes/")
 }
 
-// module.exports.memes = {
-//     "message": "List of available resources.",
-//     "resources": {
-//         "random": HOST+"/api/memes/random",
-//         "reddit": HOST+"/api/memes/reddit",
-//         "namo": HOST+"/api/memes/namo",
-//         "templates": HOST+"/api/memes/templates"
-//     },
-//     "index": HOST
-// }
-
-// module.exports.jokes = {
-//     "message": "List of available resources.",
-//     "resources": {
-//         "random": HOST+"/api/jokes/random",
-//         "chuck_norris": HOST+"/api/jokes/chuck_norris",
-//         "dad": HOST+"/api/jokes/dad",
-//         "yo_mama": HOST+"/api/jokes/yo_mama",
-//     },
-//     "index": HOST
-// }
-
 module.exports.noun = [
     'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
     'tapeworm', 'crackpot', 'rattlesnake', 'courtroom', 'rearward', 'teaspoon', 'became', 'countermeasure', 'passbook', 'earthworm', 'countdown', 'copycat', 'lifetime', 'cartwheel', 'stonewall', 'checkmate', 'carport', 'bedbug', 'airfield', 'passkey', 'taleteller', 'candid', 'ladybug', 'stepson', 'bedclothes',
