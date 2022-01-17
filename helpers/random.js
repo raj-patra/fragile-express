@@ -16,16 +16,18 @@ function fetch_response(url, res){
                 })
                     .then(data => {
                         if (data.status == 200){
-                            res.status(200).send({"message": "Data fetch successful.", 
-                                                    "data": data.data, 
-                                                    "reference_api": data.config.url,
-                                                    "root": constants.host})
+                            res.status(200).send({
+                                message: "Data fetch successful.", 
+                                data: data.data, 
+                                reference_api: data.config.url,
+                                root: constants.host})
                         }
                         else{
-                            res.status(data.status).send({"message": "Data fetch unsuccessful.", 
-                                                    "data": null, 
-                                                    "reference_api": data.config.url,
-                                                    "root": constants.host})
+                            res.status(data.status).send({
+                                message: "Data fetch unsuccessful.", 
+                                data: null, 
+                                reference_api: data.config.url,
+                                root: constants.host})
                         }
                     })
                     .catch(error => res.send(error))
@@ -46,9 +48,9 @@ router.get('/alias', (req, res)=>{
         return arr[Math.floor(arr.length * Math.random())];
     }
     res.status(200).send({
-        "message": "Random alias generated.",
-        "data": randomChoice(constants.adjective)+'-'+randomChoice(constants.noun),
-        "root": constants.host
+        message: "Random alias generated.",
+        data: randomChoice(constants.adjective)+'-'+randomChoice(constants.noun),
+        root: constants.host
     });
 });
 
