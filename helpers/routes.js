@@ -1,6 +1,4 @@
 const express = require("express");
-const axios = require("axios");
-const open = require("open");
 const router = express.Router();
 
 const constants = require('./constants');
@@ -12,24 +10,6 @@ const random = require('./random');
 const jokes = require('./jokes');
 const memes = require('./memes');
 
-function fetch_response(url, res){
-    (async () => {
-        try{
-            await axios.get(url)
-                        .then(data => {
-                            res.status(200).send({"message": "Data fetch successful.", 
-                                                    "data": data.data, 
-                                                    "reference_api": data.config.url,
-                                                    "root": constants.host})
-                        })
-                        .catch(error => res.send(error))
-                        .next;
-        }
-        catch (error) {
-            console.log(error)
-        }
-    }) ();
-}
 
 router.get('/', (req, res)=>{
     res.status(200).json(constants.api)
