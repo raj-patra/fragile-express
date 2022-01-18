@@ -75,10 +75,6 @@ module.exports = {
     api_urls: api_urls,
     host: HOST,
 
-    index: {
-        message: "List of available resources.",
-        root: HOST
-    },
     root: {
         message: "Welcome to the Fragile Express.",
         about: HOST+"/about",
