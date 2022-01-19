@@ -13,14 +13,14 @@ function fetch_response(url, res){
                 })
                     .then(data => {
                         if (data.status == 200){
-                            res.status(200).send({
+                            res.status(200).json({
                                 message: "Data fetch successful.", 
                                 data: data.data, 
                                 reference_api: data.config.url,
                                 root: constants.host})
                         }
                         else{
-                            res.status(data.status).send({
+                            res.status(data.status).json({
                                 message: "Data fetch unsuccessful.", 
                                 data: null, 
                                 reference_api: data.config.url,
@@ -37,7 +37,7 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.facts)
+    res.status(200).json(constants.facts)
 });
 
 router.get('/random', (req, res)=> fetch_response(constants.api_urls.facts.random, res));
