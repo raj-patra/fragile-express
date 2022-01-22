@@ -1,5 +1,6 @@
 const HOST = process.env.HOST || "http://localhost"
 const _ = require('lodash');
+const axios = require("axios");
 
 const api_urls = {
     random: {
@@ -71,6 +72,38 @@ const indexing = (obj, route) => {
     }  
 }
 
+const fetch_response = (url) => {
+
+    (async () => {
+        try{
+            await axios.get(url)
+                    .then(data => {
+                        if (data.status == 200){
+                            return {
+                                message: "Data fetch successful.", 
+                                data: data.data, 
+                                reference_api: data.config.url,
+                                root: HOST}
+                        }
+                        else{
+                            return {
+                                message: "Data fetch unsuccessful.", 
+                                data: null, 
+                                reference_api: data.config.url,
+                                root: HOST}
+                        }
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    })
+                    .next;
+        }
+        catch (error) {
+            console.error(error)
+        }
+    }) ();
+}
+
 module.exports = {
     api_urls: api_urls,
     host: HOST,
@@ -98,6 +131,8 @@ module.exports = {
     games: indexing(api_urls.games, "games/"),
     jokes: indexing(api_urls.jokes, "jokes/"),
     memes: indexing(api_urls.memes, "memes/"),
+
+    fetch_resource: fetch_response,
 
     noun: [
         'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
