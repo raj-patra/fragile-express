@@ -72,38 +72,6 @@ const indexing = (obj, route) => {
     }  
 }
 
-const fetch_response = (url) => {
-
-    (async () => {
-        try{
-            await axios.get(url)
-                    .then(data => {
-                        if (data.status == 200){
-                            return {
-                                message: "Data fetch successful.", 
-                                data: data.data, 
-                                reference_api: data.config.url,
-                                root: HOST}
-                        }
-                        else{
-                            return {
-                                message: "Data fetch unsuccessful.", 
-                                data: null, 
-                                reference_api: data.config.url,
-                                root: HOST}
-                        }
-                    })
-                    .catch(error => {
-                        console.error(error);
-                    })
-                    .next;
-        }
-        catch (error) {
-            console.error(error)
-        }
-    }) ();
-}
-
 module.exports = {
     api_urls: api_urls,
     host: HOST,
