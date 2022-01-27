@@ -121,7 +121,7 @@ module.exports = {
         'uptight', 'useful'
     ],
 
-    fetch_resource: async function (url) {
+    fetch_response: async function (url) {
         try{
             let data = await axios.get(url);
             if (data.status == 200){

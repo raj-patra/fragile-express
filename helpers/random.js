@@ -67,11 +67,17 @@ router.get('/human', (req, res)=> {
     res.redirect(constants.api_urls.random.human);
 });
 
-router.get('/activity', (req, res)=> fetch_response(constants.api_urls.random.activity, res));
-router.get('/yes', async(req, res)=>{
-    let data = await constants.fetch_resource(constants.api_urls.random.yes);
+router.get('/activity', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.random.activity);
     res.status(200).json(data);
  });
-router.get('/no', (req, res)=> fetch_response(constants.api_urls.random.no, res));
+router.get('/yes', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.random.yes);
+    res.status(200).json(data);
+ });
+router.get('/no', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.random.no);
+    res.status(200).json(data);
+ });
 
 module.exports = router;
