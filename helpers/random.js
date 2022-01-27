@@ -68,11 +68,10 @@ router.get('/human', (req, res)=> {
 });
 
 router.get('/activity', (req, res)=> fetch_response(constants.api_urls.random.activity, res));
-// router.get('/yes', (req, res)=> {
-//     let data = constants.fetch_resource(constants.api_urls.random.yes);
-//     console.log(data)
-//     res.status(200).send(data);
-// });
+router.get('/yes2', async(req, res)=>{
+    let data = await constants.fetch_resource(constants.api_urls.random.yes);
+    res.status(200).json(data);
+ });
 router.get('/yes', (req, res)=> fetch_response(constants.api_urls.random.yes, res));
 router.get('/no', (req, res)=> fetch_response(constants.api_urls.random.no, res));
 
