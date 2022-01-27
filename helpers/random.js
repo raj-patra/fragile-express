@@ -40,10 +40,12 @@ router.get('/activity', async(req, res)=>{
     let data = await constants.fetch_response(constants.api_urls.random.activity);
     res.status(200).json(data);
  });
+
 router.get('/yes', async(req, res)=>{
     let data = await constants.fetch_response(constants.api_urls.random.yes);
     res.status(200).json(data);
  });
+ 
 router.get('/no', async(req, res)=>{
     let data = await constants.fetch_response(constants.api_urls.random.no);
     res.status(200).json(data);
