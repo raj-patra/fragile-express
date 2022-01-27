@@ -72,38 +72,6 @@ const indexing = (obj, route) => {
     }  
 }
 
-const fetch_response = (url) => {
-
-    (async () => {
-        try{
-            await axios.get(url)
-                    .then(data => {
-                        if (data.status == 200){
-                            return {
-                                message: "Data fetch successful.", 
-                                data: data.data, 
-                                reference_api: data.config.url,
-                                root: HOST}
-                        }
-                        else{
-                            return {
-                                message: "Data fetch unsuccessful.", 
-                                data: null, 
-                                reference_api: data.config.url,
-                                root: HOST}
-                        }
-                    })
-                    .catch(error => {
-                        console.error(error);
-                    })
-                    .next;
-        }
-        catch (error) {
-            console.error(error)
-        }
-    }) ();
-}
-
 module.exports = {
     api_urls: api_urls,
     host: HOST,
@@ -132,8 +100,6 @@ module.exports = {
     jokes: indexing(api_urls.jokes, "jokes/"),
     memes: indexing(api_urls.memes, "memes/"),
 
-    fetch_resource: fetch_response,
-
     noun: [
         'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
         'tapeworm', 'crackpot', 'rattlesnake', 'courtroom', 'rearward', 'teaspoon', 'became', 'countermeasure', 'passbook', 'earthworm', 'countdown', 'copycat', 'lifetime', 'cartwheel', 'stonewall', 'checkmate', 'carport', 'bedbug', 'airfield', 'passkey', 'taleteller', 'candid', 'ladybug', 'stepson', 'bedclothes',
@@ -153,5 +119,36 @@ module.exports = {
         'prickly', 'proud', 'putrid', 'puzzled', 'quaint', 'queasy', 'real', 'relieved', 'repulsive', 'rich', 'scary', 'selfish', 'shiny', 'shy', 'silly', 'sleepy', 'smiling', 'vast', 'victorious', 'vivacious', 'wandering', 'weary', 'wicked', 'wide-eyed', 'talented', 'tame', 'tasty', 'tender', 'tense', 'terrible', 'thankful',
         'thoughtful', 'thoughtless', 'tired', 'smoggy', 'sore', 'sparkling', 'splendid', 'spotless', 'stormy', 'strange', 'stupid', 'successful', 'super ', 'svelte', 'wild', 'witty', 'worried', 'worrisome', 'wrong', 'zany', 'zealous', 'tough', 'troubled', 'ugliest', 'ugly', 'uninterested', 'unsightly', 'unusual', 'upset',
         'uptight', 'useful'
-    ]
+    ],
+
+    fetch_response: async function (url) {
+        try{
+            let data = await axios.get(url);
+            if (data.status == 200){
+                return {
+                    message: "Data fetch successful.", 
+                    data: data.data, 
+                    reference_api: data.config.url,
+                    root: HOST
+                }
+            }
+            else{
+                return {
+                    message: "Data fetch unsuccessful.", 
+                    data: null, 
+                    reference_api: data.config.url,
+                    root: HOST
+                }
+            }
+        }
+        catch (error){
+            console.error(error);
+            return {
+                message: "Data fetch unsuccessful.", 
+                data: null, 
+                reference_api: url,
+                root: HOST
+            }
+        }
+    }
 }

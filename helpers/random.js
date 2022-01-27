@@ -7,37 +7,6 @@ wordpos = new WordPOS();
 
 const constants = require('./constants');
 
-function fetch_response(url, res){
-    const headers = {"Accept": "application/json"};
-    (async () => {
-        try{
-            await axios.get(url, {
-                headers: headers
-                })
-                    .then(data => {
-                        if (data.status == 200){
-                            res.status(200).send({
-                                message: "Data fetch successful.", 
-                                data: data.data, 
-                                reference_api: data.config.url,
-                                root: constants.host})
-                        }
-                        else{
-                            res.status(data.status).send({
-                                message: "Data fetch unsuccessful.", 
-                                data: null, 
-                                reference_api: data.config.url,
-                                root: constants.host})
-                        }
-                    })
-                    .catch(error => res.send(error))
-                    .next;
-        }
-        catch (error) {
-            console.log(error)
-        }
-    }) ();
-}
 
 router.get('/', (req, res)=>{
     res.status(200).send(constants.random)
@@ -67,13 +36,19 @@ router.get('/human', (req, res)=> {
     res.redirect(constants.api_urls.random.human);
 });
 
-router.get('/activity', (req, res)=> fetch_response(constants.api_urls.random.activity, res));
-// router.get('/yes', (req, res)=> {
-//     let data = constants.fetch_resource(constants.api_urls.random.yes);
-//     console.log(data)
-//     res.status(200).send(data);
-// });
-router.get('/yes', (req, res)=> fetch_response(constants.api_urls.random.yes, res));
-router.get('/no', (req, res)=> fetch_response(constants.api_urls.random.no, res));
+router.get('/activity', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.random.activity);
+    res.status(200).json(data);
+ });
+
+router.get('/yes', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.random.yes);
+    res.status(200).json(data);
+ });
+ 
+router.get('/no', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.random.no);
+    res.status(200).json(data);
+ });
 
 module.exports = router;
