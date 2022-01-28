@@ -43,8 +43,11 @@ router.get('/', (req, res)=>{
 router.get('/random', async(req, res)=>{
     let data = await constants.fetch_response(constants.api_urls.facts.random);
     res.status(200).json(data);
- });
-router.get('/useless', (req, res)=> fetch_response(constants.api_urls.facts.useless, res));
+});
+router.get('/useless', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.facts.useless);
+    res.status(200).json(data);
+});
 router.get('/chuck_norris', (req, res)=> fetch_response(constants.api_urls.facts.chuck_norris, res));
 router.get('/trivia', (req, res)=> fetch_response(constants.api_urls.facts.trivia, res));
 router.get('/math', (req, res)=> fetch_response(constants.api_urls.facts.math, res));
