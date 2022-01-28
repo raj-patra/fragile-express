@@ -52,7 +52,10 @@ router.get('/chuck_norris', async(req, res)=>{
     let data = await constants.fetch_response(constants.api_urls.facts.chuck_norris);
     res.status(200).json(data);
 });
-router.get('/trivia', (req, res)=> fetch_response(constants.api_urls.facts.trivia, res));
+router.get('/trivia', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.facts.trivia);
+    res.status(200).json(data);
+});
 router.get('/math', (req, res)=> fetch_response(constants.api_urls.facts.math, res));
 router.get('/date', (req, res)=> fetch_response(constants.api_urls.facts.date, res));
 router.get('/year', (req, res)=> fetch_response(constants.api_urls.facts.year, res));
