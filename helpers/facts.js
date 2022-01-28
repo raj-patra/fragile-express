@@ -40,10 +40,22 @@ router.get('/', (req, res)=>{
     res.status(200).json(constants.facts)
 });
 
-router.get('/random', (req, res)=> fetch_response(constants.api_urls.facts.random, res));
-router.get('/useless', (req, res)=> fetch_response(constants.api_urls.facts.useless, res));
-router.get('/chuck_norris', (req, res)=> fetch_response(constants.api_urls.facts.chuck_norris, res));
-router.get('/trivia', (req, res)=> fetch_response(constants.api_urls.facts.trivia, res));
+router.get('/random', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.facts.random);
+    res.status(200).json(data);
+});
+router.get('/useless', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.facts.useless);
+    res.status(200).json(data);
+});
+router.get('/chuck_norris', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.facts.chuck_norris);
+    res.status(200).json(data);
+});
+router.get('/trivia', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.facts.trivia);
+    res.status(200).json(data);
+});
 router.get('/math', (req, res)=> fetch_response(constants.api_urls.facts.math, res));
 router.get('/date', (req, res)=> fetch_response(constants.api_urls.facts.date, res));
 router.get('/year', (req, res)=> fetch_response(constants.api_urls.facts.year, res));
