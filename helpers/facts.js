@@ -67,6 +67,9 @@ router.get('/year', async(req, res)=>{
     let data = await constants.fetch_response(constants.api_urls.facts.year);
     res.status(200).json(data);
 });
-router.get('/cat', (req, res)=> fetch_response(constants.api_urls.facts.cat, res));
+router.get('/cat', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.facts.cat);
+    res.status(200).json(data);
+});
 
 module.exports = router;
