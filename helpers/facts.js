@@ -4,38 +4,6 @@ const router = express.Router();
 
 const constants = require('./constants');
 
-function fetch_response(url, res){
-    const headers = {"Accept": "application/json"};
-    (async () => {
-        try{
-            await axios.get(url, {
-                headers: headers
-                })
-                    .then(data => {
-                        if (data.status == 200){
-                            res.status(200).json({
-                                message: "Data fetch successful.", 
-                                data: data.data, 
-                                reference_api: data.config.url,
-                                root: constants.host})
-                        }
-                        else{
-                            res.status(data.status).json({
-                                message: "Data fetch unsuccessful.", 
-                                data: null, 
-                                reference_api: data.config.url,
-                                root: constants.host})
-                        }
-                    })
-                    .catch(error => res.send(error))
-                    .next;
-        }
-        catch (error) {
-            console.log(error)
-        }
-    }) ();
-}
-
 router.get('/', (req, res)=>{
     res.status(200).json(constants.facts)
 });
