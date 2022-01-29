@@ -59,7 +59,10 @@ router.get('/math', async(req, res)=>{
     let data = await constants.fetch_response(constants.api_urls.facts.math);
     res.status(200).json(data);
 });
-router.get('/date', (req, res)=> fetch_response(constants.api_urls.facts.date, res));
+router.get('/date', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.facts.date);
+    res.status(200).json(data);
+});
 router.get('/year', (req, res)=> fetch_response(constants.api_urls.facts.year, res));
 router.get('/cat', (req, res)=> fetch_response(constants.api_urls.facts.cat, res));
 
