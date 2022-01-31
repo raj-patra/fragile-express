@@ -5,7 +5,7 @@ const router = express.Router();
 const constants = require('./constants');
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.games)
+    res.status(200).json(constants.games);
 });
 
 router.get('/pc', async(req, res)=>{
