@@ -46,7 +46,10 @@ router.get('/chuck_norris', async(req, res)=>{
     let data = await constants.fetch_response(constants.api_urls.jokes.chuck_norris);
     res.status(200).json(data);
 });
-router.get('/dad', (req, res)=> fetch_response(constants.api_urls.jokes.dad, res));
+router.get('/dad', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.jokes.dad);
+    res.status(200).json(data);
+});
 router.get('/yo_mama', (req, res)=> fetch_response(constants.api_urls.jokes.yo_mama, res));
 
 module.exports = router;
