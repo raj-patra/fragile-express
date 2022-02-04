@@ -32,7 +32,11 @@ router.get('/random', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/reddit', (req, res)=> fetch_response(constants.api_urls.memes.reddit, res));
+router.get('/reddit',async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.memes.reddit);
+    res.status(200).json(data);
+});
+
 router.get('/namo', (req, res)=> fetch_response(constants.api_urls.memes.namo, res));
 router.get('/templates', (req, res)=> fetch_response(constants.api_urls.memes.templates, res));
 
