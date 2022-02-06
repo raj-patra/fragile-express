@@ -5,7 +5,7 @@ const router = express.Router();
 const constants = require('./constants');
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.memes)
+    res.status(200).json(constants.memes)
 });
 
 router.get('/random', async(req, res)=>{
