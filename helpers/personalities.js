@@ -42,18 +42,13 @@ router.get('/affirmation', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/inspiration', (req, res)=> {
+router.get('/inspiration', async(req, res)=>{
     function randomChoice(arr) {
         return arr[Math.floor(arr.length * Math.random())];
     }
-    axios.get(constants.api_urls.personalities.inspiration)
-        .then(response => {
-            res.status(200).send({"message": "Data fetch successful.", 
-                                    "data": randomChoice(response.data), 
-                                    "reference_api": response.config.url,
-                                    "root": constants.host});
-        })
-        .catch(error => res.send(error));
+    let data = await constants.fetch_response(constants.api_urls.personalities.inspiration);
+    data.data = randomChoice(data.data);
+    res.status(200).json(data);
 });
 
 module.exports = router;
