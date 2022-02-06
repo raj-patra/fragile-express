@@ -24,10 +24,14 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.personalities)
+    res.status(200).json(constants.personalities)
 });
 
-router.get('/insult', (req, res)=> fetch_response(constants.api_urls.personalities.insult, res));
+router.get('/insult',  async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.personalities.insult);
+    res.status(200).json(data);
+});
+
 router.get('/advice', (req, res)=> fetch_response(constants.api_urls.personalities.advice, res));
 router.get('/affirmation', (req, res)=> fetch_response(constants.api_urls.personalities.affirmation, res));
 router.get('/inspiration', (req, res)=> {
