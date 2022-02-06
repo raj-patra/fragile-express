@@ -37,7 +37,11 @@ router.get('/advice', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/affirmation', (req, res)=> fetch_response(constants.api_urls.personalities.affirmation, res));
+router.get('/affirmation', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.personalities.affirmation);
+    res.status(200).json(data);
+});
+
 router.get('/inspiration', (req, res)=> {
     function randomChoice(arr) {
         return arr[Math.floor(arr.length * Math.random())];
