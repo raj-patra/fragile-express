@@ -24,7 +24,7 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.quotes)
+    res.status(200).json(constants.quotes)
 });
 
 router.get('/random', (req, res)=> fetch_response(constants.api_urls.quotes.random, res));
