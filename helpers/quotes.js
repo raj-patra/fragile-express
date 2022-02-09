@@ -42,7 +42,11 @@ router.get('/trump', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/superhero', (req, res)=> fetch_response(constants.api_urls.quotes.superhero, res));
+router.get('/superhero', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.quotes.superhero);
+    res.status(200).json(data);
+});
+
 router.get('/poems', (req, res)=> fetch_response(constants.api_urls.quotes.poems, res));
 router.get('/anime', (req, res)=> fetch_response(constants.api_urls.quotes.anime, res));
 router.get('/powerful', (req, res)=> fetch_response(constants.api_urls.quotes.powerful, res));
