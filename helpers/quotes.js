@@ -32,7 +32,11 @@ router.get('/random', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/kanye', (req, res)=> fetch_response(constants.api_urls.quotes.kanye, res));
+router.get('/kanye', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.quotes.kanye);
+    res.status(200).json(data);
+});
+
 router.get('/trump', (req, res)=> fetch_response(constants.api_urls.quotes.trump, res));
 router.get('/superhero', (req, res)=> fetch_response(constants.api_urls.quotes.superhero, res));
 router.get('/poems', (req, res)=> fetch_response(constants.api_urls.quotes.poems, res));
