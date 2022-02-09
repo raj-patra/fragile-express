@@ -24,13 +24,29 @@ function fetch_response(url, res){
 }
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.quotes)
+    res.status(200).json(constants.quotes)
 });
 
-router.get('/random', (req, res)=> fetch_response(constants.api_urls.quotes.random, res));
-router.get('/kanye', (req, res)=> fetch_response(constants.api_urls.quotes.kanye, res));
-router.get('/trump', (req, res)=> fetch_response(constants.api_urls.quotes.trump, res));
-router.get('/superhero', (req, res)=> fetch_response(constants.api_urls.quotes.superhero, res));
+router.get('/random', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.quotes.random);
+    res.status(200).json(data);
+});
+
+router.get('/kanye', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.quotes.kanye);
+    res.status(200).json(data);
+});
+
+router.get('/trump', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.quotes.trump);
+    res.status(200).json(data);
+});
+
+router.get('/superhero', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.quotes.superhero);
+    res.status(200).json(data);
+});
+
 router.get('/poems', (req, res)=> fetch_response(constants.api_urls.quotes.poems, res));
 router.get('/anime', (req, res)=> fetch_response(constants.api_urls.quotes.anime, res));
 router.get('/powerful', (req, res)=> fetch_response(constants.api_urls.quotes.powerful, res));
