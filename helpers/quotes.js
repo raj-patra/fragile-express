@@ -62,7 +62,11 @@ router.get('/powerful', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/stoicism', (req, res)=> fetch_response(constants.api_urls.quotes.stoicism, res));
+router.get('/stoicism', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.quotes.stoicism);
+    res.status(200).json(data);
+});
+
 router.get('/got', (req, res)=> fetch_response(constants.api_urls.quotes.game_of_thrones, res));
 
 module.exports = router;
