@@ -67,6 +67,9 @@ router.get('/stoicism', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/got', (req, res)=> fetch_response(constants.api_urls.quotes.game_of_thrones, res));
+router.get('/got', async(req, res)=>{
+    let data = await constants.fetch_response(constants.api_urls.quotes.game_of_thrones);
+    res.status(200).json(data);
+});
 
 module.exports = router;
