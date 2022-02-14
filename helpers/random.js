@@ -2,11 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 
-const WordPOS = require('wordpos'),
-wordpos = new WordPOS();
-
 const constants = require('./constants');
-
 
 router.get('/', (req, res)=>{
     res.status(200).send(constants.random)
