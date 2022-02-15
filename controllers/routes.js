@@ -15,7 +15,6 @@ router.get('/', (req, res)=>{
     res.status(200).json(constants.api)
 });
 
-
 router.use("/quotes", quotes);
 router.use("/facts", facts);
 router.use("/personalities", personalities);
@@ -23,6 +22,5 @@ router.use("/games", games);
 router.use("/random", random);
 router.use("/jokes", jokes);
 router.use("/memes", memes);
-
 
 module.exports = router;
