@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const constants = require('./constants');
+const constants = require('../helpers/constants');
 const quotes = require('./quotes');
 const facts = require('./facts');
 const personalities = require('./personalities');
