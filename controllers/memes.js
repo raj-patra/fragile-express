@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 
-const constants = require('./constants');
+const constants = require('../helpers/constants');
 
 router.get('/', (req, res)=>{
     res.status(200).json(constants.memes)

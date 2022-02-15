@@ -2,7 +2,8 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 
-const constants = require('./constants');
+const constants = require('../helpers/constants');
+const utils = require('../helpers/utils');
 
 router.get('/', (req, res)=>{
     res.status(200).send(constants.random)
@@ -33,17 +34,17 @@ router.get('/human', (req, res)=> {
 });
 
 router.get('/activity', async(req, res)=>{
-    let data = await constants.fetch_response(constants.api_urls.random.activity);
+    let data = await utils.fetch_response(constants.api_urls.random.activity);
     res.status(200).json(data);
 });
 
 router.get('/yes', async(req, res)=>{
-    let data = await constants.fetch_response(constants.api_urls.random.yes);
+    let data = await utils.fetch_response(constants.api_urls.random.yes);
     res.status(200).json(data);
 });
  
 router.get('/no', async(req, res)=>{
-    let data = await constants.fetch_response(constants.api_urls.random.no);
+    let data = await utils.fetch_response(constants.api_urls.random.no);
     res.status(200).json(data);
 });
 

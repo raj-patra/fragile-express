@@ -1,5 +1,5 @@
 const express = require("express");
-const api = require('./helpers/routes');
+const api = require('./controllers/routes');
 const constants = require('./helpers/constants');
 const app = express();
 
