@@ -3,6 +3,7 @@ const axios = require("axios");
 const router = express.Router();
 
 const constants = require('./constants');
+const utils = require('./utils');
 
 router.get('/', (req, res)=>{
     res.status(200).send(constants.random)
@@ -43,7 +44,7 @@ router.get('/yes', async(req, res)=>{
 });
  
 router.get('/no', async(req, res)=>{
-    let data = await constants.fetch_response(constants.api_urls.random.no);
+    let data = await utils.fetch_response(constants.api_urls.random.no);
     res.status(200).json(data);
 });
 
