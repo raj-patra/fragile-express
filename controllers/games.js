@@ -10,12 +10,12 @@ router.get('/', (req, res)=>{
 });
 
 router.get('/pc', async(req, res)=>{
-    let data = await constants.fetch_response(constants.api_urls.games.pc);
+    let data = await utils.fetch_response(constants.api_urls.games.pc);
     res.status(200).json(data);
 });
 
 router.get('/browser', async(req, res)=>{
-    let data = await constants.fetch_response(constants.api_urls.games.browser);
+    let data = await utils.fetch_response(constants.api_urls.games.browser);
     res.status(200).json(data);
 });
 
