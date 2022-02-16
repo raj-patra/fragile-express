@@ -10,7 +10,11 @@ router.get('/', (req, res)=>{
 });
 
 router.get('/pc', async(req, res)=>{
+    function randomChoice(arr) {
+        return arr[Math.floor(arr.length * Math.random())];
+    }
     let data = await utils.fetch_response(constants.api_urls.games.pc);
+    data.data = randomChoice(data.data);
     res.status(200).json(data);
 });
 
