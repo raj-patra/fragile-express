@@ -3,9 +3,10 @@ const axios = require("axios");
 const router = express.Router();
 
 const constants = require('../helpers/constants');
+const utils = require('../helpers/utils');
 
 router.get('/', (req, res)=>{
-    res.status(200).send(constants.jokes)
+    res.status(200).json(constants.jokes);
 });
 
 router.get('/random', async(req, res)=>{
