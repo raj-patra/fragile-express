@@ -49,7 +49,7 @@ router.get('/stoicism', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/got', async(req, res)=>{
+router.get('/game_of_thrones', async(req, res)=>{
     let data = await utils.fetch_response(constants.api_urls.quotes.game_of_thrones);
     res.status(200).json(data);
 });
