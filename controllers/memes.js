@@ -6,7 +6,7 @@ const constants = require('../helpers/constants');
 const utils = require('../helpers/utils');
 
 router.get('/', (req, res)=>{
-    res.status(200).json(constants.memes)
+    res.status(200).json(constants.memes);
 });
 
 router.get('/random', async(req, res)=>{

@@ -12,7 +12,7 @@ const memes = require('./memes');
 
 
 router.get('/', (req, res)=>{
-    res.status(200).json(constants.api)
+    res.status(200).json(constants.api);
 });
 
 router.use("/quotes", quotes);
