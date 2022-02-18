@@ -120,35 +120,4 @@ module.exports = {
         'thoughtful', 'thoughtless', 'tired', 'smoggy', 'sore', 'sparkling', 'splendid', 'spotless', 'stormy', 'strange', 'stupid', 'successful', 'super ', 'svelte', 'wild', 'witty', 'worried', 'worrisome', 'wrong', 'zany', 'zealous', 'tough', 'troubled', 'ugliest', 'ugly', 'uninterested', 'unsightly', 'unusual', 'upset',
         'uptight', 'useful'
     ],
-
-    fetch_response: async function (url) {
-        try{
-            let data = await axios.get(url);
-            if (data.status == 200){
-                return {
-                    message: "Data fetch successful.", 
-                    data: data.data, 
-                    reference_api: data.config.url,
-                    root: HOST
-                }
-            }
-            else{
-                return {
-                    message: "Data fetch unsuccessful.", 
-                    data: null, 
-                    reference_api: data.config.url,
-                    root: HOST
-                }
-            }
-        }
-        catch (error){
-            console.error(error);
-            return {
-                message: "Data fetch unsuccessful.", 
-                data: null, 
-                reference_api: url,
-                root: HOST
-            }
-        }
-    }
 }

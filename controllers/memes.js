@@ -3,28 +3,29 @@ const axios = require("axios");
 const router = express.Router();
 
 const constants = require('../helpers/constants');
+const utils = require('../helpers/utils');
 
 router.get('/', (req, res)=>{
-    res.status(200).json(constants.memes)
+    res.status(200).json(constants.memes);
 });
 
 router.get('/random', async(req, res)=>{
-    let data = await constants.fetch_response(constants.api_urls.memes.random);
+    let data = await utils.fetch_response(constants.api_urls.memes.random);
     res.status(200).json(data);
 });
 
 router.get('/reddit',async(req, res)=>{
-    let data = await constants.fetch_response(constants.api_urls.memes.reddit);
+    let data = await utils.fetch_response(constants.api_urls.memes.reddit);
     res.status(200).json(data);
 });
 
 router.get('/namo', async(req, res)=>{
-    let data = await constants.fetch_response(constants.api_urls.memes.namo);
+    let data = await utils.fetch_response(constants.api_urls.memes.namo);
     res.status(200).json(data);
 });
 
 router.get('/templates', async(req, res)=>{
-    let data = await constants.fetch_response(constants.api_urls.memes.templates);
+    let data = await utils.fetch_response(constants.api_urls.memes.templates);
     res.status(200).json(data);
 });
 
