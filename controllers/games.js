@@ -15,7 +15,7 @@ router.get('/', (req, res)=>{
 
 router.get('/pc', async(req, res)=>{
     let data = await utils.fetch_response(constants.api_urls.games.pc);
-    data.data = randomChoice(data.data);
+    data.data = utils.random_choice(data.data);
     res.status(200).json(data);
 });
 
