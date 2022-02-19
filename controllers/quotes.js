@@ -31,6 +31,7 @@ router.get('/superhero', async(req, res)=>{
 
 router.get('/poems', async(req, res)=>{
     let data = await utils.fetch_response(constants.api_urls.quotes.poems);
+    data.data = utils.random_choice(data.data);
     res.status(200).json(data);
 });
 
