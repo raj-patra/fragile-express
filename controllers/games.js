@@ -5,10 +5,6 @@ const router = express.Router();
 const constants = require('../helpers/constants');
 const utils = require('../helpers/utils');
 
-const randomChoice = function randomChoice(arr) {
-    return arr[Math.floor(arr.length * Math.random())];
-}
-
 router.get('/', (req, res)=>{
     res.status(200).json(constants.games);
 });
