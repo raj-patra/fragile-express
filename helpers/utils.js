@@ -31,5 +31,9 @@ module.exports = {
                 root: HOST
             }
         }
+    },
+
+    random_choice: function (arr) {
+        return arr[Math.floor(arr.length * Math.random())];
     }
 }
