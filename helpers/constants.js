@@ -22,6 +22,7 @@ const api_urls = {
         powerful: "https://api.fisenko.net/v1/quotes/en/random",
         stoicism: "https://api.themotivate365.com/stoic-quote",
         game_of_thrones: "https://game-of-thrones-quotes.herokuapp.com/v1/random",
+        brba: "https://breakingbadapi.com/api/quote/random",
     },
 
     facts: {
