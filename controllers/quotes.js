@@ -60,4 +60,9 @@ router.get('/brba', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/breaking_bad', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.quotes.breaking_bad);
+    res.status(200).json(data);
+});
+
 module.exports = router;
