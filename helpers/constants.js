@@ -34,7 +34,8 @@ const api_urls = {
         math: "http://numbersapi.com/random/math",
         date: "http://numbersapi.com/random/date",
         year: "http://numbersapi.com/random/year",
-        cat: "https://meowfacts.herokuapp.com/"
+        cat: "https://meowfacts.herokuapp.com/",
+        quiz: "https://opentdb.com/api.php?amount=1",
     },
 
     personalities: {
