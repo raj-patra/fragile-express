@@ -49,4 +49,10 @@ router.get('/cat', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/quiz', async(req, res)=>{
+    let query_string = "&"+req.url.split("?")[1]
+    let data = await utils.fetch_response(constants.api_urls.facts.quiz);
+    res.status(200).json(data);
+});
+
 module.exports = router;
