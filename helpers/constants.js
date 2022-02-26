@@ -34,7 +34,8 @@ const api_urls = {
         math: "http://numbersapi.com/random/math",
         date: "http://numbersapi.com/random/date",
         year: "http://numbersapi.com/random/year",
-        cat: "https://meowfacts.herokuapp.com/"
+        cat: "https://meowfacts.herokuapp.com/",
+        quiz: "https://opentdb.com/api.php?amount=1",
     },
 
     personalities: {
@@ -122,4 +123,35 @@ module.exports = {
         'thoughtful', 'thoughtless', 'tired', 'smoggy', 'sore', 'sparkling', 'splendid', 'spotless', 'stormy', 'strange', 'stupid', 'successful', 'super ', 'svelte', 'wild', 'witty', 'worried', 'worrisome', 'wrong', 'zany', 'zealous', 'tough', 'troubled', 'ugliest', 'ugly', 'uninterested', 'unsightly', 'unusual', 'upset',
         'uptight', 'useful'
     ],
+
+    quiz_options: {
+        difficulty: ["easy", "medium", "hard"],
+        category:   {
+            9: "General Knowledge",
+            10: "Entertainment: Books",
+            11: "Entertainment: Film",
+            12: "Entertainment: Music",
+            13: "Entertainment: Musicals & Theatres",
+            14: "Entertainment: Television",
+            15: "Entertainment: Video Games",
+            16: "Entertainment: Board Games",
+            17: "Science & Nature",
+            18: "Science: Computers",
+            19: "Science: Mathematics",
+            20: "Mythology",
+            21: "Sports",
+            22: "Geography",
+            23: "History",
+            24: "Politics",
+            25: "Art",
+            26: "Celebrities",
+            27: "Animals",
+            28: "Vehicles",
+            29: "Entertainment: Comics",
+            30: "Science: Gadgets",
+            31: "Entertainment: Japanese Anime & Manga",
+            32: "Entertainment: Cartoon & Animations",
+        },
+        type: ["multiple", "boolean"],
+    }
 }
