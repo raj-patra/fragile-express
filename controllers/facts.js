@@ -51,7 +51,7 @@ router.get('/cat', async(req, res)=>{
 
 router.get('/quiz', async(req, res)=>{
     let query_string = "&"+req.url.split("?")[1]
-    let data = await utils.fetch_response(constants.api_urls.facts.quiz);
+    let data = await utils.fetch_response(constants.api_urls.facts.quiz+query_string);
     res.status(200).json(data);
 });
 
