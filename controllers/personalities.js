@@ -30,4 +30,9 @@ router.get('/inspiration', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/kanye', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.quotes.kanye);
+    res.status(200).json(data);
+});
+
 module.exports = router;

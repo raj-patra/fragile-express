@@ -14,10 +14,6 @@ router.get('/random', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/kanye', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.kanye);
-    res.status(200).json(data);
-});
 
 router.get('/trump', async(req, res)=>{
     let data = await utils.fetch_response(constants.api_urls.quotes.trump);
