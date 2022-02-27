@@ -14,8 +14,6 @@ const api_urls = {
 
     quotes: {
         random: "https://api.quotable.io/random",
-        kanye: "https://api.kanye.rest/",
-        trump: "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
         superhero: "https://superhero-quotes.herokuapp.com/random",
         poems: "https://www.poemist.com/api/v1/randompoems",
         anime: "https://animechan.vercel.app/api/random",
@@ -42,7 +40,9 @@ const api_urls = {
         insult: "https://evilinsult.com/generate_insult.php?lang=en&type=json",
         advice: "https://api.adviceslip.com/advice",
         affirmation: "https://www.affirmations.dev",
-        inspiration: "https://type.fit/api/quotes"
+        inspiration: "https://type.fit/api/quotes",
+        kanye: "https://api.kanye.rest/",
+        trump: "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
     },
 
     games: {
