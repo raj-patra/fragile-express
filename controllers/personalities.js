@@ -31,7 +31,12 @@ router.get('/inspiration', async(req, res)=>{
 });
 
 router.get('/kanye', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.kanye);
+    let data = await utils.fetch_response(constants.api_urls.personalities.kanye);
+    res.status(200).json(data);
+});
+
+router.get('/trump', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.personalities.trump);
     res.status(200).json(data);
 });
 
