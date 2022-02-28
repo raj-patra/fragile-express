@@ -7,8 +7,6 @@ const api_urls = {
         website: "https://www.boredbutton.com/random",
         human: "https://thispersondoesnotexist.com/image",
         activity: "http://www.boredapi.com/api/activity",
-        yes: "https://yesno.wtf/api?force=yes",
-        no: "https://yesno.wtf/api?force=no",
     },
 
     quotes: {
@@ -60,7 +58,9 @@ const api_urls = {
         random: "https://inspirobot.me/api?generate=true",
         reddit: "https://meme-api.herokuapp.com/gimme",
         templates: "https://api.imgflip.com/get_memes",
-        namo: "https://namo-memes.herokuapp.com/memes/1"
+        namo: "https://namo-memes.herokuapp.com/memes/1",
+        yes: "https://yesno.wtf/api?force=yes",
+        no: "https://yesno.wtf/api?force=no",
     }
 
 }
