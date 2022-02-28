@@ -1,6 +1,5 @@
 const HOST = process.env.HOST || "http://localhost"
 const _ = require('lodash');
-const axios = require("axios");
 
 const api_urls = {
     random: {
@@ -8,8 +7,6 @@ const api_urls = {
         website: "https://www.boredbutton.com/random",
         human: "https://thispersondoesnotexist.com/image",
         activity: "http://www.boredapi.com/api/activity",
-        yes: "https://yesno.wtf/api?force=yes",
-        no: "https://yesno.wtf/api?force=no",
     },
 
     quotes: {
@@ -53,15 +50,17 @@ const api_urls = {
     jokes: {
         random: "https://sv443.net/jokeapi/v2/joke/Any",
         chuck_norris: "https://api.chucknorris.io/jokes/random",
-        "yo_mama": "https://yomomma-api.herokuapp.com/jokes",
-        "dad": "https://icanhazdadjoke.com/"
+        yo_mama: "https://yomomma-api.herokuapp.com/jokes",
+        dad: "https://icanhazdadjoke.com/"
     },
 
     memes:{
         random: "https://inspirobot.me/api?generate=true",
         reddit: "https://meme-api.herokuapp.com/gimme",
         templates: "https://api.imgflip.com/get_memes",
-        namo: "https://namo-memes.herokuapp.com/memes/1"
+        namo: "https://namo-memes.herokuapp.com/memes/1",
+        yes: "https://yesno.wtf/api?force=yes",
+        no: "https://yesno.wtf/api?force=no",
     }
 
 }
