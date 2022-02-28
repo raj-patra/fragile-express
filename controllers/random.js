@@ -38,14 +38,4 @@ router.get('/activity', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/yes', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.random.yes);
-    res.status(200).json(data);
-});
- 
-router.get('/no', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.random.no);
-    res.status(200).json(data);
-});
-
 module.exports = router;

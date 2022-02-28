@@ -29,4 +29,14 @@ router.get('/templates', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/yes', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.memes.yes);
+    res.status(200).json(data);
+});
+ 
+router.get('/no', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.memes.no);
+    res.status(200).json(data);
+});
+
 module.exports = router;
