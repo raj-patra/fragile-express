@@ -1,6 +1,5 @@
 const HOST = process.env.HOST || "http://localhost"
 const _ = require('lodash');
-const axios = require("axios");
 
 const api_urls = {
     random: {
@@ -53,8 +52,8 @@ const api_urls = {
     jokes: {
         random: "https://sv443.net/jokeapi/v2/joke/Any",
         chuck_norris: "https://api.chucknorris.io/jokes/random",
-        "yo_mama": "https://yomomma-api.herokuapp.com/jokes",
-        "dad": "https://icanhazdadjoke.com/"
+        yo_mama: "https://yomomma-api.herokuapp.com/jokes",
+        dad: "https://icanhazdadjoke.com/"
     },
 
     memes:{
