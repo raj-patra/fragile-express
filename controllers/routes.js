@@ -9,6 +9,7 @@ const games = require('./games');
 const random = require('./random');
 const jokes = require('./jokes');
 const memes = require('./memes');
+const shows = require('./shows');
 
 
 router.get('/', (req, res)=>{
@@ -22,5 +23,6 @@ router.use("/games", games);
 router.use("/random", random);
 router.use("/jokes", jokes);
 router.use("/memes", memes);
+router.use("/shows", shows);
 
 module.exports = router;

@@ -39,19 +39,4 @@ router.get('/stoicism', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/game_of_thrones', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.game_of_thrones);
-    res.status(200).json(data);
-});
-
-router.get('/brba', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.brba);
-    res.status(200).json(data);
-});
-
-router.get('/breaking_bad', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.breaking_bad);
-    res.status(200).json(data);
-});
-
 module.exports = router;
