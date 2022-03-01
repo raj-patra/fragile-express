@@ -21,7 +21,7 @@ const api_urls = {
         breaking_bad: "https://breaking-bad-quotes.herokuapp.com/v1/quotes",
     },
 
-    facts: {
+    trivia: {
         random: "https://asli-fun-fact-api.herokuapp.com/",
         useless: "https://uselessfacts.jsph.pl//random.json?language=en",
         chuck_norris: "http://api.icndb.com/jokes/random",
@@ -96,7 +96,7 @@ module.exports = {
     api: indexing(api_urls, ""),
     random: indexing(api_urls.random, "random/"),
     quotes: indexing(api_urls.quotes, "quotes/"),
-    facts: indexing(api_urls.facts, "facts/"),
+    trivia: indexing(api_urls.trivia, "trivia/"),
     personalities: indexing(api_urls.personalities, "personalities/"),
     games: indexing(api_urls.games, "games/"),
     jokes: indexing(api_urls.jokes, "jokes/"),
