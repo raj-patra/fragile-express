@@ -16,6 +16,9 @@ const api_urls = {
         anime: "https://animechan.vercel.app/api/random",
         powerful: "https://api.fisenko.net/v1/quotes/en/random",
         stoicism: "https://api.themotivate365.com/stoic-quote",
+    },
+
+    shows: {
         game_of_thrones: "https://game-of-thrones-quotes.herokuapp.com/v1/random",
         brba: "https://breakingbadapi.com/api/quote/random",
         breaking_bad: "https://breaking-bad-quotes.herokuapp.com/v1/quotes",
@@ -101,6 +104,7 @@ module.exports = {
     games: indexing(api_urls.games, "games/"),
     jokes: indexing(api_urls.jokes, "jokes/"),
     memes: indexing(api_urls.memes, "memes/"),
+    shows: indexing(api_urls.shows, "shows/"),
 
     noun: [
         'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
