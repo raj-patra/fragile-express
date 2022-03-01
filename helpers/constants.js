@@ -25,7 +25,7 @@ const api_urls = {
         random: "https://asli-fun-fact-api.herokuapp.com/",
         useless: "https://uselessfacts.jsph.pl//random.json?language=en",
         chuck_norris: "http://api.icndb.com/jokes/random",
-        trivia: "http://numbersapi.com/random/trivia",
+        number: "http://numbersapi.com/random/trivia",
         math: "http://numbersapi.com/random/math",
         date: "http://numbersapi.com/random/date",
         year: "http://numbersapi.com/random/year",

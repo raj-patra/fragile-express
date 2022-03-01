@@ -23,8 +23,8 @@ router.get('/chuck_norris', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/trivia', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.facts.trivia);
+router.get('/number', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.facts.number);
     res.status(200).json(data);
 });
 
