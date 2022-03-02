@@ -16,6 +16,7 @@ const api_urls = {
         anime: "https://animechan.vercel.app/api/random",
         powerful: "https://api.fisenko.net/v1/quotes/en/random",
         stoicism: "https://api.themotivate365.com/stoic-quote",
+        zen: "https://zenquotes.io/api/random",
     },
 
     shows: {

@@ -39,4 +39,9 @@ router.get('/stoicism', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/zen', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.quotes.zen);
+    res.status(200).json(data);
+});
+
 module.exports = router;
