@@ -17,6 +17,7 @@ const api_urls = {
         powerful: "https://api.fisenko.net/v1/quotes/en/random",
         stoicism: "https://api.themotivate365.com/stoic-quote",
         zen: "https://zenquotes.io/api/random",
+        qotd: "https://favqs.com/api/qotd",
     },
 
     shows: {
