@@ -18,6 +18,7 @@ const api_urls = {
         stoicism: "https://api.themotivate365.com/stoic-quote",
         zen: "https://zenquotes.io/api/random",
         qotd: "https://favqs.com/api/qotd",
+        design: "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand&per_page=1",
     },
 
     shows: {
