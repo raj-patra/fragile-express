@@ -49,4 +49,9 @@ router.get('/qotd', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/design', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.quotes.design);
+    res.status(200).json(data);
+});
+
 module.exports = router;
