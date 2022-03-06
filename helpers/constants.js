@@ -22,6 +22,7 @@ const api_urls = {
     },
 
     shows: {
+        random: "https://web-series-quotes-api.deta.dev/quote/",
         game_of_thrones: "https://game-of-thrones-quotes.herokuapp.com/v1/random",
         brba: "https://breakingbadapi.com/api/quote/random",
         breaking_bad: "https://breaking-bad-quotes.herokuapp.com/v1/quotes",
