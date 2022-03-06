@@ -8,6 +8,11 @@ router.get('/', (req, res)=>{
     res.status(200).json(constants.shows);
 });
 
+router.get('/random', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.shows.random);
+    res.status(200).json(data);
+});
+
 router.get('/game_of_thrones', async(req, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.game_of_thrones);
     res.status(200).json(data);
