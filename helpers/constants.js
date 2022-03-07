@@ -26,6 +26,7 @@ const api_urls = {
         game_of_thrones: "https://game-of-thrones-quotes.herokuapp.com/v1/random",
         brba: "https://breakingbadapi.com/api/quote/random",
         breaking_bad: "https://breaking-bad-quotes.herokuapp.com/v1/quotes",
+        lucifer: "https://lucifer-quotes.vercel.app/api/quotes",
     },
 
     trivia: {
@@ -101,14 +102,14 @@ module.exports = {
     },
 
     api: indexing(api_urls, ""),
-    random: indexing(api_urls.random, "random/"),
-    quotes: indexing(api_urls.quotes, "quotes/"),
-    trivia: indexing(api_urls.trivia, "trivia/"),
-    personalities: indexing(api_urls.personalities, "personalities/"),
     games: indexing(api_urls.games, "games/"),
     jokes: indexing(api_urls.jokes, "jokes/"),
     memes: indexing(api_urls.memes, "memes/"),
     shows: indexing(api_urls.shows, "shows/"),
+    random: indexing(api_urls.random, "random/"),
+    quotes: indexing(api_urls.quotes, "quotes/"),
+    trivia: indexing(api_urls.trivia, "trivia/"),
+    personalities: indexing(api_urls.personalities, "personalities/"),
 
     noun: [
         'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
