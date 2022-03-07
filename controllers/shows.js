@@ -28,4 +28,9 @@ router.get('/breaking_bad', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/lucifer', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.shows.lucifer);
+    res.status(200).json(data);
+});
+
 module.exports = router;
