@@ -40,6 +40,7 @@ router.get('/stranger_things', async(req, res)=>{
 
 router.get('/harry_potter', async(req, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.harry_potter);
+    data.data = utils.random_choice(data.data);
     res.status(200).json(data);
 });
 
