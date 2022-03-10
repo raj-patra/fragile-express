@@ -28,6 +28,7 @@ const api_urls = {
         breaking_bad: "https://breaking-bad-quotes.herokuapp.com/v1/quotes",
         lucifer: "https://lucifer-quotes.vercel.app/api/quotes",
         stranger_things: "https://strangerthings-quotes.vercel.app/api/quotes",
+        harry_potter: "http://hp-api.herokuapp.com/api/characters",
     },
 
     trivia: {
