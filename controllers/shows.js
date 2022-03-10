@@ -38,4 +38,9 @@ router.get('/stranger_things', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/harry_potter', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.shows.harry_potter);
+    res.status(200).json(data);
+});
+
 module.exports = router;
