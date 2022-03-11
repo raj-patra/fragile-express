@@ -29,6 +29,7 @@ const api_urls = {
         lucifer: "https://lucifer-quotes.vercel.app/api/quotes",
         stranger_things: "https://strangerthings-quotes.vercel.app/api/quotes",
         harry_potter: "http://hp-api.herokuapp.com/api/characters/",
+        final_space: "https://finalspaceapi.com/api/v0/quote",
     },
 
     trivia: {
