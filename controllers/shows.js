@@ -51,6 +51,7 @@ router.get(['/harry_potter', '/harry_potter/:option'], async(req, res)=>{
 
 router.get('/final_space', async(req, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.final_space);
+    data.data = utils.random_choice(data.data);
     res.status(200).json(data);
 });
 
