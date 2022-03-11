@@ -38,14 +38,20 @@ router.get('/stranger_things', async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get(['/harry_potter', '/harry_potter/:option', '/harry_potter/house/:option'], async(req, res)=>{
+router.get(['/harry_potter', '/harry_potter/:option'], async(req, res)=>{
     let option = req.params.option;
     let url = (option) ? constants.api_urls.shows.harry_potter+option : constants.api_urls.shows.harry_potter;
     let data = await utils.fetch_response(url);
-
+    
     data.data = utils.random_choice(data.data);
     data.options = constants.hp_options;
+    
+    res.status(200).json(data);
+});
 
+router.get('/final_space', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.shows.final_space);
+    data.data = utils.random_choice(data.data);
     res.status(200).json(data);
 });
 
