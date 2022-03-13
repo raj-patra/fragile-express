@@ -55,4 +55,9 @@ router.get('/quiz', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/chess', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.trivia.chess);
+    res.status(200).json(data);
+});
+
 module.exports = router;
