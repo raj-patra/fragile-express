@@ -42,6 +42,7 @@ const api_urls = {
         year: "http://numbersapi.com/random/year",
         cat: "https://meowfacts.herokuapp.com/",
         quiz: "https://opentdb.com/api.php?amount=1",
+        chess: "https://api.chess.com/pub/puzzle/random",
     },
 
     personalities: {
