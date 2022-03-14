@@ -52,6 +52,7 @@ const api_urls = {
         inspiration: "https://type.fit/api/quotes",
         kanye: "https://api.kanye.rest/",
         trump: "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
+        ron_swanson: "https://ron-swanson-quotes.herokuapp.com/v2/quotes",
     },
 
     games: {
