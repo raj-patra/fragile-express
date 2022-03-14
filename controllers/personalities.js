@@ -39,4 +39,9 @@ router.get('/trump', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/ron_swanson', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.personalities.ron_swanson);
+    res.status(200).json(data);
+});
+
 module.exports = router;
