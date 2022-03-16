@@ -58,7 +58,7 @@ const api_urls = {
     games: {
         pc: "https://www.freetogame.com/api/games?platform=pc",
         browser: "https://www.freetogame.com/api/games?platform=browser",
-        valorant: "https://valorant-api.com/v1"
+        valorant: "https://valorant-api.com/v1/"
     },
 
     jokes: {

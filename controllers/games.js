@@ -22,7 +22,8 @@ router.get('/browser', async(req, res)=>{
 
 router.get(['/valorant', '/valorant/:option'], async(req, res)=>{
     let option = req.params.option;
-    let url = (option) ? constants.api_urls.games.valorant+option : constants.api_urls.games.valorant+"/agents";
+    let url = (option) ? constants.api_urls.games.valorant+option : constants.api_urls.games.valorant+"agents";
+    console.log(url)
     let data = await utils.fetch_response(url);
     
     data.data = utils.random_choice(data.data.data);
