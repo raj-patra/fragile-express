@@ -175,6 +175,6 @@ module.exports = {
     ],
 
     valo_options: [
-        "agents", "buddies", "bundles", "ceremonies"
+        "/agents", "/buddies", "/bundles", "/ceremonies"
     ]
 }
