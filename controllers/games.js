@@ -27,6 +27,7 @@ router.get(['/valorant', '/valorant/:option'], async(req, res)=>{
     let data = await utils.fetch_response(url);
     
     data.data = utils.random_choice(data.data.data);
+    data.options = constants.valo_options;
     
     res.status(200).json(data);
 });

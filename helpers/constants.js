@@ -172,5 +172,9 @@ module.exports = {
     hp_options: [
         "/students",
         "/staff",
+    ],
+
+    valo_options: [
+        "/agents", "/buddies", "/bundles", "/ceremonies"
     ]
 }
