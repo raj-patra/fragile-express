@@ -176,6 +176,7 @@ module.exports = {
 
     valo_options: [
         "/agents", "/buddies", "/bundles", "/ceremonies",
-        "/competitivetiers", "/contenttiers", "/contracts", "/currencies"
+        "/competitivetiers", "/contenttiers", "/contracts", "/currencies",
+        "/events", "/gamemodes", "/gear", "/maps"
     ]
 }
