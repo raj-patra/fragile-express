@@ -178,6 +178,7 @@ module.exports = {
         "/agents", "/buddies", "/bundles", "/ceremonies",
         "/competitivetiers", "/contenttiers", "/contracts", "/currencies",
         "/events", "/gamemodes", "/gear", "/maps",
-        "/playercards", "/playertitles", "/seasons"
+        "/playercards", "/playertitles", "/seasons",
+        "/sprays", "/themes", "/weapons"
     ]
 }
