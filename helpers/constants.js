@@ -68,13 +68,17 @@ const api_urls = {
         dad: "https://icanhazdadjoke.com/"
     },
 
-    memes:{
+    memes: {
         random: "https://inspirobot.me/api?generate=true",
         reddit: "https://meme-api.herokuapp.com/gimme",
         templates: "https://api.imgflip.com/get_memes",
         namo: "https://namo-memes.herokuapp.com/memes/1",
         yes: "https://yesno.wtf/api?force=yes",
         no: "https://yesno.wtf/api?force=no",
+    }, 
+
+    images: {
+        nekos: "https://nekos.best/api/v2/neko",
     }
 
 }
@@ -108,14 +112,15 @@ module.exports = {
     },
 
     api: indexing(api_urls, ""),
+    random: indexing(api_urls.random, "random/"),
+    quotes: indexing(api_urls.quotes, "quotes/"),
+    shows: indexing(api_urls.shows, "shows/"),
+    trivia: indexing(api_urls.trivia, "trivia/"),
+    personalities: indexing(api_urls.personalities, "personalities/"),
     games: indexing(api_urls.games, "games/"),
     jokes: indexing(api_urls.jokes, "jokes/"),
     memes: indexing(api_urls.memes, "memes/"),
-    shows: indexing(api_urls.shows, "shows/"),
-    random: indexing(api_urls.random, "random/"),
-    quotes: indexing(api_urls.quotes, "quotes/"),
-    trivia: indexing(api_urls.trivia, "trivia/"),
-    personalities: indexing(api_urls.personalities, "personalities/"),
+    images: indexing(api_urls.images, "images/"),
 
     noun: [
         'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
