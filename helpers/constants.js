@@ -68,13 +68,17 @@ const api_urls = {
         dad: "https://icanhazdadjoke.com/"
     },
 
-    memes:{
+    memes: {
         random: "https://inspirobot.me/api?generate=true",
         reddit: "https://meme-api.herokuapp.com/gimme",
         templates: "https://api.imgflip.com/get_memes",
         namo: "https://namo-memes.herokuapp.com/memes/1",
         yes: "https://yesno.wtf/api?force=yes",
         no: "https://yesno.wtf/api?force=no",
+    }, 
+
+    photos: {
+        waifu: "https://api.waifu.im/random",
     }
 
 }
