@@ -77,7 +77,7 @@ const api_urls = {
         no: "https://yesno.wtf/api?force=no",
     }, 
 
-    photos: {
+    images: {
         nekos: "https://nekos.best/api/v2/neko",
     }
 
@@ -120,7 +120,7 @@ module.exports = {
     games: indexing(api_urls.games, "games/"),
     jokes: indexing(api_urls.jokes, "jokes/"),
     memes: indexing(api_urls.memes, "memes/"),
-    photos: indexing(api_urls.photos, "photos/"),
+    images: indexing(api_urls.images, "images/"),
 
     noun: [
         'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',

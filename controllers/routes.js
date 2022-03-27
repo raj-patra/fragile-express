@@ -10,7 +10,7 @@ const personalities = require('./personalities');
 const games = require('./games');
 const jokes = require('./jokes');
 const memes = require('./memes');
-const photos = require('./photos');
+const images = require('./images');
 
 
 router.get('/', (req, res)=>{
@@ -25,6 +25,6 @@ router.use("/personalities", personalities);
 router.use("/games", games);
 router.use("/jokes", jokes);
 router.use("/memes", memes);
-router.use("/photos", photos);
+router.use("/images", images);
 
 module.exports = router;
