@@ -112,14 +112,15 @@ module.exports = {
     },
 
     api: indexing(api_urls, ""),
+    random: indexing(api_urls.random, "random/"),
+    quotes: indexing(api_urls.quotes, "quotes/"),
+    shows: indexing(api_urls.shows, "shows/"),
+    trivia: indexing(api_urls.trivia, "trivia/"),
+    personalities: indexing(api_urls.personalities, "personalities/"),
     games: indexing(api_urls.games, "games/"),
     jokes: indexing(api_urls.jokes, "jokes/"),
     memes: indexing(api_urls.memes, "memes/"),
-    shows: indexing(api_urls.shows, "shows/"),
-    random: indexing(api_urls.random, "random/"),
-    quotes: indexing(api_urls.quotes, "quotes/"),
-    trivia: indexing(api_urls.trivia, "trivia/"),
-    personalities: indexing(api_urls.personalities, "personalities/"),
+    photos: indexing(api_urls.photos, "photos/"),
 
     noun: [
         'fishbowl', 'chairman', 'vineyard', 'caretaker', 'carwash', 'inland', 'barnyard', 'because', 'password', 'fireman', 'worldwide', 'buttercup', 'quicksand', 'courthouse', 'workshop', 'dustpan', 'backfield', 'bobcat', 'ratline', 'background', 'bathroom', 'rawboned', 'grapefruit', 'aircraft', 'talebearer',
