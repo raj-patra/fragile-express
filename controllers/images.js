@@ -13,4 +13,9 @@ router.get('/nekos', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/waifu', async(req, res)=>{
+    let data = await utils.fetch_response(constants.api_urls.images.waifu);
+    res.status(200).json(data);
+});
+
 module.exports = router;

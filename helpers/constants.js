@@ -79,6 +79,7 @@ const api_urls = {
 
     images: {
         nekos: "https://nekos.best/api/v2/neko",
+        waifu: "https://api.waifu.im/random",
     }
 
 }
