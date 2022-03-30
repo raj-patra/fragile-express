@@ -23,4 +23,8 @@ router.get('/emoji', async(req, res)=>{
     res.status(200).json(data);
 });
 
+router.get('/unsplash', async(req, res)=>{
+    res.redirect(constants.api_urls.images.unsplash);
+});
+
 module.exports = router;
