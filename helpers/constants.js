@@ -81,6 +81,7 @@ const api_urls = {
         nekos: "https://nekos.best/api/v2/neko",
         waifu: "https://api.waifu.im/random",
         emoji: "https://emojihub.herokuapp.com/api/random",
+        unsplash: "https://source.unsplash.com/random",
     }
 
 }
