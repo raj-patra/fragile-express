@@ -82,6 +82,7 @@ const api_urls = {
         waifu: "https://api.waifu.im/random",
         emoji: "https://emojihub.herokuapp.com/api/random",
         unsplash: "https://source.unsplash.com/random",
+        lorem_picsum: "https://picsum.photos/1920/1080/?random",
     }
 
 }

@@ -27,4 +27,8 @@ router.get('/unsplash', async(req, res)=>{
     res.redirect(constants.api_urls.images.unsplash);
 });
 
+router.get('/lorem_picsum', async(req, res)=>{
+    res.redirect(constants.api_urls.images.lorem_picsum);
+});
+
 module.exports = router;
