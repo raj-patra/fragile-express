@@ -31,4 +31,8 @@ router.get('/lorem_picsum', async(req, res)=>{
     res.redirect(constants.api_urls.images.lorem_picsum);
 });
 
+router.get('/cat', async(req, res)=>{
+    res.redirect(constants.api_urls.images.cat);
+});
+
 module.exports = router;
