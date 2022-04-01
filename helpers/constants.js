@@ -83,6 +83,7 @@ const api_urls = {
         emoji: "https://emojihub.herokuapp.com/api/random",
         unsplash: "https://source.unsplash.com/random",
         lorem_picsum: "https://picsum.photos/1920/1080/?random",
+        cat: "https://cataas.com/cat/cute",
     }
 
 }
