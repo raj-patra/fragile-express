@@ -84,6 +84,7 @@ const api_urls = {
         unsplash: "https://source.unsplash.com/random",
         lorem_picsum: "https://picsum.photos/1920/1080/?random",
         cat: "https://cataas.com/cat/cute",
+        dog: "https://random.dog/woof.json",
     }
 
 }
