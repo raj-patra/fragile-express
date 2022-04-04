@@ -39,4 +39,8 @@ router.get('/dog', async(req, res)=>{
     res.redirect(constants.api_urls.images.dog);
 });
 
+router.get('/fox', async(req, res)=>{
+    res.redirect(constants.api_urls.images.fox);
+});
+
 module.exports = router;
