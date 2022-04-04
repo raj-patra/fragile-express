@@ -85,6 +85,7 @@ const api_urls = {
         lorem_picsum: "https://picsum.photos/1920/1080/?random",
         cat: "https://cataas.com/cat/cute",
         dog: "https://random.dog",
+        fox: "https://randomfox.ca",
     }
 
 }
