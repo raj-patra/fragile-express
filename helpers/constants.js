@@ -86,6 +86,7 @@ const api_urls = {
         cat: "https://cataas.com/cat/cute",
         dog: "https://random.dog",
         fox: "https://randomfox.ca",
+        duck: "https://random-d.uk/api/randomimg",
     }
 
 }
