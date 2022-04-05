@@ -8,43 +8,20 @@ router.get('/', (req, res)=>{
     res.status(200).json(constants.images);
 });
 
-router.get('/nekos', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.images.nekos);
-    res.status(200).json(data);
-});
-
-router.get('/waifu', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.images.waifu);
-    res.status(200).json(data);
-});
-
-router.get('/emoji', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.images.emoji);
-    res.status(200).json(data);
-});
-
-router.get('/unsplash', async(req, res)=>{
-    res.redirect(constants.api_urls.images.unsplash);
-});
-
-router.get('/lorem_picsum', async(req, res)=>{
-    res.redirect(constants.api_urls.images.lorem_picsum);
-});
-
-router.get('/cat', async(req, res)=>{
-    res.redirect(constants.api_urls.images.cat);
-});
-
-router.get('/dog', async(req, res)=>{
-    res.redirect(constants.api_urls.images.dog);
-});
-
-router.get('/fox', async(req, res)=>{
-    res.redirect(constants.api_urls.images.fox);
-});
-
-router.get('/duck', async(req, res)=>{
-    res.redirect(constants.api_urls.images.duck);
+router.get('/:option', async(req, res)=>{
+    let option = req.params.option;
+    if (option in constants.api_urls.images){
+        if (option == 'nekos' || option == 'waifu' || option == 'emoji') {
+            let data = await utils.fetch_response(constants.api_urls.images[option]);
+            res.status(200).json(data);
+        } else {
+            res.redirect(constants.api_urls.images[option]);
+        }
+    } else {
+        res.status(404).json({
+            error: 'Endpoint does not exist'
+        });
+    }
 });
 
 module.exports = router;
