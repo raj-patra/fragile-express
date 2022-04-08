@@ -52,6 +52,7 @@ const api_urls = {
         inspiration: "https://type.fit/api/quotes",
         kanye: "https://api.kanye.rest/",
         trump: "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
+        chuck_norris: "https://api.chucknorris.io/jokes/random",
         ron_swanson: "https://ron-swanson-quotes.herokuapp.com/v2/quotes",
     },
 
@@ -63,7 +64,6 @@ const api_urls = {
 
     jokes: {
         random: "https://sv443.net/jokeapi/v2/joke/Any",
-        chuck_norris: "https://api.chucknorris.io/jokes/random",
         yo_mama: "https://yomomma-api.herokuapp.com/jokes",
         dad: "https://icanhazdadjoke.com/"
     },
