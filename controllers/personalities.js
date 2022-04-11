@@ -4,49 +4,23 @@ const router = express.Router();
 const constants = require('../helpers/constants');
 const utils = require('../helpers/utils');
 
-router.get('/', (req, res)=>{
+router.get('/', (_, res)=>{
     res.status(200).json(constants.personalities);
 });
 
-router.get('/insult', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.personalities.insult);
-    res.status(200).json(data);
-});
-
-router.get('/advice', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.personalities.advice);
-    res.status(200).json(data);
-});
-
-router.get('/affirmation', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.personalities.affirmation);
-    res.status(200).json(data);
-});
-
-router.get('/inspiration', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.personalities.inspiration);
-    data.data = utils.random_choice(data.data);
-    res.status(200).json(data);
-});
-
-router.get('/kanye', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.personalities.kanye);
-    res.status(200).json(data);
-});
-
-router.get('/trump', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.personalities.trump);
-    res.status(200).json(data);
-});
-
-router.get('/chuck_norris', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.personalities.chuck_norris);
-    res.status(200).json(data);
-});
-
-router.get('/ron_swanson', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.personalities.ron_swanson);
-    res.status(200).json(data);
+router.get('/:option', async(req, res)=>{
+    let option = req.params.option;
+    if (option in constants.api_urls.personalities){
+        let data = await utils.fetch_response(constants.api_urls.personalities[option]);
+        if (option === 'inspiration'){
+            data.data = utils.random_choice(data.data);
+        }
+        res.status(200).json(data);
+    } else {
+        res.status(404).json({
+            error: 'Endpoint does not exist'
+        });
+    }
 });
 
 module.exports = router;
