@@ -23,22 +23,6 @@ router.get('/:option', async(req, res)=>{
     }
 });
 
-router.get('/random', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.random);
-    res.status(200).json(data);
-});
-
-router.get('/superhero', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.superhero);
-    res.status(200).json(data);
-});
-
-router.get('/poems', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.poems);
-    data.data = utils.random_choice(data.data);
-    res.status(200).json(data);
-});
-
 router.get('/anime', async(req, res)=>{
     let data = await utils.fetch_response(constants.api_urls.quotes.anime);
     res.status(200).json(data);
