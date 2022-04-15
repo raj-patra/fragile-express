@@ -23,21 +23,6 @@ router.get('/:option', async(req, res)=>{
     }
 });
 
-router.get('/anime', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.anime);
-    res.status(200).json(data);
-});
-
-router.get('/powerful', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.powerful);
-    res.status(200).json(data);
-});
-
-router.get('/stoicism', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.stoicism);
-    res.status(200).json(data);
-});
-
 router.get('/zen', async(req, res)=>{
     let data = await utils.fetch_response(constants.api_urls.quotes.zen);
     res.status(200).json(data);
