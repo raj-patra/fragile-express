@@ -23,19 +23,4 @@ router.get('/:option', async(req, res)=>{
     }
 });
 
-router.get('/zen', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.zen);
-    res.status(200).json(data);
-});
-
-router.get('/qotd', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.qotd);
-    res.status(200).json(data);
-});
-
-router.get('/design', async(req, res)=>{
-    let data = await utils.fetch_response(constants.api_urls.quotes.design);
-    res.status(200).json(data);
-});
-
 module.exports = router;
