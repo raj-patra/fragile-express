@@ -13,7 +13,7 @@ const memes = require('./memes');
 const images = require('./images');
 
 
-router.get('/', (req, res)=>{
+router.get('/', (_, res)=>{
     res.status(200).json(constants.api);
 });
 

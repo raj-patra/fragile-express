@@ -12,7 +12,7 @@ router.get('/:option', async(req, res)=>{
     let option = req.params.option;
     if (option in constants.api_urls.quotes){
         let data = await utils.fetch_response(constants.api_urls.quotes[option]);
-        if (option === 'inspiration'){
+        if (option === 'poems'){
             data.data = utils.random_choice(data.data);
         }
         res.status(200).json(data);
