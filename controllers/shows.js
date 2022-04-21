@@ -8,6 +8,21 @@ router.get('/', (_, res)=>{
     res.status(200).json(constants.shows);
 });
 
+router.get('/:option', async(req, res)=>{
+    let option = req.params.option;
+    if (option in constants.api_urls.shows){
+        let data = await utils.fetch_response(constants.api_urls.shows[option]);
+        if (option === 'final_space'){
+            data.data = utils.random_choice(data.data);
+        }
+        res.status(200).json(data);
+    } else {
+        res.status(404).json({
+            error: 'Endpoint does not exist'
+        });
+    }
+});
+
 router.get('/random', async(req, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.random);
     res.status(200).json(data);
