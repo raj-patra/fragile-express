@@ -23,32 +23,32 @@ router.get('/:option', async(req, res)=>{
     }
 });
 
-router.get('/random', async(req, res)=>{
+router.get('/random', async(_, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.random);
     res.status(200).json(data);
 });
 
-router.get('/game_of_thrones', async(req, res)=>{
+router.get('/game_of_thrones', async(_, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.game_of_thrones);
     res.status(200).json(data);
 });
 
-router.get('/brba', async(req, res)=>{
+router.get('/brba', async(_, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.brba);
     res.status(200).json(data);
 });
 
-router.get('/breaking_bad', async(req, res)=>{
+router.get('/breaking_bad', async(_, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.breaking_bad);
     res.status(200).json(data);
 });
 
-router.get('/lucifer', async(req, res)=>{
+router.get('/lucifer', async(_, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.lucifer);
     res.status(200).json(data);
 });
 
-router.get('/stranger_things', async(req, res)=>{
+router.get('/stranger_things', async(_, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.stranger_things);
     res.status(200).json(data);
 });
@@ -64,7 +64,7 @@ router.get(['/harry_potter', '/harry_potter/:option'], async(req, res)=>{
     res.status(200).json(data);
 });
 
-router.get('/final_space', async(req, res)=>{
+router.get('/final_space', async(_, res)=>{
     let data = await utils.fetch_response(constants.api_urls.shows.final_space);
     data.data = utils.random_choice(data.data);
     res.status(200).json(data);
