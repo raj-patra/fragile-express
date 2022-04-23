@@ -17,4 +17,8 @@ app.get('/about', (_, res)=>{
     res.status(200).send(constants.about)
 });
 
+app.get('/reference', (_, res)=>{
+    res.status(200).send(constants.api_urls)
+});
+
 app.listen(PORT, () => {console.log("Server is listening at %s", HOST);});

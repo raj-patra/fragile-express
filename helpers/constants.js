@@ -107,7 +107,8 @@ module.exports = {
     root: {
         message: "Welcome to the Fragile Express.",
         about: HOST+"/about",
-        api: HOST+"/api"
+        api: HOST+"/api",
+        reference: HOST+"/reference",
     },
     about: {
         message: "Fragile Express, is an attempt to bring various resources and APIs from the net into one.",
