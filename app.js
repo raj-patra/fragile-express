@@ -9,11 +9,11 @@ const HOST = process.env.HOST || "http://localhost"
 app.use([express.json(), express.urlencoded({extended: true})]);
 app.use('/api', api);
 
-app.get('/', (req, res)=>{
+app.get('/', (_, res)=>{
     res.status(200).send(constants.root)
 });
 
-app.get('/about', (req, res)=>{
+app.get('/about', (_, res)=>{
     res.status(200).send(constants.about)
 });
 
