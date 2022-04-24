@@ -6,9 +6,9 @@
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-overtime.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
-## 🕸   - [Try out in Browser](https://fragile-express.herokuapp.com/)
+### 🕸 [Try out in Browser](https://fragile-express.herokuapp.com/)
 
-## 📓 Reference APIs
+### 📓 Reference APIs
 
 | Section       | URL                                                                               | Description                          |
 |---------------|-----------------------------------------------------------------------------------|--------------------------------------|
