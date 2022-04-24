@@ -2,8 +2,9 @@
 
 ### Fragile Express, is an index based JSON API which attempts to bring various resources and APIs from the net into one.
 
-    - [!  - [forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
-    - [!  - [forthebadge](https://forthebadge.com/images/badges/powered-by-overtime.svg)](https://forthebadge.com)    - [!  - [forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-overtime.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
 
 ## 🕸   - [Try out in Browser](https://fragile-express.herokuapp.com/)
 
