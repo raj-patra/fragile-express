@@ -21,4 +21,8 @@ app.get('/reference', (_, res)=>{
     res.status(200).send(constants.api_urls)
 });
 
+app.get('*', (_, res)=>{
+    res.status(404).send({message: "Endpoint does not exist."})
+});
+
 app.listen(PORT, () => {console.log("Server is listening at %s", HOST);});
