@@ -197,5 +197,9 @@ module.exports = {
         "/events", "/gamemodes", "/gear", "/maps",
         "/playercards", "/playertitles", "/seasons",
         "/sprays", "/themes", "/weapons"
-    ]
+    ],
+
+    404: {
+        message: "Endpoint does not exist."
+    }
 }

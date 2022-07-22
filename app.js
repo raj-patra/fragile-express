@@ -22,7 +22,7 @@ app.get('/reference', (_, res)=>{
 });
 
 app.get('*', (_, res)=>{
-    res.status(404).send({message: "Endpoint does not exist."})
+    res.status(404).send(constants[404])
 });
 
 app.listen(PORT, () => {console.log("Server is listening at %s", HOST);});
