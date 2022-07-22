@@ -10,19 +10,19 @@ app.use([express.json(), express.urlencoded({extended: true})]);
 app.use('/api', api);
 
 app.get('/', (_, res)=>{
-    res.status(200).send(constants.root)
+    res.status(200).send(constants.root);
 });
 
 app.get('/about', (_, res)=>{
-    res.status(200).send(constants.about)
+    res.status(200).send(constants.about);
 });
 
 app.get('/reference', (_, res)=>{
-    res.status(200).send(constants.api_urls)
+    res.status(200).send(constants.api_urls);
 });
 
 app.get('*', (_, res)=>{
-    res.status(404).send(constants[404])
+    res.status(404).send(constants[404]);
 });
 
 app.listen(PORT, () => {console.log("Server is listening at %s", HOST);});

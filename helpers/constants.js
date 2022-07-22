@@ -75,7 +75,7 @@ const api_urls = {
         namo: "https://namo-memes.herokuapp.com/memes/1",
         yes: "https://yesno.wtf/api?force=yes",
         no: "https://yesno.wtf/api?force=no",
-    }, 
+    },
 
     images: {
         nekos: "https://nekos.best/api/v2/neko",
@@ -97,7 +97,7 @@ const indexing = (obj, route) => {
         message: "List of available resources.",
         resources: _.zipObject(keys, _.map(keys, (key) => HOST+"/api/"+route+key)),
         root: HOST
-    }  
+    }
 }
 
 module.exports = {
