@@ -23,7 +23,7 @@ router.get('/alias', (_, res)=>{
 router.get('/website', (_, res)=> {
     axios.get(constants.api_urls.random.website)
         .then(response => {
-            var data = response.data.split(`iframe src="`)[1].split(`">`)[0].split(`" title="`)
+            let data = response.data.split(`iframe src="`)[1].split(`">`)[0].split(`" title="`)
             res.redirect(data[0]);
         })
         .catch(error => res.send(error));

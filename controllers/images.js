@@ -18,9 +18,7 @@ router.get('/:option', async(req, res)=>{
             res.redirect(constants.api_urls.images[option]);
         }
     } else {
-        res.status(404).json({
-            error: 'Endpoint does not exist'
-        });
+        res.status(404).json(constants[404]);
     }
 });
 

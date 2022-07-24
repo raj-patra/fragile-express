@@ -21,9 +21,7 @@ router.get('/:option', async(req, res)=>{
         }
         res.status(200).json(data);
     } else {
-        res.status(404).json({
-            error: 'Endpoint does not exist'
-        });
+        res.status(404).json(constants[404]);
     }
 });
 
