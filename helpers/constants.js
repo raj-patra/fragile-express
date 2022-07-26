@@ -10,15 +10,15 @@ const api_urls = {
     },
 
     images: {
-        nekos: "https://nekos.best/api/v2/neko",
-        waifu: "https://api.waifu.im/random",
-        emoji: "https://emojihub.herokuapp.com/api/random",
-        unsplash: "https://source.unsplash.com/random",
-        lorem_picsum: "https://picsum.photos/1920/1080/?random",
         cat: "https://cataas.com/cat/cute",
         dog: "https://random.dog",
-        fox: "https://randomfox.ca",
         duck: "https://random-d.uk/api/randomimg",
+        emoji: "https://emojihub.herokuapp.com/api/random",
+        fox: "https://randomfox.ca",
+        lorem_picsum: "https://picsum.photos/1920/1080/?random",
+        nekos: "https://nekos.best/api/v2/neko",
+        unsplash: "https://source.unsplash.com/random",
+        waifu: "https://api.waifu.im/random",
     },
 
     jokes: {
