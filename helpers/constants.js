@@ -2,6 +2,7 @@ const HOST = process.env.HOST || "http://localhost"
 const _ = require('lodash');
 
 const api_urls = {
+
     games: {
         pc: "https://www.freetogame.com/api/games?platform=pc",
         browser: "https://www.freetogame.com/api/games?platform=browser",
@@ -25,7 +26,7 @@ const api_urls = {
         yo_mama: "https://yomomma-api.herokuapp.com/jokes",
         dad: "https://icanhazdadjoke.com/"
     },
-    
+
     memes: {
         random: "https://inspirobot.me/api?generate=true",
         reddit: "https://meme-api.herokuapp.com/gimme",
@@ -34,7 +35,7 @@ const api_urls = {
         yes: "https://yesno.wtf/api?force=yes",
         no: "https://yesno.wtf/api?force=no",
     },
-    
+
     personalities: {
         insult: "https://evilinsult.com/generate_insult.php?lang=en&type=json",
         advice: "https://api.adviceslip.com/advice",
@@ -88,7 +89,6 @@ const api_urls = {
         quiz: "https://opentdb.com/api.php?amount=1",
         chess: "https://api.chess.com/pub/puzzle/random",
     },
-
 }
 
 const indexing = (obj, route) => {
