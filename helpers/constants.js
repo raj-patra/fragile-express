@@ -4,8 +4,8 @@ const _ = require('lodash');
 const api_urls = {
 
     games: {
-        pc: "https://www.freetogame.com/api/games?platform=pc",
         browser: "https://www.freetogame.com/api/games?platform=browser",
+        pc: "https://www.freetogame.com/api/games?platform=pc",
         valorant: "https://valorant-api.com/v1/"
     },
 
