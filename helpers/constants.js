@@ -2,11 +2,48 @@ const HOST = process.env.HOST || "http://localhost"
 const _ = require('lodash');
 
 const api_urls = {
-    random: {
-        alias: "",
-        website: "https://www.boredbutton.com/random",
-        human: "https://thispersondoesnotexist.com/image",
-        activity: "http://www.boredapi.com/api/activity",
+    games: {
+        pc: "https://www.freetogame.com/api/games?platform=pc",
+        browser: "https://www.freetogame.com/api/games?platform=browser",
+        valorant: "https://valorant-api.com/v1/"
+    },
+
+    images: {
+        nekos: "https://nekos.best/api/v2/neko",
+        waifu: "https://api.waifu.im/random",
+        emoji: "https://emojihub.herokuapp.com/api/random",
+        unsplash: "https://source.unsplash.com/random",
+        lorem_picsum: "https://picsum.photos/1920/1080/?random",
+        cat: "https://cataas.com/cat/cute",
+        dog: "https://random.dog",
+        fox: "https://randomfox.ca",
+        duck: "https://random-d.uk/api/randomimg",
+    },
+
+    jokes: {
+        random: "https://sv443.net/jokeapi/v2/joke/Any",
+        yo_mama: "https://yomomma-api.herokuapp.com/jokes",
+        dad: "https://icanhazdadjoke.com/"
+    },
+    
+    memes: {
+        random: "https://inspirobot.me/api?generate=true",
+        reddit: "https://meme-api.herokuapp.com/gimme",
+        templates: "https://api.imgflip.com/get_memes",
+        namo: "https://namo-memes.herokuapp.com/memes/1",
+        yes: "https://yesno.wtf/api?force=yes",
+        no: "https://yesno.wtf/api?force=no",
+    },
+    
+    personalities: {
+        insult: "https://evilinsult.com/generate_insult.php?lang=en&type=json",
+        advice: "https://api.adviceslip.com/advice",
+        affirmation: "https://www.affirmations.dev",
+        inspiration: "https://type.fit/api/quotes",
+        kanye: "https://api.kanye.rest/",
+        trump: "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
+        chuck_norris: "https://api.chucknorris.io/jokes/random",
+        ron_swanson: "https://ron-swanson-quotes.herokuapp.com/v2/quotes",
     },
 
     quotes: {
@@ -19,6 +56,13 @@ const api_urls = {
         zen: "https://zenquotes.io/api/random",
         qotd: "https://favqs.com/api/qotd",
         design: "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand&per_page=1",
+    },
+
+    random: {
+        alias: "",
+        website: "https://www.boredbutton.com/random",
+        human: "https://thispersondoesnotexist.com/image",
+        activity: "http://www.boredapi.com/api/activity",
     },
 
     shows: {
@@ -44,50 +88,6 @@ const api_urls = {
         quiz: "https://opentdb.com/api.php?amount=1",
         chess: "https://api.chess.com/pub/puzzle/random",
     },
-
-    personalities: {
-        insult: "https://evilinsult.com/generate_insult.php?lang=en&type=json",
-        advice: "https://api.adviceslip.com/advice",
-        affirmation: "https://www.affirmations.dev",
-        inspiration: "https://type.fit/api/quotes",
-        kanye: "https://api.kanye.rest/",
-        trump: "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
-        chuck_norris: "https://api.chucknorris.io/jokes/random",
-        ron_swanson: "https://ron-swanson-quotes.herokuapp.com/v2/quotes",
-    },
-
-    games: {
-        pc: "https://www.freetogame.com/api/games?platform=pc",
-        browser: "https://www.freetogame.com/api/games?platform=browser",
-        valorant: "https://valorant-api.com/v1/"
-    },
-
-    jokes: {
-        random: "https://sv443.net/jokeapi/v2/joke/Any",
-        yo_mama: "https://yomomma-api.herokuapp.com/jokes",
-        dad: "https://icanhazdadjoke.com/"
-    },
-
-    memes: {
-        random: "https://inspirobot.me/api?generate=true",
-        reddit: "https://meme-api.herokuapp.com/gimme",
-        templates: "https://api.imgflip.com/get_memes",
-        namo: "https://namo-memes.herokuapp.com/memes/1",
-        yes: "https://yesno.wtf/api?force=yes",
-        no: "https://yesno.wtf/api?force=no",
-    },
-
-    images: {
-        nekos: "https://nekos.best/api/v2/neko",
-        waifu: "https://api.waifu.im/random",
-        emoji: "https://emojihub.herokuapp.com/api/random",
-        unsplash: "https://source.unsplash.com/random",
-        lorem_picsum: "https://picsum.photos/1920/1080/?random",
-        cat: "https://cataas.com/cat/cute",
-        dog: "https://random.dog",
-        fox: "https://randomfox.ca",
-        duck: "https://random-d.uk/api/randomimg",
-    }
 
 }
 
