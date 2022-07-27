@@ -6,7 +6,7 @@ const api_urls = {
     games: {
         browser: "https://www.freetogame.com/api/games?platform=browser",
         pc: "https://www.freetogame.com/api/games?platform=pc",
-        valorant: "https://valorant-api.com/v1/"
+        valorant: "https://valorant-api.com/v1/",
     },
 
     images: {
@@ -22,9 +22,9 @@ const api_urls = {
     },
 
     jokes: {
+        dad: "https://icanhazdadjoke.com/",
         random: "https://sv443.net/jokeapi/v2/joke/Any",
         yo_mama: "https://yomomma-api.herokuapp.com/jokes",
-        dad: "https://icanhazdadjoke.com/"
     },
 
     memes: {
