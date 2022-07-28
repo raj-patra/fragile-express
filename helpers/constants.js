@@ -28,12 +28,12 @@ const api_urls = {
     },
 
     memes: {
+        namo: "https://namo-memes.herokuapp.com/memes/1",
+        no: "https://yesno.wtf/api?force=no",
         random: "https://inspirobot.me/api?generate=true",
         reddit: "https://meme-api.herokuapp.com/gimme",
         templates: "https://api.imgflip.com/get_memes",
-        namo: "https://namo-memes.herokuapp.com/memes/1",
         yes: "https://yesno.wtf/api?force=yes",
-        no: "https://yesno.wtf/api?force=no",
     },
 
     personalities: {
