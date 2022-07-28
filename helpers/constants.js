@@ -37,14 +37,14 @@ const api_urls = {
     },
 
     personalities: {
-        insult: "https://evilinsult.com/generate_insult.php?lang=en&type=json",
         advice: "https://api.adviceslip.com/advice",
         affirmation: "https://www.affirmations.dev",
-        inspiration: "https://type.fit/api/quotes",
-        kanye: "https://api.kanye.rest/",
-        trump: "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
         chuck_norris: "https://api.chucknorris.io/jokes/random",
+        inspiration: "https://type.fit/api/quotes",
+        insult: "https://evilinsult.com/generate_insult.php?lang=en&type=json",
+        kanye: "https://api.kanye.rest/",
         ron_swanson: "https://ron-swanson-quotes.herokuapp.com/v2/quotes",
+        trump: "https://api.whatdoestrumpthink.com/api/v1/quotes/random",
     },
 
     quotes: {
