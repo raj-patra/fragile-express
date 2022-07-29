@@ -60,10 +60,10 @@ const api_urls = {
     },
 
     random: {
-        alias: "",
-        website: "https://www.boredbutton.com/random",
-        human: "https://thispersondoesnotexist.com/image",
         activity: "http://www.boredapi.com/api/activity",
+        alias: "",
+        human: "https://thispersondoesnotexist.com/image",
+        website: "https://www.boredbutton.com/random",
     },
 
     shows: {
