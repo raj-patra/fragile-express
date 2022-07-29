@@ -48,15 +48,15 @@ const api_urls = {
     },
 
     quotes: {
-        random: "https://api.quotable.io/random",
-        superhero: "https://superhero-quotes.herokuapp.com/random",
-        poems: "https://www.poemist.com/api/v1/randompoems",
         anime: "https://animechan.vercel.app/api/random",
-        powerful: "https://api.fisenko.net/v1/quotes/en/random",
-        stoicism: "https://api.themotivate365.com/stoic-quote",
-        zen: "https://zenquotes.io/api/random",
-        qotd: "https://favqs.com/api/qotd",
         design: "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand&per_page=1",
+        poems: "https://www.poemist.com/api/v1/randompoems",
+        powerful: "https://api.fisenko.net/v1/quotes/en/random",
+        qotd: "https://favqs.com/api/qotd",
+        random: "https://api.quotable.io/random",
+        stoicism: "https://api.themotivate365.com/stoic-quote",
+        superhero: "https://superhero-quotes.herokuapp.com/random",
+        zen: "https://zenquotes.io/api/random",
     },
 
     random: {
