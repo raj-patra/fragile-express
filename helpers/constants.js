@@ -78,16 +78,16 @@ const api_urls = {
     },
 
     trivia: {
+        cat: "https://meowfacts.herokuapp.com/",
+        chess: "https://api.chess.com/pub/puzzle/random",
+        chuck_norris: "http://api.icndb.com/jokes/random",
+        date: "http://numbersapi.com/random/date",
+        math: "http://numbersapi.com/random/math",
+        number: "http://numbersapi.com/random/trivia",
+        quiz: "https://opentdb.com/api.php?amount=1",
         random: "https://asli-fun-fact-api.herokuapp.com/",
         useless: "https://uselessfacts.jsph.pl//random.json?language=en",
-        chuck_norris: "http://api.icndb.com/jokes/random",
-        number: "http://numbersapi.com/random/trivia",
-        math: "http://numbersapi.com/random/math",
-        date: "http://numbersapi.com/random/date",
         year: "http://numbersapi.com/random/year",
-        cat: "https://meowfacts.herokuapp.com/",
-        quiz: "https://opentdb.com/api.php?amount=1",
-        chess: "https://api.chess.com/pub/puzzle/random",
     },
 }
 
