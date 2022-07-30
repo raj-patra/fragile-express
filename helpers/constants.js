@@ -67,14 +67,14 @@ const api_urls = {
     },
 
     shows: {
-        random: "https://web-series-quotes-api.deta.dev/quote/",
-        game_of_thrones: "https://game-of-thrones-quotes.herokuapp.com/v1/random",
         brba: "https://breakingbadapi.com/api/quote/random",
         breaking_bad: "https://breaking-bad-quotes.herokuapp.com/v1/quotes",
-        lucifer: "https://lucifer-quotes.vercel.app/api/quotes",
-        stranger_things: "https://strangerthings-quotes.vercel.app/api/quotes",
-        harry_potter: "http://hp-api.herokuapp.com/api/characters/",
         final_space: "https://finalspaceapi.com/api/v0/quote",
+        game_of_thrones: "https://game-of-thrones-quotes.herokuapp.com/v1/random",
+        harry_potter: "http://hp-api.herokuapp.com/api/characters/",
+        lucifer: "https://lucifer-quotes.vercel.app/api/quotes",
+        random: "https://web-series-quotes-api.deta.dev/quote/",
+        stranger_things: "https://strangerthings-quotes.vercel.app/api/quotes",
     },
 
     trivia: {
