@@ -6,6 +6,7 @@ const api_urls = {
     animals: {
         cats: "https://api.thecatapi.com/v1/images/search",
         dogs: "https://dog.ceo/api/breeds/image/random",
+        foxes: "https://randomfox.ca/floof/",
     },
 
     games: {
