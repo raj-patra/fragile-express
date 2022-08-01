@@ -3,6 +3,10 @@ const _ = require('lodash');
 
 const api_urls = {
 
+    animals: {
+        cats: "https://api.thecatapi.com/v1/images/search",
+    },
+
     games: {
         browser: "https://www.freetogame.com/api/games?platform=browser",
         pc: "https://www.freetogame.com/api/games?platform=pc",
